@@ -1,0 +1,85 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260408101859
+Username: DSK240600178\HSE.Installer
+RunAs User: DSK240600178\HSE.Installer
+Configuration Name: 
+Machine: DSK240600178 (Microsoft Windows NT 10.0.19045.0)
+Host Application: powershell -NoProfile -ExecutionPolicy Bypass -File Run-All.ps1
+Process ID: 10376
+PSVersion: 5.1.19041.3031
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.3031
+BuildVersion: 10.0.19041.3031
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is D:\Scripts\FullScriptLog\FullScriptLog_2026-04-08_10-18-59.txt
+Logging to D:\Scripts\FullScriptLog\FullScriptLog_2026-04-08_10-18-59.txt
+
+===== SYSTEM INFORMATION =====
+ComputerName      : DSK240600178
+CanonicalName     : N/A
+SerialNumber      : GM020Z87
+Model             : 11JQS1H700
+Domain            : healthirl.net
+InstalledRAM      : 15.38 GB
+OSName            : Microsoft Windows 10 Pro
+Version           : 10.0.19045
+BuildNumber       : 19045
+WindowsRelease    : 22H2
+SystemDrive       : C:
+OSArchitecture    : 64-bit
+SystemDirectory   : C:\windows\system32
+==============================
+
+Checking Windows version...
+Detected Version: 22H2
+Windows version meets minimum requirement for Windows 11 upgrade path.
+
+Checking system uptime...
+System Uptime: 0 Days 0 Hours
+
+Checking for pending reboot...
+No pending reboot.
+
+Checking Windows activation...
+Windows is ACTIVATED.
+
+---------------------------------------------------------------------------
+
+
+Checking RAM configuration...
+Total Installed RAM : 16 GB
+Number of DIMMs     : 2
+Stick Sizes         : 8 GB, 8 GB
+
+16GB RAM detected. No upgrade required.
+
+---------------------------------------------------------------------------
+
+
+Checking disk health and drives...
+# Drives detected: 1 #
+
+Name                    Size     Firmware Type BusType Status Health  SerialNumber                             Model   
+----                    ----     -------- ---- ------- ------ ------  ------------                             -----   
+M2 Series NVMe SSD 256G 238.5 GB SN10141  SSD  NVMe    OK     Healthy 0000_0006_0000_0000_3A5A_2702_3000_117D. M2 Se...
+# Partitions: 6 #
+
+DriveLetter FileSystemLabel FileSystem SizeRemaining          Size HealthStatus
+----------- --------------- ---------- -------------          ---- ------------
+            Recovery        NTFS          2079490048    2560618496 Healthy     
+            Recovery        NTFS         19401805824   20106727424 Healthy     
+            BOOT            FAT32          488730624     519045120 Healthy     
+            BOOT            FAT32          485654528     522199040 Warning     
+C           Windows         NTFS        200795574272  252841029632 Healthy     
+D           Windows11       NTFS       1891456991232 1979600523264 Healthy
+
+Checking disk space...
+Sufficient Free Space: 187.01 GB, no cleanup required.
+
+---------------------------------------------------------------------------
+

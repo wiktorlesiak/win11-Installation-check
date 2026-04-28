@@ -1,0 +1,305 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260410110109
+Username: DSKML18134\HSE.Installer
+RunAs User: DSKML18134\HSE.Installer
+Configuration Name: 
+Machine: DSKML18134 (Microsoft Windows NT 10.0.19045.0)
+Host Application: powershell -NoProfile -ExecutionPolicy Bypass -File Run-All.ps1
+Process ID: 13752
+PSVersion: 5.1.19041.6807
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.6807
+BuildVersion: 10.0.19041.6807
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is D:\Scripts\FullScriptLog\FullScriptLog_2026-04-10_11-01-08.txt
+Logging to D:\Scripts\FullScriptLog\FullScriptLog_2026-04-10_11-01-08.txt
+
+===== SYSTEM INFORMATION =====
+ComputerName      : DSKML18134
+CanonicalName     : N/A
+SerialNumber      : PC2C79HD
+Model             : 11DUSDBP00
+Domain            : healthirl.net
+InstalledRAM      : 15.74 GB
+OSName            : Microsoft Windows 10 Pro
+Version           : 10.0.19045
+BuildNumber       : 19045
+WindowsRelease    : 22H2
+SystemDrive       : C:
+OSArchitecture    : 64-bit
+SystemDirectory   : C:\windows\system32
+==============================
+
+Checking Windows version...
+Detected Version: 22H2
+Windows version meets minimum requirement for Windows 11 upgrade path.
+
+Checking system uptime...
+System Uptime: 0 Days 0 Hours
+
+Checking for pending reboot...
+No pending reboot.
+
+Checking Windows activation...
+Windows is ACTIVATED.
+
+---------------------------------------------------------------------------
+
+
+Checking RAM configuration...
+Total Installed RAM : 16 GB
+Number of DIMMs     : 2
+Stick Sizes         : 8 GB, 8 GB
+
+16GB RAM detected. No upgrade required.
+
+---------------------------------------------------------------------------
+
+
+Checking disk health and drives...
+# Drives detected: 1 #
+
+Name                    Size     Firmware Type BusType Status Health  SerialNumber    Model                  
+----                    ----     -------- ---- ------- ------ ------  ------------    -----                  
+V Series SATA SSD 500GB 465.8 GB SN12980  SSD  SATA    OK     Healthy 232010999904644 V Series SATA SSD 500GB
+# Partitions: 6 #
+
+DriveLetter FileSystemLabel FileSystem SizeRemaining          Size HealthStatus
+----------- --------------- ---------- -------------          ---- ------------
+            BOOT            FAT32          602480640     650366976 Healthy     
+            Recovery        NTFS          3792957440    4467974144 Healthy     
+            BOOT            FAT32          485654528     522199040 Warning     
+            Recovery        NTFS         19401805824   20106727424 Healthy     
+C           Windows         NTFS        290758688768  494748545024 Healthy     
+D           Windows11       NTFS       1891456753664 1979600523264 Healthy
+
+Checking disk space...
+Sufficient Free Space: 270.79 GB, no cleanup required.
+
+---------------------------------------------------------------------------
+
+
+Checking TPM...
+TPM detected.
+
+Checking Secure Boot...
+Secure Boot enabled.
+
+Checking Windows upgrade residue...
+No previous upgrade folder detected.
+
+Checking network connection...
+Connected via Ethernet.
+
+Refreshing C:\Temp
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows
+-------------------------------------------------------------------------------
+
+  Started : 10 April 2026 11:02:32
+   Source : D:\W11\Temp\
+     Dest : C:\Temp\
+
+    Files : *.*
+
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /PURGE /MIR /R:1 /W:1
+
+------------------------------------------------------------------------------
+
+                           7    D:\W11\Temp\
+        *EXTRA Dir        -1    C:\Temp\Eurofins - CDx Connect_files\
+          *EXTRA File              19458        biomnisconnect-ccaeb97ebd38aedf45fd82871f2acb3d.png
+          *EXTRA File              11825        bootstrap-select.min.css
+          *EXTRA File              58378        bootstrap-select.min.js.download
+          *EXTRA File             232948        bootstrap.min-cd822b7fd22c8a95a68470c795adea69.css
+          *EXTRA File              60577        bootstrap.min-f63dfbdcc649f13af4791a90e51f7907.js.download
+          *EXTRA File              34028        flag-icon.min-3ec51e5e797a0b68940179e636a6bdac.css
+          *EXTRA File               1644        help02-4c221ace26c7c0647075dbd0edcf0d8f.svg
+          *EXTRA File              87533        jquery.min-2c872dbe60f4ba70fb85356113d8b35e.js.download
+          *EXTRA File               5844        login-3331f9d1aaf66772cee3c09c80ea5747.js.download
+          *EXTRA File               7859        main-17b92ee5b34151e698e1a07387d6c1d1.css
+          *EXTRA File              20122        popper.min.js.download
+          *EXTRA File                153        Citrix StoreFront.url
+          *EXTRA File              10535        Eurofins - CDx Connect.html
+          *EXTRA File                196        Ivanti Self Service.url
+          *EXTRA File             519608        Pass.pdf
+100%        New File                2580        ApplockerWin11scriptstask.ps1
+100%        New File                5871        backendscripts.ps1
+100%        New File                4049        excel_word_background_memory.vbs
+100%        New File                 293        how to run.txt
+100%        New File               56304        softwareprotection.reg
+100%        New File                 690        upgrade.bat
+100%        New File                 955        W11 update fix commands.bat
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :         1         0         1         0         0         1
+   Files :         7         7         0         0         0        15
+   Bytes :    69.0 k    69.0 k         0         0         0    1.02 m
+   Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+
+
+   Speed :              346774 Bytes/sec.
+   Speed :              19.842 MegaBytes/min.
+   Ended : 10 April 2026 11:02:32
+---------------------------------------------------------------------------
+
+
+Running D:\\Blocked apps checker\run_check.bat
+
+Running D:\\Profile checker\run_profile_check.bat
+
+Running D:\\Java Removal Tool & Checker\Run-JavaCheck.bat
+
+Running C:\Temp\W11 update fix commands.bat
+
+---------------------------------------------------------------------------
+Checking NetAcquire...
+NetAcquire installed.
+C:\Win11Scripts\NetAcquire already exists. NetAcquire fix not required.
+
+---------------------------------------------------------------------------
+
+
+Checking Lenovo System Update...
+Lenovo System Update not found. Installing...
+Installation completed.
+Launching Lenovo System Update...
+
+Checking DirectX and WDDM requirements...
+GPU: Intel(R) UHD Graphics 630
+DirectX Feature Levels: 12_1,12_0,11_1,11_0,10_1,10_0,9_3,9_2,9_1
+Driver Model (WDDM): WDDM 2.7
+Result: Meets Windows 11 graphics requirements.
+
+
+Preparing Windows Update environment...
+
+[CHECK] Update Orchestrator
+[OK] Update Orchestrator
+
+[CHECK] Windows Update
+[OK] Windows Update
+
+[CHECK] Windows Modules Installer
+[OK] Windows Modules Installer
+
+[CHECK] Windows Update Medic
+[OK] Windows Update Medic
+
+[CHECK] Windows Installer
+[OK] Windows Installer
+
+[CHECK] BITS
+[OK] BITS
+
+[CHECK] Cryptographic Services
+[OK] Cryptographic Services
+
+[CHECK] Windows Update Policies
+[OK] Windows Update Policies
+
+[CHECK] Disable Fast Startup
+[ISSUE] Disable Fast Startup
+ -> Attempting fix...
+
+
+HiberbootEnabled : 0
+PSPath           : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session
+                   Manager\Power
+PSParentPath     : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session
+                   Manager
+PSChildName      : Power
+PSDrive          : HKLM
+PSProvider       : Microsoft.PowerShell.Core\Registry
+
+ -> Fix applied
+
+[CHECK] Hosts file entries - windowsupdate
+[OK] Hosts file entries - windowsupdate
+
+[CHECK] Hosts file entries - update.microsoft
+[OK] Hosts file entries - update.microsoft
+
+Cleaning Windows Update cache...
+
+=== Windows Update environment prepared ===
+
+Cleaning old update and temporary files...
+This may take some time but helps prevent Windows 11 upgrade failures.
+
+SoftwareDistribution size : 0.06 GB
+SoftwareDistribution items: 4
+
+Catroot2 size             : 0.06 GB
+Catroot2 items            : 4
+
+Temp size                 : 0 GB
+Temp items                : 2
+
+Stopping Windows Update services...
+Cleaning folders...
+Restarting services...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+
+Cleanup completed successfully.
+
+Refreshing C:\Temp
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows
+-------------------------------------------------------------------------------
+
+  Started : 10 April 2026 11:06:03
+   Source : D:\W11\Temp\
+     Dest : C:\Temp\
+
+    Files : *.*
+
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /PURGE /MIR /R:1 /W:1
+
+------------------------------------------------------------------------------
+
+                           7    D:\W11\Temp\
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :         1         0         1         0         0         0
+   Files :         7         0         7         0         0         0
+   Bytes :    69.0 k         0    69.0 k         0         0         0
+   Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+   Ended : 10 April 2026 11:06:03
+
+
+Select Upgrade Method:
+1 - Silent Upgrade (Win11Upgrade folder)
+2 - Windows11InstallationAssistant
+
+C:\Temp already exists. Skipping copy.
+
+Copying Windows11InstallationAssistant.exe to C:\...
+Running upgrade.bat...

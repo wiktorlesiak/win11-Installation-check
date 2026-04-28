@@ -1,0 +1,9 @@
+1. Place The Temp folder on the C: Drive on a Windows 10 22H2 device.
+
+2. Copy the Net-Acquire task PS setup text into an elevated Power Shell window in Admin or elevated account.
+
+4. Check Task Scheduler that task is created. ( Set-UKRegionalSettings ) 
+
+3. Upgrade device to Windows 11. 
+
+4. Test application with Lab Technicians.

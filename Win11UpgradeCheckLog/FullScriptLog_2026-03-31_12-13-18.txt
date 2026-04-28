@@ -1,0 +1,2333 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260331121318
+Username: DSKML18080\HSE.Installer
+RunAs User: DSKML18080\HSE.Installer
+Configuration Name: 
+Machine: DSKML18080 (Microsoft Windows NT 10.0.19045.0)
+Host Application: powershell -NoProfile -ExecutionPolicy Bypass -File Run-All.ps1
+Process ID: 13988
+PSVersion: 5.1.19041.7058
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.7058
+BuildVersion: 10.0.19041.7058
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is D:\Scripts\FullScriptLog\FullScriptLog_2026-03-31_12-13-18.txt
+Logging to D:\Scripts\FullScriptLog\FullScriptLog_2026-03-31_12-13-18.txt
+
+===== SYSTEM INFORMATION =====
+ComputerName      : DSKML18080
+CanonicalName     : N/A
+SerialNumber      : PC2C79PE
+Model             : 11DUSDBP00
+Domain            : healthirl.net
+InstalledRAM      : 15.74 GB
+OSName            : Microsoft Windows 10 Pro
+Version           : 10.0.19045
+BuildNumber       : 19045
+WindowsRelease    : 22H2
+SystemDrive       : C:
+OSArchitecture    : 64-bit
+SystemDirectory   : C:\windows\system32
+==============================
+
+Checking Windows version...
+Detected Version: 22H2
+Windows version meets minimum requirement for Windows 11 upgrade path.
+
+Checking system uptime...
+System Uptime: 0 Days 0 Hours
+
+Checking for pending reboot...
+No pending reboot.
+
+Checking Windows activation...
+Windows is ACTIVATED.
+
+---------------------------------------------------------------------------
+
+
+Checking RAM configuration...
+Total Installed RAM : 16 GB
+Number of DIMMs     : 2
+Stick Sizes         : 8 GB, 8 GB
+
+16GB RAM detected. No upgrade required.
+
+---------------------------------------------------------------------------
+
+
+Checking disk health and drives...
+Get-PhysicalDisk not supported on this system.
+# Partitions: 6 #
+
+DriveLetter FileSystemLabel FileSystem SizeRemaining          Size HealthStatus
+----------- --------------- ---------- -------------          ---- ------------
+            Recovery        NTFS         19401805824   20106727424 Healthy     
+            BOOT            FAT32          623931392     671821824 Healthy     
+            Recovery        NTFS          4002865152    4646232064 Healthy     
+            BOOT            FAT32          485654528     522199040 Warning     
+C           Windows         NTFS        307323392000  474649452544 Healthy     
+D           Windows11       NTFS       1891457564672 1979600523264 Healthy
+
+Checking disk space...
+Sufficient Free Space: 286.22 GB, no cleanup required.
+
+---------------------------------------------------------------------------
+
+
+Checking TPM...
+TPM detected.
+
+Checking Secure Boot...
+Secure Boot enabled.
+
+Checking Windows upgrade residue...
+No previous upgrade folder detected.
+
+Checking network connection...
+Connected via Ethernet.
+
+Refreshing C:\Temp
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows
+-------------------------------------------------------------------------------
+
+  Started : Tuesday 31 March 2026 12:17:16
+   Source : D:\W11\Temp\
+     Dest : C:\Temp\
+
+    Files : *.*
+
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /PURGE /MIR /R:1 /W:1
+
+------------------------------------------------------------------------------
+
+                           7    D:\W11\Temp\
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\
+          *EXTRA File            141.5 m        HL_6400_Y15B_C1_ULWT-inst-E1.EXE
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\
+          *EXTRA File              16200        CountryRule.xml
+          *EXTRA File              1.8 m        InstUI.exe
+          *EXTRA File                388        InstUI.ini
+          *EXTRA File               4746        modellist.dat
+          *EXTRA File             392426        Resource.dat
+          *EXTRA File              1.6 m        start.exe
+          *EXTRA File                458        start.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\DotNetFramework\
+          *EXTRA File             48.1 m        dotNetFx40_Full_x86_x64.exe
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\bul\
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\bul\32\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2057        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221530        brhlrc04.dl_
+          *EXTRA File              36916        brhlrd04.dl_
+          *EXTRA File              39545        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\bul\64\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2067        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221524        brhlrc04.dl_
+          *EXTRA File              34049        brhlrd04.dl_
+          *EXTRA File              37721        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\chn\
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\chn\32\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2057        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             220661        brhlrc04.dl_
+          *EXTRA File              36916        brhlrd04.dl_
+          *EXTRA File              39545        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\chn\64\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2067        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             220654        brhlrc04.dl_
+          *EXTRA File              34049        brhlrd04.dl_
+          *EXTRA File              37721        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\cht\
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\cht\32\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2057        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             220828        brhlrc04.dl_
+          *EXTRA File              36916        brhlrd04.dl_
+          *EXTRA File              39545        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\cht\64\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2067        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             220820        brhlrc04.dl_
+          *EXTRA File              34049        brhlrd04.dl_
+          *EXTRA File              37721        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\cze\
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\cze\32\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2057        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221284        brhlrc04.dl_
+          *EXTRA File              36916        brhlrd04.dl_
+          *EXTRA File              39545        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\cze\64\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2067        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221277        brhlrc04.dl_
+          *EXTRA File              34049        brhlrd04.dl_
+          *EXTRA File              37721        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\dan\
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\dan\32\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2057        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221136        brhlrc04.dl_
+          *EXTRA File              36916        brhlrd04.dl_
+          *EXTRA File              39545        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\dan\64\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2067        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221128        brhlrc04.dl_
+          *EXTRA File              34049        brhlrd04.dl_
+          *EXTRA File              37721        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\dut\
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\dut\32\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2057        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221144        brhlrc04.dl_
+          *EXTRA File              36916        brhlrd04.dl_
+          *EXTRA File              39545        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\dut\64\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2067        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221136        brhlrc04.dl_
+          *EXTRA File              34049        brhlrd04.dl_
+          *EXTRA File              37721        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\eng\
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\eng\32\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2057        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221021        brhlrc04.dl_
+          *EXTRA File              36916        brhlrd04.dl_
+          *EXTRA File              39545        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\eng\64\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2067        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221013        brhlrc04.dl_
+          *EXTRA File              34049        brhlrd04.dl_
+          *EXTRA File              37721        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\fin\
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\fin\32\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2057        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221199        brhlrc04.dl_
+          *EXTRA File              36916        brhlrd04.dl_
+          *EXTRA File              39545        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\fin\64\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2067        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221191        brhlrc04.dl_
+          *EXTRA File              34049        brhlrd04.dl_
+          *EXTRA File              37721        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\fre\
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\fre\32\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2057        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221321        brhlrc04.dl_
+          *EXTRA File              36916        brhlrd04.dl_
+          *EXTRA File              39545        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\fre\64\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2067        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221314        brhlrc04.dl_
+          *EXTRA File              34049        brhlrd04.dl_
+          *EXTRA File              37721        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\ger\
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\ger\32\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2057        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221104        brhlrc04.dl_
+          *EXTRA File              36916        brhlrd04.dl_
+          *EXTRA File              39545        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\ger\64\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2067        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221096        brhlrc04.dl_
+          *EXTRA File              34049        brhlrd04.dl_
+          *EXTRA File              37721        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\hun\
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\hun\32\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2057        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221410        brhlrc04.dl_
+          *EXTRA File              36916        brhlrd04.dl_
+          *EXTRA File              39545        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\hun\64\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2067        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221403        brhlrc04.dl_
+          *EXTRA File              34049        brhlrd04.dl_
+          *EXTRA File              37721        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\ita\
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\ita\32\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2057        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221169        brhlrc04.dl_
+          *EXTRA File              36916        brhlrd04.dl_
+          *EXTRA File              39545        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\ita\64\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2067        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221161        brhlrc04.dl_
+          *EXTRA File              34049        brhlrd04.dl_
+          *EXTRA File              37721        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\jpn\
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\jpn\32\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2057        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             220999        brhlrc04.dl_
+          *EXTRA File              36916        brhlrd04.dl_
+          *EXTRA File              39545        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\jpn\64\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2067        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             220992        brhlrc04.dl_
+          *EXTRA File              34049        brhlrd04.dl_
+          *EXTRA File              37721        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\kor\
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\kor\32\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2057        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             220970        brhlrc04.dl_
+          *EXTRA File              36916        brhlrd04.dl_
+          *EXTRA File              39545        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\kor\64\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2067        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             220963        brhlrc04.dl_
+          *EXTRA File              34049        brhlrd04.dl_
+          *EXTRA File              37721        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\nor\
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\nor\32\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2057        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221142        brhlrc04.dl_
+          *EXTRA File              36916        brhlrd04.dl_
+          *EXTRA File              39545        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\nor\64\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2067        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221134        brhlrc04.dl_
+          *EXTRA File              34049        brhlrd04.dl_
+          *EXTRA File              37721        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\pol\
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\pol\32\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2057        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221610        brhlrc04.dl_
+          *EXTRA File              36916        brhlrd04.dl_
+          *EXTRA File              39545        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\pol\64\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2067        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221603        brhlrc04.dl_
+          *EXTRA File              34049        brhlrd04.dl_
+          *EXTRA File              37721        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\por\
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\por\32\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2057        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221387        brhlrc04.dl_
+          *EXTRA File              36916        brhlrd04.dl_
+          *EXTRA File              39545        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\por\64\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2067        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221380        brhlrc04.dl_
+          *EXTRA File              34049        brhlrd04.dl_
+          *EXTRA File              37721        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\rom\
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\rom\32\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2057        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221364        brhlrc04.dl_
+          *EXTRA File              36916        brhlrd04.dl_
+          *EXTRA File              39545        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\rom\64\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2067        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221358        brhlrc04.dl_
+          *EXTRA File              34049        brhlrd04.dl_
+          *EXTRA File              37721        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\rus\
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\rus\32\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2057        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221689        brhlrc04.dl_
+          *EXTRA File              36916        brhlrd04.dl_
+          *EXTRA File              39545        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\rus\64\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2067        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221682        brhlrc04.dl_
+          *EXTRA File              34049        brhlrd04.dl_
+          *EXTRA File              37721        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\spa\
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\spa\32\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2057        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221227        brhlrc04.dl_
+          *EXTRA File              36916        brhlrd04.dl_
+          *EXTRA File              39545        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\spa\64\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2067        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221220        brhlrc04.dl_
+          *EXTRA File              34049        brhlrd04.dl_
+          *EXTRA File              37721        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\svk\
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\svk\32\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2057        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221607        brhlrc04.dl_
+          *EXTRA File              36916        brhlrd04.dl_
+          *EXTRA File              39545        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\svk\64\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2067        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221600        brhlrc04.dl_
+          *EXTRA File              34049        brhlrd04.dl_
+          *EXTRA File              37721        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\swe\
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\swe\32\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2057        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221123        brhlrc04.dl_
+          *EXTRA File              36916        brhlrd04.dl_
+          *EXTRA File              39545        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\swe\64\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2067        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221115        brhlrc04.dl_
+          *EXTRA File              34049        brhlrd04.dl_
+          *EXTRA File              37721        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\trk\
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\trk\32\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2057        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221242        brhlrc04.dl_
+          *EXTRA File              36916        brhlrd04.dl_
+          *EXTRA File              39545        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\generic\trk\64\
+          *EXTRA File              10325        bhpcl5e.cat
+          *EXTRA File               2067        BHPCL5E.INF
+          *EXTRA File               9053        brhlpcl5e.gp_
+          *EXTRA File             221235        brhlrc04.dl_
+          *EXTRA File              34049        brhlrd04.dl_
+          *EXTRA File              37721        brhlui04.dl_
+          *EXTRA File                138        BRHLUI04.INI
+          *EXTRA File               2166        brnames.gp_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\image\
+          *EXTRA File              58315        connectionLAN.png
+          *EXTRA File              52086        connectionLocal.png
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\instview\
+          *EXTRA File               5249        instview.xml
+          *EXTRA File              59414        page01.png
+          *EXTRA File              42821        page02_CHN.png
+          *EXTRA File              45242        page02_EU.png
+          *EXTRA File              37908        page02_JPN.png
+          *EXTRA File              50792        page02_US.png
+          *EXTRA File              53380        page03.png
+          *EXTRA File              52167        page03_Fre_Frc.png
+          *EXTRA File              45145        page04.png
+          *EXTRA File              44042        page04_Fre_Frc.png
+          *EXTRA File              53586        page05.png
+          *EXTRA File             166424        Resource.dat
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\lang\
+          *EXTRA File               2096        langaru.dat
+          *EXTRA File               2146        langbul.dat
+          *EXTRA File               2106        langchn.dat
+          *EXTRA File               2138        langchneng.dat
+          *EXTRA File               2110        langcht.dat
+          *EXTRA File               2142        langcze.dat
+          *EXTRA File               2138        langdan.dat
+          *EXTRA File               2148        langdut.dat
+          *EXTRA File               2174        langeng.dat
+          *EXTRA File               2138        langfin.dat
+          *EXTRA File               2116        langfrc.dat
+          *EXTRA File               2162        langfre.dat
+          *EXTRA File               2142        langger.dat
+          *EXTRA File               2098        langhrv.dat
+          *EXTRA File               2140        langhun.dat
+          *EXTRA File               2114        langind.dat
+          *EXTRA File               2144        langita.dat
+          *EXTRA File               2132        langjpn.dat
+          *EXTRA File               2104        langkor.dat
+          *EXTRA File               2138        langnor.dat
+          *EXTRA File               2140        langpol.dat
+          *EXTRA File               2168        langpor.dat
+          *EXTRA File               2122        langptb.dat
+          *EXTRA File               2140        langrom.dat
+          *EXTRA File               2096        langrus.dat
+          *EXTRA File               2146        langslv.dat
+          *EXTRA File               2142        langspa.dat
+          *EXTRA File               2094        langsrl.dat
+          *EXTRA File               2146        langsvk.dat
+          *EXTRA File               2142        langswe.dat
+          *EXTRA File               2088        langtha.dat
+          *EXTRA File               2094        langtrk.dat
+          *EXTRA File               2102        langukr.dat
+          *EXTRA File               2126        langusa.dat
+          *EXTRA File               2102        langvit.dat
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\license\
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\license\bul\
+          *EXTRA File              18789        license.txt
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\license\chn\
+          *EXTRA File               8802        license.txt
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\license\cht\
+          *EXTRA File               8602        license.txt
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\license\cze\
+          *EXTRA File              11433        license.txt
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\license\dan\
+          *EXTRA File              10298        license.txt
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\license\dut\
+          *EXTRA File              11093        license.txt
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\license\eng\
+          *EXTRA File              10004        license.txt
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\license\fin\
+          *EXTRA File              10504        license.txt
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\license\frc\
+          *EXTRA File              11493        license.txt
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\license\fre\
+          *EXTRA File              11382        license.txt
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\license\ger\
+          *EXTRA File              15340        license.txt
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\license\hrv\
+          *EXTRA File              10381        license.txt
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\license\hun\
+          *EXTRA File              10934        license.txt
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\license\ind\
+          *EXTRA File              11197        license.txt
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\license\ita\
+          *EXTRA File              11577        license.txt
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\license\jpn\
+          *EXTRA File              11721        license.txt
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\license\kor\
+          *EXTRA File              11761        license.txt
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\license\nor\
+          *EXTRA File              10289        license.txt
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\license\pol\
+          *EXTRA File              11907        license.txt
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\license\por\
+          *EXTRA File              10965        license.txt
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\license\ptb\
+          *EXTRA File              10619        license.txt
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\license\rom\
+          *EXTRA File              12410        license.txt
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\license\rus\
+          *EXTRA File              21375        license.txt
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\license\slv\
+          *EXTRA File              11533        license.txt
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\license\spa\
+          *EXTRA File              10408        license.txt
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\license\svk\
+          *EXTRA File              12049        license.txt
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\license\swe\
+          *EXTRA File              11204        license.txt
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\license\tha\
+          *EXTRA File              26935        license.txt
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\license\trk\
+          *EXTRA File              12286        license.txt
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Lot4\
+          *EXTRA File               4464        ErP_Lot4VA_Bul.rtf
+          *EXTRA File               1677        ErP_Lot4VA_Cze.rtf
+          *EXTRA File               1385        ErP_Lot4VA_Dan.rtf
+          *EXTRA File               1465        ErP_Lot4VA_Dut.rtf
+          *EXTRA File               1291        ErP_Lot4VA_Eng.rtf
+          *EXTRA File               1580        ErP_Lot4VA_Fin.rtf
+          *EXTRA File               1851        ErP_Lot4VA_Fre.rtf
+          *EXTRA File               1597        ErP_Lot4VA_Ger.rtf
+          *EXTRA File               2070        ErP_Lot4VA_Hun.rtf
+          *EXTRA File               1587        ErP_Lot4VA_Ita.rtf
+          *EXTRA File               1559        ErP_Lot4VA_Nor.rtf
+          *EXTRA File               1690        ErP_Lot4VA_Pol.rtf
+          *EXTRA File               1543        ErP_Lot4VA_Por.rtf
+          *EXTRA File               1771        ErP_Lot4VA_Rom.rtf
+          *EXTRA File               1450        ErP_Lot4VA_Slv.rtf
+          *EXTRA File               1554        ErP_Lot4VA_Spa.rtf
+          *EXTRA File               1873        ErP_Lot4VA_Svk.rtf
+          *EXTRA File               1603        ErP_Lot4VA_Swe.rtf
+          *EXTRA File               1291        ErP_Lot4VA_Usa.rtf
+          *EXTRA File                162        ~$P_Lot4VA_Eng.rtf
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\model\
+          *EXTRA File               3202        model001.dat
+          *EXTRA File               3158        model002.dat
+          *EXTRA File               3158        model003.dat
+          *EXTRA File               3178        model004.dat
+          *EXTRA File               3210        model005.dat
+          *EXTRA File               3168        model006.dat
+          *EXTRA File               3210        model007.dat
+          *EXTRA File               3178        model008.dat
+          *EXTRA File               3210        model009.dat
+          *EXTRA File               3178        model010.dat
+          *EXTRA File               3210        model011.dat
+          *EXTRA File               3210        model012.dat
+          *EXTRA File               3210        model013.dat
+          *EXTRA File               3178        model014.dat
+          *EXTRA File               3210        model015.dat
+          *EXTRA File               3168        model016.dat
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Msi\
+          *EXTRA File             290816        AppLogLib.msi
+          *EXTRA File              9.5 m        brium15a.msi
+          *EXTRA File             999424        BrLauncher.msi
+          *EXTRA File             405504        BrLogRx.msi
+          *EXTRA File             18.5 m        brohl15a.msi
+          *EXTRA File             217088        BrParSys32.msi
+          *EXTRA File             221184        BrParSys64.msi
+          *EXTRA File              6.6 m        brphl15a.msi
+          *EXTRA File              1.5 m        BrSupportTools.msi
+          *EXTRA File              1.3 m        NetworkRepairTool.msi
+          *EXTRA File              6.0 m        StatusMonitor.msi
+          *EXTRA File              2.0 m        UsbRepairTool.msi
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\MsiUpdate\
+          *EXTRA File              2.4 m        WindowsInstaller-KB893803-v2-x86.exe
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\series\
+          *EXTRA File               1840        series001.dat
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\SupportModules\
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\SupportModules\BrPar\
+          *EXTRA File             131072        BRUNINST.dll
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\SupportModules\ChgFscEx\
+          *EXTRA File              65536        ChgFscEx.dll
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\SupportModules\DevConnect\
+          *EXTRA File                453        agentoid.dat
+          *EXTRA File              1.6 m        DevConnectSNMP.dll
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\SupportModules\OJLauncher\
+          *EXTRA File              2.7 m        OmniJoinTrial.exe
+          *EXTRA File              58610        Resource.dat
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\SupportModules\Stsmon\
+          *EXTRA File             319488        BrLaunchSmUserMode.exe
+          *EXTRA File                507        BrStsModel_M15AP.ini
+          *EXTRA File              1.5 m        SetStMonReg.dll
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\WIC\
+          *EXTRA File              1.8 m        wic_x64_enu.exe
+          *EXTRA File              1.1 m        wic_x86_enu.exe
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\
+          *EXTRA File              95232        Brchkinsdrv.dll
+          *EXTRA File             108544        BrmfPrint.dll
+          *EXTRA File             116224        BrRemPnP.dll
+          *EXTRA File              94720        BrUsbPrnIO.dll
+          *EXTRA File             102400        brwlankey.exe
+          *EXTRA File             132096        BrWPrWiz.exe
+          *EXTRA File               3363        BrWPrWiz.ini
+          *EXTRA File              50688        BrWpwBul.dll
+          *EXTRA File              43008        BrWpwChn.dll
+          *EXTRA File              43008        BrWpwCht.dll
+          *EXTRA File              50176        BrWpwCze.dll
+          *EXTRA File              49664        BrWpwDan.dll
+          *EXTRA File              50688        BrWpwDut.dll
+          *EXTRA File              49664        BrWpwEng.dll
+          *EXTRA File              48640        BrWpwFin.dll
+          *EXTRA File              51200        BrWpwFrc.dll
+          *EXTRA File              51200        BrWpwFre.dll
+          *EXTRA File              51200        BrWpwGer.dll
+          *EXTRA File              49664        BrWpwHrv.dll
+          *EXTRA File              50688        BrWpwHun.dll
+          *EXTRA File             794624        BrWpwImg.dll
+          *EXTRA File              50176        BrWpwInd.dll
+          *EXTRA File              51200        BrWpwIta.dll
+          *EXTRA File              45056        BrWpwJpn.dll
+          *EXTRA File              44544        BrWpwKor.dll
+          *EXTRA File              49152        BrWpwNor.dll
+          *EXTRA File              50688        BrWpwPol.dll
+          *EXTRA File              50688        BrWpwPor.dll
+          *EXTRA File              50176        BrWpwPtb.dll
+          *EXTRA File              51200        BrWpwRom.dll
+          *EXTRA File              50176        BrWpwRus.dll
+          *EXTRA File              49152        BrWpwSlv.dll
+          *EXTRA File              51200        BrWpwSpa.dll
+          *EXTRA File              50176        BrWpwSvk.dll
+          *EXTRA File              49664        BrWpwSwe.dll
+          *EXTRA File              48128        BrWpwtai.dll
+          *EXTRA File              50176        BrWpwTrk.dll
+          *EXTRA File              71168        THoop.dll
+          *EXTRA File              1.8 m        uwdsw.exe
+          *EXTRA File              1.6 m        WirelessAPChecker.exe
+          *EXTRA File              1.5 m        WirelessSetupChecker.exe
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\aru\
+          *EXTRA File                 97        basic.css
+          *EXTRA File                207        copy.html
+          *EXTRA File               7213        eng.txt
+          *EXTRA File               6745        glossary.html
+          *EXTRA File               5297        help_authentication.html
+          *EXTRA File               2043        help_automatic_step.html
+          *EXTRA File               2527        help_available_networks.html
+          *EXTRA File               3344        help_certificate.html
+          *EXTRA File               1660        help_howto_networkkey.html
+          *EXTRA File               1635        help_howto_ssid.html
+          *EXTRA File               1935        help_ip_configuration.html
+          *EXTRA File               1444        help_leap_authentication.html
+          *EXTRA File               1966        help_network_key.html
+          *EXTRA File               1766        help_network_name.html
+          *EXTRA File               1639        help_settings_confirmation.html
+          *EXTRA File               1416        top_bar.html
+          *EXTRA File              10681        troubleshooting.html
+          *EXTRA File                739        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\aru\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\bul\
+          *EXTRA File                 97        basic.css
+          *EXTRA File              14941        bul
+          *EXTRA File               7512        bul.txt
+          *EXTRA File                207        copy.html
+          *EXTRA File              10420        glossary.html
+          *EXTRA File               8701        help_authentication.html
+          *EXTRA File               2168        help_automatic_step.html
+          *EXTRA File               2291        help_available_devices.html
+          *EXTRA File               3361        help_available_networks.html
+          *EXTRA File               4665        help_certificate.html
+          *EXTRA File               2039        help_howto_networkkey.html
+          *EXTRA File               1962        help_howto_ssid.html
+          *EXTRA File               2620        help_ip_configuration.html
+          *EXTRA File               1660        help_leap_authentication.html
+          *EXTRA File               2700        help_network_key.html
+          *EXTRA File               2121        help_network_name.html
+          *EXTRA File               2014        help_settings_confirmation.html
+          *EXTRA File               1485        top_bar.html
+          *EXTRA File              14947        troubleshooting.html
+          *EXTRA File                739        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\bul\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\chn\
+          *EXTRA File                 97        basic.css
+          *EXTRA File               5157        chn.txt
+          *EXTRA File                207        copy.html
+          *EXTRA File               5966        glossary.html
+          *EXTRA File               4716        help_authentication.html
+          *EXTRA File               1708        help_automatic_step.html
+          *EXTRA File               2340        help_available_networks.html
+          *EXTRA File               2982        help_certificate.html
+          *EXTRA File               1590        help_howto_networkkey.html
+          *EXTRA File               1576        help_howto_ssid.html
+          *EXTRA File               1837        help_ip_configuration.html
+          *EXTRA File               1396        help_leap_authentication.html
+          *EXTRA File               1949        help_network_key.html
+          *EXTRA File               1724        help_network_name.html
+          *EXTRA File               1550        help_settings_confirmation.html
+          *EXTRA File               1413        top_bar.html
+          *EXTRA File               9643        troubleshooting.html
+          *EXTRA File                737        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\chn\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\chneng\
+          *EXTRA File                 97        basic.css
+          *EXTRA File                207        copy.html
+          *EXTRA File               7213        eng.txt
+          *EXTRA File               6745        glossary.html
+          *EXTRA File               5297        help_authentication.html
+          *EXTRA File               2043        help_automatic_step.html
+          *EXTRA File               2527        help_available_networks.html
+          *EXTRA File               3344        help_certificate.html
+          *EXTRA File               1660        help_howto_networkkey.html
+          *EXTRA File               1635        help_howto_ssid.html
+          *EXTRA File               1935        help_ip_configuration.html
+          *EXTRA File               1444        help_leap_authentication.html
+          *EXTRA File               1966        help_network_key.html
+          *EXTRA File               1766        help_network_name.html
+          *EXTRA File               1639        help_settings_confirmation.html
+          *EXTRA File               1416        top_bar.html
+          *EXTRA File              10681        troubleshooting.html
+          *EXTRA File                739        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\chneng\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\cht\
+          *EXTRA File                 97        basic.css
+          *EXTRA File               5167        cht.txt
+          *EXTRA File                207        copy.html
+          *EXTRA File               5980        glossary.html
+          *EXTRA File               4692        help_authentication.html
+          *EXTRA File               1711        help_automatic_step.html
+          *EXTRA File               2358        help_available_networks.html
+          *EXTRA File               2975        help_certificate.html
+          *EXTRA File               1560        help_howto_networkkey.html
+          *EXTRA File               1550        help_howto_ssid.html
+          *EXTRA File               1864        help_ip_configuration.html
+          *EXTRA File               1405        help_leap_authentication.html
+          *EXTRA File               1987        help_network_key.html
+          *EXTRA File               1716        help_network_name.html
+          *EXTRA File               1556        help_settings_confirmation.html
+          *EXTRA File               1413        top_bar.html
+          *EXTRA File               9687        troubleshooting.html
+          *EXTRA File                743        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\cht\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\cze\
+          *EXTRA File                 97        basic.css
+          *EXTRA File                207        copy.html
+          *EXTRA File               7181        cze.txt
+          *EXTRA File               7258        glossary.html
+          *EXTRA File               5585        help_authentication.html
+          *EXTRA File               2141        help_automatic_step.html
+          *EXTRA File               2641        help_available_networks.html
+          *EXTRA File               3415        help_certificate.html
+          *EXTRA File               1664        help_howto_networkkey.html
+          *EXTRA File               1600        help_howto_ssid.html
+          *EXTRA File               1938        help_ip_configuration.html
+          *EXTRA File               1447        help_leap_authentication.html
+          *EXTRA File               2203        help_network_key.html
+          *EXTRA File               1798        help_network_name.html
+          *EXTRA File               1712        help_settings_confirmation.html
+          *EXTRA File               1411        top_bar.html
+          *EXTRA File              11196        troubleshooting.html
+          *EXTRA File                739        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\cze\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\dan\
+          *EXTRA File                 97        basic.css
+          *EXTRA File                207        copy.html
+          *EXTRA File               7379        dan.txt
+          *EXTRA File               6865        glossary.html
+          *EXTRA File               5388        help_authentication.html
+          *EXTRA File               2131        help_automatic_step.html
+          *EXTRA File               2549        help_available_networks.html
+          *EXTRA File               3320        help_certificate.html
+          *EXTRA File               1630        help_howto_networkkey.html
+          *EXTRA File               1587        help_howto_ssid.html
+          *EXTRA File               1984        help_ip_configuration.html
+          *EXTRA File               1459        help_leap_authentication.html
+          *EXTRA File               2012        help_network_key.html
+          *EXTRA File               1816        help_network_name.html
+          *EXTRA File               1679        help_settings_confirmation.html
+          *EXTRA File               1411        top_bar.html
+          *EXTRA File              11017        troubleshooting.html
+          *EXTRA File                737        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\dan\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\dut\
+          *EXTRA File                 97        basic.css
+          *EXTRA File                207        copy.html
+          *EXTRA File               7719        dut.txt
+          *EXTRA File               6946        glossary.html
+          *EXTRA File               5653        help_authentication.html
+          *EXTRA File               2164        help_automatic_step.html
+          *EXTRA File               2538        help_available_networks.html
+          *EXTRA File               3449        help_certificate.html
+          *EXTRA File               1639        help_howto_networkkey.html
+          *EXTRA File               1596        help_howto_ssid.html
+          *EXTRA File               2015        help_ip_configuration.html
+          *EXTRA File               1492        help_leap_authentication.html
+          *EXTRA File               2090        help_network_key.html
+          *EXTRA File               1721        help_network_name.html
+          *EXTRA File               1692        help_settings_confirmation.html
+          *EXTRA File               1434        top_bar.html
+          *EXTRA File              11271        troubleshooting.html
+          *EXTRA File                737        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\dut\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\eng\
+          *EXTRA File                 97        basic.css
+          *EXTRA File                207        copy.html
+          *EXTRA File               7213        eng.txt
+          *EXTRA File               6745        glossary.html
+          *EXTRA File               5297        help_authentication.html
+          *EXTRA File               2043        help_automatic_step.html
+          *EXTRA File               2527        help_available_networks.html
+          *EXTRA File               3344        help_certificate.html
+          *EXTRA File               1660        help_howto_networkkey.html
+          *EXTRA File               1635        help_howto_ssid.html
+          *EXTRA File               1935        help_ip_configuration.html
+          *EXTRA File               1444        help_leap_authentication.html
+          *EXTRA File               1966        help_network_key.html
+          *EXTRA File               1766        help_network_name.html
+          *EXTRA File               1639        help_settings_confirmation.html
+          *EXTRA File               1416        top_bar.html
+          *EXTRA File              10681        troubleshooting.html
+          *EXTRA File                739        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\eng\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\fin\
+          *EXTRA File                 97        basic.css
+          *EXTRA File                207        copy.html
+          *EXTRA File               7119        fin.txt
+          *EXTRA File               6759        glossary.html
+          *EXTRA File               5452        help_authentication.html
+          *EXTRA File               1984        help_automatic_step.html
+          *EXTRA File               2492        help_available_networks.html
+          *EXTRA File               3404        help_certificate.html
+          *EXTRA File               1622        help_howto_networkkey.html
+          *EXTRA File               1616        help_howto_ssid.html
+          *EXTRA File               1933        help_ip_configuration.html
+          *EXTRA File               1461        help_leap_authentication.html
+          *EXTRA File               2113        help_network_key.html
+          *EXTRA File               1714        help_network_name.html
+          *EXTRA File               1636        help_settings_confirmation.html
+          *EXTRA File               1411        top_bar.html
+          *EXTRA File              10339        troubleshooting.html
+          *EXTRA File                737        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\fin\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\frc\
+          *EXTRA File                 97        basic.css
+          *EXTRA File                207        copy.html
+          *EXTRA File               7937        frc.txt
+          *EXTRA File               7371        glossary.html
+          *EXTRA File               6027        help_authentication.html
+          *EXTRA File               2207        help_automatic_step.html
+          *EXTRA File               2681        help_available_networks.html
+          *EXTRA File               3736        help_certificate.html
+          *EXTRA File               1752        help_howto_networkkey.html
+          *EXTRA File               1740        help_howto_ssid.html
+          *EXTRA File               2085        help_ip_configuration.html
+          *EXTRA File               1537        help_leap_authentication.html
+          *EXTRA File               2124        help_network_key.html
+          *EXTRA File               1809        help_network_name.html
+          *EXTRA File               1711        help_settings_confirmation.html
+          *EXTRA File               1423        top_bar.html
+          *EXTRA File              11605        troubleshooting.html
+          *EXTRA File                739        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\frc\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\fre\
+          *EXTRA File                 97        basic.css
+          *EXTRA File                207        copy.html
+          *EXTRA File               8037        fre.txt
+          *EXTRA File               7394        glossary.html
+          *EXTRA File               6046        help_authentication.html
+          *EXTRA File               2227        help_automatic_step.html
+          *EXTRA File               2601        help_available_networks.html
+          *EXTRA File               3736        help_certificate.html
+          *EXTRA File               1752        help_howto_networkkey.html
+          *EXTRA File               1740        help_howto_ssid.html
+          *EXTRA File               2114        help_ip_configuration.html
+          *EXTRA File               1537        help_leap_authentication.html
+          *EXTRA File               2118        help_network_key.html
+          *EXTRA File               1816        help_network_name.html
+          *EXTRA File               1683        help_settings_confirmation.html
+          *EXTRA File               1425        top_bar.html
+          *EXTRA File              11669        troubleshooting.html
+          *EXTRA File                737        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\fre\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\ger\
+          *EXTRA File                 97        basic.css
+          *EXTRA File                207        copy.html
+          *EXTRA File               8294        ger.txt
+          *EXTRA File               7083        glossary.html
+          *EXTRA File               5906        help_authentication.html
+          *EXTRA File               2134        help_automatic_step.html
+          *EXTRA File               2745        help_available_networks.html
+          *EXTRA File               3611        help_certificate.html
+          *EXTRA File               1744        help_howto_networkkey.html
+          *EXTRA File               1673        help_howto_ssid.html
+          *EXTRA File               2083        help_ip_configuration.html
+          *EXTRA File               1476        help_leap_authentication.html
+          *EXTRA File               2115        help_network_key.html
+          *EXTRA File               1823        help_network_name.html
+          *EXTRA File               1726        help_settings_confirmation.html
+          *EXTRA File               1413        top_bar.html
+          *EXTRA File              11201        troubleshooting.html
+          *EXTRA File                737        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\ger\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\hrv\
+          *EXTRA File                 97        basic.css
+          *EXTRA File                207        copy.html
+          *EXTRA File               6873        glossary.html
+          *EXTRA File               5557        help_authentication.html
+          *EXTRA File               2082        help_automatic_step.html
+          *EXTRA File               2505        help_available_networks.html
+          *EXTRA File               3407        help_certificate.html
+          *EXTRA File               1704        help_howto_networkkey.html
+          *EXTRA File               1665        help_howto_ssid.html
+          *EXTRA File               1929        help_ip_configuration.html
+          *EXTRA File               1449        help_leap_authentication.html
+          *EXTRA File               2098        help_network_key.html
+          *EXTRA File               1716        help_network_name.html
+          *EXTRA File               1639        help_settings_confirmation.html
+          *EXTRA File               7219        hrv.txt
+          *EXTRA File               1420        top_bar.html
+          *EXTRA File              10634        troubleshooting.html
+          *EXTRA File                739        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\hrv\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\hun\
+          *EXTRA File                 97        basic.css
+          *EXTRA File                207        copy.html
+          *EXTRA File               7841        glossary.html
+          *EXTRA File               6003        help_authentication.html
+          *EXTRA File               2195        help_automatic_step.html
+          *EXTRA File               2752        help_available_networks.html
+          *EXTRA File               3576        help_certificate.html
+          *EXTRA File               1745        help_howto_networkkey.html
+          *EXTRA File               1674        help_howto_ssid.html
+          *EXTRA File               2024        help_ip_configuration.html
+          *EXTRA File               1495        help_leap_authentication.html
+          *EXTRA File               2227        help_network_key.html
+          *EXTRA File               1882        help_network_name.html
+          *EXTRA File               1750        help_settings_confirmation.html
+          *EXTRA File               7632        hun.txt
+          *EXTRA File               1416        top_bar.html
+          *EXTRA File              11472        troubleshooting.html
+          *EXTRA File                739        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\hun\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\ind\
+          *EXTRA File                 97        basic.css
+          *EXTRA File                207        copy.html
+          *EXTRA File               7030        glossary.html
+          *EXTRA File               5415        help_authentication.html
+          *EXTRA File               2144        help_automatic_step.html
+          *EXTRA File               2618        help_available_networks.html
+          *EXTRA File               3437        help_certificate.html
+          *EXTRA File               1675        help_howto_networkkey.html
+          *EXTRA File               1638        help_howto_ssid.html
+          *EXTRA File               1986        help_ip_configuration.html
+          *EXTRA File               1452        help_leap_authentication.html
+          *EXTRA File               2084        help_network_key.html
+          *EXTRA File               1775        help_network_name.html
+          *EXTRA File               1632        help_settings_confirmation.html
+          *EXTRA File               7418        ind.txt
+          *EXTRA File               1414        top_bar.html
+          *EXTRA File              10842        troubleshooting.html
+          *EXTRA File                739        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\ind\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\ita\
+          *EXTRA File                 97        basic.css
+          *EXTRA File                207        copy.html
+          *EXTRA File               7078        glossary.html
+          *EXTRA File               5843        help_authentication.html
+          *EXTRA File               2191        help_automatic_step.html
+          *EXTRA File               2545        help_available_networks.html
+          *EXTRA File               3508        help_certificate.html
+          *EXTRA File               1682        help_howto_networkkey.html
+          *EXTRA File               1652        help_howto_ssid.html
+          *EXTRA File               2032        help_ip_configuration.html
+          *EXTRA File               1466        help_leap_authentication.html
+          *EXTRA File               2061        help_network_key.html
+          *EXTRA File               1801        help_network_name.html
+          *EXTRA File               1692        help_settings_confirmation.html
+          *EXTRA File               7718        ita.txt
+          *EXTRA File               1425        top_bar.html
+          *EXTRA File              11378        troubleshooting.html
+          *EXTRA File                737        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\ita\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\jpn\
+          *EXTRA File                 97        basic.css
+          *EXTRA File                207        copy.html
+          *EXTRA File              10471        glossary.html
+          *EXTRA File               6079        help_authentication.html
+          *EXTRA File               1779        help_automatic_step.html
+          *EXTRA File               2702        help_available_networks.html
+          *EXTRA File               3658        help_certificate.html
+          *EXTRA File               1803        help_howto_networkkey.html
+          *EXTRA File               1747        help_howto_ssid.html
+          *EXTRA File               2300        help_ip_configuration.html
+          *EXTRA File               1513        help_leap_authentication.html
+          *EXTRA File               2198        help_network_key.html
+          *EXTRA File               1936        help_network_name.html
+          *EXTRA File               1583        help_settings_confirmation.html
+          *EXTRA File               6441        jpn.txt
+          *EXTRA File               1439        top_bar.html
+          *EXTRA File              12283        troubleshooting.html
+          *EXTRA File                759        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\jpn\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\jpneng\
+          *EXTRA File                 97        basic.css
+          *EXTRA File                207        copy.html
+          *EXTRA File               7213        eng.txt
+          *EXTRA File               6745        glossary.html
+          *EXTRA File               5297        help_authentication.html
+          *EXTRA File               2043        help_automatic_step.html
+          *EXTRA File               2527        help_available_networks.html
+          *EXTRA File               3344        help_certificate.html
+          *EXTRA File               1660        help_howto_networkkey.html
+          *EXTRA File               1635        help_howto_ssid.html
+          *EXTRA File               1935        help_ip_configuration.html
+          *EXTRA File               1444        help_leap_authentication.html
+          *EXTRA File               1966        help_network_key.html
+          *EXTRA File               1766        help_network_name.html
+          *EXTRA File               1639        help_settings_confirmation.html
+          *EXTRA File               1416        top_bar.html
+          *EXTRA File              10681        troubleshooting.html
+          *EXTRA File                739        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\jpneng\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\kor\
+          *EXTRA File                 97        basic.css
+          *EXTRA File                207        copy.html
+          *EXTRA File               7366        glossary.html
+          *EXTRA File               5521        help_authentication.html
+          *EXTRA File               1864        help_automatic_step.html
+          *EXTRA File               2597        help_available_networks.html
+          *EXTRA File               3261        help_certificate.html
+          *EXTRA File               1675        help_howto_networkkey.html
+          *EXTRA File               1643        help_howto_ssid.html
+          *EXTRA File               2042        help_ip_configuration.html
+          *EXTRA File               1463        help_leap_authentication.html
+          *EXTRA File               2080        help_network_key.html
+          *EXTRA File               1807        help_network_name.html
+          *EXTRA File               1636        help_settings_confirmation.html
+          *EXTRA File               6236        kor.txt
+          *EXTRA File               1411        top_bar.html
+          *EXTRA File              11206        troubleshooting.html
+          *EXTRA File                735        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\kor\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File              20992        Thumbs.db
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\nor\
+          *EXTRA File                 97        basic.css
+          *EXTRA File                207        copy.html
+          *EXTRA File               6815        glossary.html
+          *EXTRA File               5592        help_authentication.html
+          *EXTRA File               2120        help_automatic_step.html
+          *EXTRA File               2493        help_available_networks.html
+          *EXTRA File               3337        help_certificate.html
+          *EXTRA File               1700        help_howto_networkkey.html
+          *EXTRA File               1650        help_howto_ssid.html
+          *EXTRA File               1986        help_ip_configuration.html
+          *EXTRA File               1475        help_leap_authentication.html
+          *EXTRA File               2069        help_network_key.html
+          *EXTRA File               1771        help_network_name.html
+          *EXTRA File               1671        help_settings_confirmation.html
+          *EXTRA File               7466        nor.txt
+          *EXTRA File               1411        top_bar.html
+          *EXTRA File              10952        troubleshooting.html
+          *EXTRA File                737        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\nor\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\pol\
+          *EXTRA File                 97        basic.css
+          *EXTRA File                207        copy.html
+          *EXTRA File               7318        glossary.html
+          *EXTRA File               5729        help_authentication.html
+          *EXTRA File               2168        help_automatic_step.html
+          *EXTRA File               2621        help_available_networks.html
+          *EXTRA File               3440        help_certificate.html
+          *EXTRA File               1714        help_howto_networkkey.html
+          *EXTRA File               1705        help_howto_ssid.html
+          *EXTRA File               2017        help_ip_configuration.html
+          *EXTRA File               1467        help_leap_authentication.html
+          *EXTRA File               2127        help_network_key.html
+          *EXTRA File               1782        help_network_name.html
+          *EXTRA File               1649        help_settings_confirmation.html
+          *EXTRA File               7771        pol.txt
+          *EXTRA File               1425        top_bar.html
+          *EXTRA File              11249        troubleshooting.html
+          *EXTRA File                739        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\pol\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\por\
+          *EXTRA File                 97        basic.css
+          *EXTRA File                207        copy.html
+          *EXTRA File               7172        glossary.html
+          *EXTRA File               5748        help_authentication.html
+          *EXTRA File               2097        help_automatic_step.html
+          *EXTRA File               2461        help_available_networks.html
+          *EXTRA File               3533        help_certificate.html
+          *EXTRA File               1698        help_howto_networkkey.html
+          *EXTRA File               1651        help_howto_ssid.html
+          *EXTRA File               2060        help_ip_configuration.html
+          *EXTRA File               1500        help_leap_authentication.html
+          *EXTRA File               2122        help_network_key.html
+          *EXTRA File               1762        help_network_name.html
+          *EXTRA File               1719        help_settings_confirmation.html
+          *EXTRA File               7747        por.txt
+          *EXTRA File               1426        top_bar.html
+          *EXTRA File              11177        troubleshooting.html
+          *EXTRA File                739        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\por\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\ptb\
+          *EXTRA File                 97        basic.css
+          *EXTRA File                207        copy.html
+          *EXTRA File               7463        glossary.html
+          *EXTRA File               5735        help_authentication.html
+          *EXTRA File               2151        help_automatic_step.html
+          *EXTRA File               2554        help_available_networks.html
+          *EXTRA File               3451        help_certificate.html
+          *EXTRA File               1759        help_howto_networkkey.html
+          *EXTRA File               1800        help_howto_ssid.html
+          *EXTRA File               2069        help_ip_configuration.html
+          *EXTRA File               1467        help_leap_authentication.html
+          *EXTRA File               2097        help_network_key.html
+          *EXTRA File               1807        help_network_name.html
+          *EXTRA File               1721        help_settings_confirmation.html
+          *EXTRA File               7770        ptb.txt
+          *EXTRA File               1424        top_bar.html
+          *EXTRA File              11019        troubleshooting.html
+          *EXTRA File                739        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\ptb\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\rom\
+          *EXTRA File                 97        basic.css
+          *EXTRA File                207        copy.html
+          *EXTRA File               7942        glossary.html
+          *EXTRA File               5805        help_authentication.html
+          *EXTRA File               2193        help_automatic_step.html
+          *EXTRA File               2677        help_available_networks.html
+          *EXTRA File               3630        help_certificate.html
+          *EXTRA File               1756        help_howto_networkkey.html
+          *EXTRA File               1747        help_howto_ssid.html
+          *EXTRA File               2082        help_ip_configuration.html
+          *EXTRA File               1483        help_leap_authentication.html
+          *EXTRA File               2247        help_network_key.html
+          *EXTRA File               1839        help_network_name.html
+          *EXTRA File               1692        help_settings_confirmation.html
+          *EXTRA File               7839        rom.txt
+          *EXTRA File               1407        top_bar.html
+          *EXTRA File              11488        troubleshooting.html
+          *EXTRA File                739        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\rom\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\rus\
+          *EXTRA File                 97        basic.css
+          *EXTRA File                207        copy.html
+          *EXTRA File              10686        glossary.html
+          *EXTRA File               8870        help_authentication.html
+          *EXTRA File               2182        help_automatic_step.html
+          *EXTRA File               3306        help_available_networks.html
+          *EXTRA File               4608        help_certificate.html
+          *EXTRA File               1993        help_howto_networkkey.html
+          *EXTRA File               1990        help_howto_ssid.html
+          *EXTRA File               2665        help_ip_configuration.html
+          *EXTRA File               1698        help_leap_authentication.html
+          *EXTRA File               2581        help_network_key.html
+          *EXTRA File               2214        help_network_name.html
+          *EXTRA File               2102        help_settings_confirmation.html
+          *EXTRA File               7584        rus.txt
+          *EXTRA File               1485        top_bar.html
+          *EXTRA File              15306        troubleshooting.html
+          *EXTRA File                739        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\rus\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\slv\
+          *EXTRA File                 97        basic.css
+          *EXTRA File                207        copy.html
+          *EXTRA File               6841        glossary.html
+          *EXTRA File               5439        help_authentication.html
+          *EXTRA File               2099        help_automatic_step.html
+          *EXTRA File               2460        help_available_networks.html
+          *EXTRA File               3260        help_certificate.html
+          *EXTRA File               1627        help_howto_networkkey.html
+          *EXTRA File               1605        help_howto_ssid.html
+          *EXTRA File               1917        help_ip_configuration.html
+          *EXTRA File               1476        help_leap_authentication.html
+          *EXTRA File               2124        help_network_key.html
+          *EXTRA File               1740        help_network_name.html
+          *EXTRA File               1657        help_settings_confirmation.html
+          *EXTRA File               7396        slv.txt
+          *EXTRA File               1417        top_bar.html
+          *EXTRA File              10428        troubleshooting.html
+          *EXTRA File                739        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\slv\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\spa\
+          *EXTRA File                 97        basic.css
+          *EXTRA File                207        copy.html
+          *EXTRA File               7315        glossary.html
+          *EXTRA File               5905        help_authentication.html
+          *EXTRA File               2229        help_automatic_step.html
+          *EXTRA File               2523        help_available_networks.html
+          *EXTRA File               3517        help_certificate.html
+          *EXTRA File               1724        help_howto_networkkey.html
+          *EXTRA File               1696        help_howto_ssid.html
+          *EXTRA File               2072        help_ip_configuration.html
+          *EXTRA File               1457        help_leap_authentication.html
+          *EXTRA File               2054        help_network_key.html
+          *EXTRA File               1819        help_network_name.html
+          *EXTRA File               1715        help_settings_confirmation.html
+          *EXTRA File               7877        spa.txt
+          *EXTRA File               1440        top_bar.html
+          *EXTRA File              11436        troubleshooting.html
+          *EXTRA File                739        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\spa\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\srl\
+          *EXTRA File                 97        basic.css
+          *EXTRA File                207        copy.html
+          *EXTRA File               7213        eng.txt
+          *EXTRA File               6745        glossary.html
+          *EXTRA File               5297        help_authentication.html
+          *EXTRA File               2043        help_automatic_step.html
+          *EXTRA File               2527        help_available_networks.html
+          *EXTRA File               3344        help_certificate.html
+          *EXTRA File               1660        help_howto_networkkey.html
+          *EXTRA File               1635        help_howto_ssid.html
+          *EXTRA File               1935        help_ip_configuration.html
+          *EXTRA File               1444        help_leap_authentication.html
+          *EXTRA File               1966        help_network_key.html
+          *EXTRA File               1766        help_network_name.html
+          *EXTRA File               1639        help_settings_confirmation.html
+          *EXTRA File               1416        top_bar.html
+          *EXTRA File              10681        troubleshooting.html
+          *EXTRA File                739        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\srl\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\svk\
+          *EXTRA File                 97        basic.css
+          *EXTRA File                207        copy.html
+          *EXTRA File               7476        glossary.html
+          *EXTRA File               5551        help_authentication.html
+          *EXTRA File               2144        help_automatic_step.html
+          *EXTRA File               2602        help_available_networks.html
+          *EXTRA File               3439        help_certificate.html
+          *EXTRA File               1716        help_howto_networkkey.html
+          *EXTRA File               1695        help_howto_ssid.html
+          *EXTRA File               1987        help_ip_configuration.html
+          *EXTRA File               1468        help_leap_authentication.html
+          *EXTRA File               2177        help_network_key.html
+          *EXTRA File               1757        help_network_name.html
+          *EXTRA File               1700        help_settings_confirmation.html
+          *EXTRA File               7244        svk.txt
+          *EXTRA File               1428        top_bar.html
+          *EXTRA File              11146        troubleshooting.html
+          *EXTRA File                739        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\svk\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\swe\
+          *EXTRA File                 97        basic.css
+          *EXTRA File                207        copy.html
+          *EXTRA File               6862        glossary.html
+          *EXTRA File               5432        help_authentication.html
+          *EXTRA File               2090        help_automatic_step.html
+          *EXTRA File               2496        help_available_networks.html
+          *EXTRA File               3350        help_certificate.html
+          *EXTRA File               1746        help_howto_networkkey.html
+          *EXTRA File               1678        help_howto_ssid.html
+          *EXTRA File               1991        help_ip_configuration.html
+          *EXTRA File               1462        help_leap_authentication.html
+          *EXTRA File               2033        help_network_key.html
+          *EXTRA File               1813        help_network_name.html
+          *EXTRA File               1682        help_settings_confirmation.html
+          *EXTRA File               7270        swe.txt
+          *EXTRA File               1411        top_bar.html
+          *EXTRA File              11207        troubleshooting.html
+          *EXTRA File                739        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\swe\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\tha\
+          *EXTRA File                 97        basic.css
+          *EXTRA File                207        copy.html
+          *EXTRA File              13009        glossary.html
+          *EXTRA File              10207        help_authentication.html
+          *EXTRA File               2087        help_automatic_step.html
+          *EXTRA File               3989        help_available_networks.html
+          *EXTRA File               5457        help_certificate.html
+          *EXTRA File               2324        help_howto_networkkey.html
+          *EXTRA File               2165        help_howto_ssid.html
+          *EXTRA File               3033        help_ip_configuration.html
+          *EXTRA File               1721        help_leap_authentication.html
+          *EXTRA File               2915        help_network_key.html
+          *EXTRA File               2379        help_network_name.html
+          *EXTRA File               2349        help_settings_confirmation.html
+          *EXTRA File               6838        tha.txt
+          *EXTRA File               1464        top_bar.html
+          *EXTRA File              17994        troubleshooting.html
+          *EXTRA File                757        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\tha\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\trk\
+          *EXTRA File                 97        basic.css
+          *EXTRA File                207        copy.html
+          *EXTRA File               7061        glossary.html
+          *EXTRA File               5914        help_authentication.html
+          *EXTRA File               2079        help_automatic_step.html
+          *EXTRA File               2493        help_available_networks.html
+          *EXTRA File               3464        help_certificate.html
+          *EXTRA File               1646        help_howto_networkkey.html
+          *EXTRA File               1632        help_howto_ssid.html
+          *EXTRA File               2004        help_ip_configuration.html
+          *EXTRA File               1483        help_leap_authentication.html
+          *EXTRA File               2130        help_network_key.html
+          *EXTRA File               1723        help_network_name.html
+          *EXTRA File               1691        help_settings_confirmation.html
+          *EXTRA File               1413        top_bar.html
+          *EXTRA File               7042        trk.txt
+          *EXTRA File              10730        troubleshooting.html
+          *EXTRA File                739        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\trk\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\ukr\
+          *EXTRA File                 97        basic.css
+          *EXTRA File                207        copy.html
+          *EXTRA File               7213        eng.txt
+          *EXTRA File               6745        glossary.html
+          *EXTRA File               5297        help_authentication.html
+          *EXTRA File               2043        help_automatic_step.html
+          *EXTRA File               2527        help_available_networks.html
+          *EXTRA File               3344        help_certificate.html
+          *EXTRA File               1660        help_howto_networkkey.html
+          *EXTRA File               1635        help_howto_ssid.html
+          *EXTRA File               1935        help_ip_configuration.html
+          *EXTRA File               1444        help_leap_authentication.html
+          *EXTRA File               1966        help_network_key.html
+          *EXTRA File               1766        help_network_name.html
+          *EXTRA File               1639        help_settings_confirmation.html
+          *EXTRA File               1416        top_bar.html
+          *EXTRA File              10681        troubleshooting.html
+          *EXTRA File                739        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\ukr\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\usa\
+          *EXTRA File                 97        basic.css
+          *EXTRA File                207        copy.html
+          *EXTRA File               7213        eng.txt
+          *EXTRA File               6745        glossary.html
+          *EXTRA File               5297        help_authentication.html
+          *EXTRA File               2043        help_automatic_step.html
+          *EXTRA File               2527        help_available_networks.html
+          *EXTRA File               3344        help_certificate.html
+          *EXTRA File               1660        help_howto_networkkey.html
+          *EXTRA File               1635        help_howto_ssid.html
+          *EXTRA File               1935        help_ip_configuration.html
+          *EXTRA File               1444        help_leap_authentication.html
+          *EXTRA File               1966        help_network_key.html
+          *EXTRA File               1766        help_network_name.html
+          *EXTRA File               1639        help_settings_confirmation.html
+          *EXTRA File               1416        top_bar.html
+          *EXTRA File              10681        troubleshooting.html
+          *EXTRA File                739        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\usa\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\vit\
+          *EXTRA File                 97        basic.css
+          *EXTRA File                207        copy.html
+          *EXTRA File               7213        eng.txt
+          *EXTRA File               6745        glossary.html
+          *EXTRA File               5297        help_authentication.html
+          *EXTRA File               2043        help_automatic_step.html
+          *EXTRA File               2527        help_available_networks.html
+          *EXTRA File               3344        help_certificate.html
+          *EXTRA File               1660        help_howto_networkkey.html
+          *EXTRA File               1635        help_howto_ssid.html
+          *EXTRA File               1935        help_ip_configuration.html
+          *EXTRA File               1444        help_leap_authentication.html
+          *EXTRA File               1966        help_network_key.html
+          *EXTRA File               1766        help_network_name.html
+          *EXTRA File               1639        help_settings_confirmation.html
+          *EXTRA File               1416        top_bar.html
+          *EXTRA File              10681        troubleshooting.html
+          *EXTRA File                739        wdsw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\vit\img\
+          *EXTRA File               2151        accesspoint.gif
+          *EXTRA File               2676        aosslogo.gif
+          *EXTRA File               6907        apseal.gif
+          *EXTRA File               2823        books.gif
+          *EXTRA File               4449        check.jpg
+          *EXTRA File               1942        key.gif
+          *EXTRA File               6229        wireless_bar.gif
+          *EXTRA File                 77        wireless_bar2.gif
+          *EXTRA File               4138        wpsLogo.gif
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\
+          *EXTRA File              1.5 m        BrMuSNMP.dll
+          *EXTRA File              2.3 m        waw.exe
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\aru\
+          *EXTRA File               2580        eng.txt
+          *EXTRA File                513        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\bul\
+          *EXTRA File               2931        bul.txt
+          *EXTRA File                511        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\chn\
+          *EXTRA File               1681        chn.txt
+          *EXTRA File                511        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\chneng\
+          *EXTRA File               2580        eng.txt
+          *EXTRA File                513        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\cht\
+          *EXTRA File               1724        cht.txt
+          *EXTRA File                519        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\cze\
+          *EXTRA File               2658        cze.txt
+          *EXTRA File                513        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\dan\
+          *EXTRA File               2644        dan.txt
+          *EXTRA File                513        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\dut\
+          *EXTRA File               2905        dut.txt
+          *EXTRA File                513        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\eng\
+          *EXTRA File               2580        eng.txt
+          *EXTRA File                513        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\fin\
+          *EXTRA File               2580        fin.txt
+          *EXTRA File                513        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\frc\
+          *EXTRA File               2937        frc.txt
+          *EXTRA File                513        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\fre\
+          *EXTRA File               3082        fre.txt
+          *EXTRA File                513        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\ger\
+          *EXTRA File               3056        ger.txt
+          *EXTRA File                513        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\hrv\
+          *EXTRA File               2475        hrv.txt
+          *EXTRA File                513        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\hun\
+          *EXTRA File               2932        hun.txt
+          *EXTRA File                513        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\ind\
+          *EXTRA File               2623        ind.txt
+          *EXTRA File                513        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\ita\
+          *EXTRA File               2845        ita.txt
+          *EXTRA File                513        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\jpn\
+          *EXTRA File               2119        jpn.txt
+          *EXTRA File                533        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\jpneng\
+          *EXTRA File               2580        eng.txt
+          *EXTRA File                513        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\kor\
+          *EXTRA File               2268        kor.txt
+          *EXTRA File                511        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\nor\
+          *EXTRA File               2695        nor.txt
+          *EXTRA File                513        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\pol\
+          *EXTRA File               2890        pol.txt
+          *EXTRA File                513        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\por\
+          *EXTRA File               2911        por.txt
+          *EXTRA File                513        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\ptb\
+          *EXTRA File               2714        ptb.txt
+          *EXTRA File                513        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\rom\
+          *EXTRA File               3066        rom.txt
+          *EXTRA File                513        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\rus\
+          *EXTRA File               2744        rus.txt
+          *EXTRA File                511        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\slv\
+          *EXTRA File               2714        slv.txt
+          *EXTRA File                513        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\spa\
+          *EXTRA File               2900        spa.txt
+          *EXTRA File                513        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\srl\
+          *EXTRA File               2580        eng.txt
+          *EXTRA File                513        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\svk\
+          *EXTRA File               2688        svk.txt
+          *EXTRA File                513        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\swe\
+          *EXTRA File               2673        swe.txt
+          *EXTRA File                513        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\tha\
+          *EXTRA File               2335        tha.txt
+          *EXTRA File                529        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\trk\
+          *EXTRA File               2674        trk.txt
+          *EXTRA File                513        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\ukr\
+          *EXTRA File               2580        eng.txt
+          *EXTRA File                513        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\usa\
+          *EXTRA File               2580        eng.txt
+          *EXTRA File                513        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\Wlan_wiz\wlan_assistant\vit\
+          *EXTRA File               2580        eng.txt
+          *EXTRA File                513        waw.ini
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\xmlpaper\
+          *EXTRA File                 71        bradm15a.da_
+          *EXTRA File               3024        BRPRF080.icc
+          *EXTRA File                 65        brxeh5580d.da_
+          *EXTRA File                 65        brxeh5585d.da_
+          *EXTRA File                 65        brxeh5590dn.da_
+          *EXTRA File                 65        brxeh5595dn.da_
+          *EXTRA File                 65        brxehl5000d.da_
+          *EXTRA File                 65        brxehl5100dn.da_
+          *EXTRA File                 65        brxehl5102dw.da_
+          *EXTRA File                 65        brxehl5200dw.da_
+          *EXTRA File                 65        brxehl5202dw.da_
+          *EXTRA File                 65        brxehl6200dw.da_
+          *EXTRA File                 65        brxehl6202dw.da_
+          *EXTRA File                 65        brxehl6250dn.da_
+          *EXTRA File                 65        brxehl6250dw.da_
+          *EXTRA File                 65        brxehl6300dw.da_
+          *EXTRA File                 65        brxehl6400dw.da_
+          *EXTRA File                 65        brxehl6402dw.da_
+          *EXTRA File             107935        BRXHL15A.CAT
+          *EXTRA File              17726        BRXHL15A.INF
+          *EXTRA File             113334        brxhl15a_ar-ae.ch_
+          *EXTRA File             116231        brxhl15a_bg-bg.ch_
+          *EXTRA File             110242        brxhl15a_cs-cz.ch_
+          *EXTRA File             111272        brxhl15a_da-dk.ch_
+          *EXTRA File             113594        brxhl15a_de-de.ch_
+          *EXTRA File             110368        brxhl15a_en-cn.ch_
+          *EXTRA File             107598        brxhl15a_en-gb.ch_
+          *EXTRA File             107819        brxhl15a_en-us.ch_
+          *EXTRA File             113078        brxhl15a_es-es.ch_
+          *EXTRA File             110421        brxhl15a_fi-fi.ch_
+          *EXTRA File             112580        brxhl15a_fr-ca.ch_
+          *EXTRA File             112767        brxhl15a_fr-fr.ch_
+          *EXTRA File             111852        brxhl15a_hr-hr.ch_
+          *EXTRA File             114424        brxhl15a_hu-hu.ch_
+          *EXTRA File             112022        brxhl15a_id-id.ch_
+          *EXTRA File             112411        brxhl15a_it-it.ch_
+          *EXTRA File             111361        brxhl15a_ja-jp.ch_
+          *EXTRA File             111859        brxhl15a_ko-kr.ch_
+          *EXTRA File             112905        brxhl15a_nl-nl.ch_
+          *EXTRA File             109303        brxhl15a_no-no.ch_
+          *EXTRA File             114516        brxhl15a_pl-pl.ch_
+          *EXTRA File             113054        brxhl15a_pt-br.ch_
+          *EXTRA File             112736        brxhl15a_pt-pt.ch_
+          *EXTRA File             114222        brxhl15a_ro-ro.ch_
+          *EXTRA File             116663        brxhl15a_ru-ru.ch_
+          *EXTRA File             114170        brxhl15a_sk-sk.ch_
+          *EXTRA File             111573        brxhl15a_sl-si.ch_
+          *EXTRA File             112367        brxhl15a_sr-rs.ch_
+          *EXTRA File             112040        brxhl15a_sv-se.ch_
+          *EXTRA File             115761        brxhl15a_th-th.ch_
+          *EXTRA File             113553        brxhl15a_tr-tr.ch_
+          *EXTRA File             116171        brxhl15a_uk-ua.ch_
+          *EXTRA File             110837        brxhl15a_vi-vn.ch_
+          *EXTRA File             112742        brxhl15a_zh-cn.ch_
+          *EXTRA File             113374        brxhl15a_zh-tw.ch_
+          *EXTRA File              14767        BRXM15A.DSI
+          *EXTRA File               1701        BRXSH5580D-PIPELINECONFIG.XML
+          *EXTRA File               2988        BRXSH5580D.DSI
+          *EXTRA File               1701        BRXSH5585D-PIPELINECONFIG.XML
+          *EXTRA File               2988        BRXSH5585D.DSI
+          *EXTRA File               1701        BRXSH5590DN-PIPELINECONFIG.XML
+          *EXTRA File               2950        BRXSH5590DN.DSI
+          *EXTRA File               1701        BRXSH5595DN-PIPELINECONFIG.XML
+          *EXTRA File               2987        BRXSH5595DN.DSI
+          *EXTRA File               1701        BRXSHL5000D-PIPELINECONFIG.XML
+          *EXTRA File               3008        BRXSHL5000D.DSI
+          *EXTRA File               1701        BRXSHL5100DN-PIPELINECONFIG.XML
+          *EXTRA File               2992        BRXSHL5100DN.DSI
+          *EXTRA File               1701        BRXSHL5102DW-PIPELINECONFIG.XML
+          *EXTRA File               2978        BRXSHL5102DW.DSI
+          *EXTRA File               1701        BRXSHL5200DW-PIPELINECONFIG.XML
+          *EXTRA File               2992        BRXSHL5200DW.DSI
+          *EXTRA File               1701        BRXSHL5202DW-PIPELINECONFIG.XML
+          *EXTRA File               2978        BRXSHL5202DW.DSI
+          *EXTRA File               1701        BRXSHL6200DW-PIPELINECONFIG.XML
+          *EXTRA File               3029        BRXSHL6200DW.DSI
+          *EXTRA File               1701        BRXSHL6202DW-PIPELINECONFIG.XML
+          *EXTRA File               3015        BRXSHL6202DW.DSI
+          *EXTRA File               1701        BRXSHL6250DN-PIPELINECONFIG.XML
+          *EXTRA File               3029        BRXSHL6250DN.DSI
+          *EXTRA File               1701        BRXSHL6250DW-PIPELINECONFIG.XML
+          *EXTRA File               3029        BRXSHL6250DW.DSI
+          *EXTRA File               1701        BRXSHL6300DW-PIPELINECONFIG.XML
+          *EXTRA File               2951        BRXSHL6300DW.DSI
+          *EXTRA File               1701        BRXSHL6400DW-PIPELINECONFIG.XML
+          *EXTRA File               2929        BRXSHL6400DW.DSI
+          *EXTRA File               1701        BRXSHL6402DW-PIPELINECONFIG.XML
+          *EXTRA File               2915        BRXSHL6402DW.DSI
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\xmlpaper\amd64\
+          *EXTRA File              41480        bral130.ex_
+          *EXTRA File              47695        bralb30.ex_
+          *EXTRA File              2.2 m        brbmm15a.dl_
+          *EXTRA File              29267        brcmi080.dl_
+          *EXTRA File              27118        brcmm080.dl_
+          *EXTRA File             159044        brcms080.dl_
+          *EXTRA File             137511        brdim15a.dl_
+          *EXTRA File             333434        brenm15a.dl_
+          *EXTRA File              42337        brlgm15a_ar-ae.dl_
+          *EXTRA File              47961        brlgm15a_bg-bg.dl_
+          *EXTRA File              45353        brlgm15a_cs-cz.dl_
+          *EXTRA File              43800        brlgm15a_da-dk.dl_
+          *EXTRA File              45972        brlgm15a_de-de.dl_
+          *EXTRA File              42425        brlgm15a_en-cn.dl_
+          *EXTRA File              42283        brlgm15a_en-gb.dl_
+          *EXTRA File              42426        brlgm15a_en-us.dl_
+          *EXTRA File              46442        brlgm15a_es-es.dl_
+          *EXTRA File              43885        brlgm15a_fi-fi.dl_
+          *EXTRA File              46834        brlgm15a_fr-ca.dl_
+          *EXTRA File              46762        brlgm15a_fr-fr.dl_
+          *EXTRA File              45000        brlgm15a_hr-hr.dl_
+          *EXTRA File              47091        brlgm15a_hu-hu.dl_
+          *EXTRA File              44076        brlgm15a_id-id.dl_
+          *EXTRA File              44684        brlgm15a_it-it.dl_
+          *EXTRA File              39201        brlgm15a_ja-jp.dl_
+          *EXTRA File              38752        brlgm15a_ko-kr.dl_
+          *EXTRA File              44973        brlgm15a_nl-nl.dl_
+          *EXTRA File              43464        brlgm15a_no-no.dl_
+          *EXTRA File              47239        brlgm15a_pl-pl.dl_
+          *EXTRA File              45977        brlgm15a_pt-br.dl_
+          *EXTRA File              45971        brlgm15a_pt-pt.dl_
+          *EXTRA File              46386        brlgm15a_ro-ro.dl_
+          *EXTRA File              48027        brlgm15a_ru-ru.dl_
+          *EXTRA File              46214        brlgm15a_sk-sk.dl_
+          *EXTRA File              45000        brlgm15a_sl-si.dl_
+          *EXTRA File              45407        brlgm15a_sr-rs.dl_
+          *EXTRA File              43760        brlgm15a_sv-se.dl_
+          *EXTRA File              44046        brlgm15a_th-th.dl_
+          *EXTRA File              45114        brlgm15a_tr-tr.dl_
+          *EXTRA File              48792        brlgm15a_uk-ua.dl_
+          *EXTRA File              44367        brlgm15a_vi-vn.dl_
+          *EXTRA File              36032        brlgm15a_zh-cn.dl_
+          *EXTRA File              36139        brlgm15a_zh-tw.dl_
+          *EXTRA File              14486        brlm03a.dl_
+          *EXTRA File              37710        brlmw03a.dl_
+          *EXTRA File                126        brlmw03a.in_
+          *EXTRA File              51950        brmdm15a.dl_
+          *EXTRA File             101829        brosnmp.dl_
+          *EXTRA File              35873        brpfm15a.dl_
+          *EXTRA File              89394        brrbm15a.dl_
+          *EXTRA File             632977        brrcv080.dl_
+          *EXTRA File              54705        brrpc080.dl_
+          *EXTRA File             385567        brrsr080.dl_
+          *EXTRA File              21244        brtcpcon.dl_
+          *EXTRA File              1.3 m        bruim15a.dl_
+          *EXTRA File             131565        brxffm15a.dl_
+          *EXTRA File             195500        brxflm15a.dl_
+          *EXTRA File             109475        brxfom15a.dl_
+          *EXTRA File             189811        brxfpm15a.dl_
+          *EXTRA File             123322        brxfrm15a.dl_
+        *EXTRA Dir        -1    C:\Temp\Windows 10 64 bit\Install\xmlpaper\i386\
+          *EXTRA File              41480        bral130.ex_
+          *EXTRA File              47695        bralb30.ex_
+          *EXTRA File              2.2 m        brbmm15a.dl_
+          *EXTRA File              30427        brcmi080.dl_
+          *EXTRA File              29020        brcmm080.dl_
+          *EXTRA File             154311        brcms080.dl_
+          *EXTRA File             141171        brdim15a.dl_
+          *EXTRA File             279276        brenm15a.dl_
+          *EXTRA File              42341        brlgm15a_ar-ae.dl_
+          *EXTRA File              47964        brlgm15a_bg-bg.dl_
+          *EXTRA File              45357        brlgm15a_cs-cz.dl_
+          *EXTRA File              43804        brlgm15a_da-dk.dl_
+          *EXTRA File              45976        brlgm15a_de-de.dl_
+          *EXTRA File              42429        brlgm15a_en-cn.dl_
+          *EXTRA File              42288        brlgm15a_en-gb.dl_
+          *EXTRA File              42430        brlgm15a_en-us.dl_
+          *EXTRA File              46447        brlgm15a_es-es.dl_
+          *EXTRA File              43890        brlgm15a_fi-fi.dl_
+          *EXTRA File              46839        brlgm15a_fr-ca.dl_
+          *EXTRA File              46766        brlgm15a_fr-fr.dl_
+          *EXTRA File              45004        brlgm15a_hr-hr.dl_
+          *EXTRA File              47095        brlgm15a_hu-hu.dl_
+          *EXTRA File              44080        brlgm15a_id-id.dl_
+          *EXTRA File              44689        brlgm15a_it-it.dl_
+          *EXTRA File              39206        brlgm15a_ja-jp.dl_
+          *EXTRA File              38757        brlgm15a_ko-kr.dl_
+          *EXTRA File              44977        brlgm15a_nl-nl.dl_
+          *EXTRA File              43467        brlgm15a_no-no.dl_
+          *EXTRA File              47244        brlgm15a_pl-pl.dl_
+          *EXTRA File              45981        brlgm15a_pt-br.dl_
+          *EXTRA File              45976        brlgm15a_pt-pt.dl_
+          *EXTRA File              46391        brlgm15a_ro-ro.dl_
+          *EXTRA File              48031        brlgm15a_ru-ru.dl_
+          *EXTRA File              46218        brlgm15a_sk-sk.dl_
+          *EXTRA File              45004        brlgm15a_sl-si.dl_
+          *EXTRA File              45412        brlgm15a_sr-rs.dl_
+          *EXTRA File              43763        brlgm15a_sv-se.dl_
+          *EXTRA File              44050        brlgm15a_th-th.dl_
+          *EXTRA File              45118        brlgm15a_tr-tr.dl_
+          *EXTRA File              48797        brlgm15a_uk-ua.dl_
+          *EXTRA File              44371        brlgm15a_vi-vn.dl_
+          *EXTRA File              36036        brlgm15a_zh-cn.dl_
+          *EXTRA File              36144        brlgm15a_zh-tw.dl_
+          *EXTRA File              14486        brlm03a.dl_
+          *EXTRA File              37710        brlmw03a.dl_
+          *EXTRA File                126        brlmw03a.in_
+          *EXTRA File              45232        brmdm15a.dl_
+          *EXTRA File             101829        brosnmp.dl_
+          *EXTRA File              37397        brpfm15a.dl_
+          *EXTRA File              89394        brrbm15a.dl_
+          *EXTRA File             544544        brrcv080.dl_
+          *EXTRA File              50220        brrpc080.dl_
+          *EXTRA File             327498        brrsr080.dl_
+          *EXTRA File              21244        brtcpcon.dl_
+          *EXTRA File              1.0 m        bruim15a.dl_
+          *EXTRA File             117653        brxffm15a.dl_
+          *EXTRA File             156402        brxflm15a.dl_
+          *EXTRA File              97529        brxfom15a.dl_
+          *EXTRA File             155541        brxfpm15a.dl_
+          *EXTRA File             127461        brxfrm15a.dl_
+100%        New File                2580        ApplockerWin11scriptstask.ps1
+100%        New File                5871        backendscripts.ps1
+100%        New File                4049        excel_word_background_memory.vbs
+100%        New File                 293        how to run.txt
+100%        New File               56304        softwareprotection.reg
+100%        New File                 690        upgrade.bat
+100%        New File                 955        W11 update fix commands.bat
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :         1         0         1         0         0       231
+   Files :         7         7         0         0         0      1814
+   Bytes :    69.0 k    69.0 k         0         0         0  302.58 m
+   Times :   0:00:05   0:00:00                       0:00:00   0:00:05
+
+
+   Speed :              175103 Bytes/sec.
+   Speed :              10.019 MegaBytes/min.
+   Ended : Tuesday 31 March 2026 12:17:22
+---------------------------------------------------------------------------
+
+
+Running D:\\Blocked apps checker\run_check.bat
+
+Running D:\\Profile checker\run_profile_check.bat
+
+Running D:\\Java Removal Tool & Checker\Run-JavaCheck.bat
+
+Running C:\Temp\W11 update fix commands.bat
+
+---------------------------------------------------------------------------
+Checking NetAcquire...
+NetAcquire not installed.
+
+---------------------------------------------------------------------------
+
+
+Checking Lenovo System Update...
+Lenovo System Update not found. Installing...
+Installation completed.
+Launching Lenovo System Update...
+
+Checking DirectX and WDDM requirements...
+GPU: Intel(R) UHD Graphics 630
+DirectX Feature Levels: 12_1,12_0,11_1,11_0,10_1,10_0,9_3,9_2,9_1
+Driver Model (WDDM): WDDM 2.7
+Result: Meets Windows 11 graphics requirements.
+
+
+Preparing Windows Update environment...
+
+[CHECK] Update Orchestrator
+[OK] Update Orchestrator
+
+[CHECK] Windows Update
+[OK] Windows Update
+
+[CHECK] Windows Modules Installer
+[OK] Windows Modules Installer
+
+[CHECK] Windows Update Medic
+[OK] Windows Update Medic
+
+[CHECK] Windows Installer
+[OK] Windows Installer
+
+[CHECK] BITS
+[OK] BITS
+
+[CHECK] Cryptographic Services
+[OK] Cryptographic Services
+
+[CHECK] Windows Update Policies
+[OK] Windows Update Policies
+
+[CHECK] Disable Fast Startup
+[ISSUE] Disable Fast Startup
+ -> Attempting fix...
+
+
+HiberbootEnabled : 0
+PSPath           : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session
+                   Manager\Power
+PSParentPath     : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session
+                   Manager
+PSChildName      : Power
+PSDrive          : HKLM
+PSProvider       : Microsoft.PowerShell.Core\Registry
+
+ -> Fix applied
+
+[CHECK] Hosts file entries - windowsupdate
+[OK] Hosts file entries - windowsupdate
+
+[CHECK] Hosts file entries - update.microsoft
+[OK] Hosts file entries - update.microsoft
+
+Cleaning Windows Update cache...
+
+=== Windows Update environment prepared ===
+
+Cleaning old update and temporary files...
+This may take some time but helps prevent Windows 11 upgrade failures.
+
+SoftwareDistribution size : 0 GB
+SoftwareDistribution items: 0
+
+Catroot2 size             : 0.06 GB
+Catroot2 items            : 4
+
+Temp size                 : 0 GB
+Temp items                : 1
+
+Stopping Windows Update services...
+Cleaning folders...
+Restarting services...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+
+Cleanup completed successfully.
+
+Refreshing C:\Temp
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows
+-------------------------------------------------------------------------------
+
+  Started : Tuesday 31 March 2026 12:25:30
+   Source : D:\W11\Temp\
+     Dest : C:\Temp\
+
+    Files : *.*
+
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /PURGE /MIR /R:1 /W:1
+
+------------------------------------------------------------------------------
+
+                           7    D:\W11\Temp\
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :         1         0         1         0         0         0
+   Files :         7         0         7         0         0         0
+   Bytes :    69.0 k         0    69.0 k         0         0         0
+   Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+   Ended : Tuesday 31 March 2026 12:25:30
+
+
+Select Upgrade Method:
+1 - Silent Upgrade (Win11Upgrade folder)
+2 - Windows11InstallationAssistant
+
+C:\Temp already exists. Skipping copy.
+
+Copying Windows11InstallationAssistant.exe to C:\...
+Running upgrade.bat...

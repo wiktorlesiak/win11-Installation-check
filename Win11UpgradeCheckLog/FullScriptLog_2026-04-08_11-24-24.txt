@@ -1,0 +1,1460 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260408112424
+Username: HEALTHIRL\pfhwlesiak
+RunAs User: HEALTHIRL\pfhwlesiak
+Configuration Name: 
+Machine: LAP240100494 (Microsoft Windows NT 10.0.19045.0)
+Host Application: powershell -NoProfile -ExecutionPolicy Bypass -File Run-All.ps1
+Process ID: 15136
+PSVersion: 5.1.19041.6456
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.6456
+BuildVersion: 10.0.19041.6456
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is D:\Scripts\FullScriptLog\FullScriptLog_2026-04-08_11-24-24.txt
+Logging to D:\Scripts\FullScriptLog\FullScriptLog_2026-04-08_11-24-24.txt
+
+===== SYSTEM INFORMATION =====
+ComputerName      : LAP240100494
+CanonicalName     : N/A
+SerialNumber      : PF45B32E
+Model             : 21EES02500
+Domain            : healthirl.net
+InstalledRAM      : 14.83 GB
+OSName            : Microsoft Windows 10 Pro
+Version           : 10.0.19045
+BuildNumber       : 19045
+WindowsRelease    : 22H2
+SystemDrive       : C:
+OSArchitecture    : 64-bit
+SystemDirectory   : C:\windows\system32
+==============================
+
+Checking Windows version...
+Detected Version: 22H2
+Windows version meets minimum requirement for Windows 11 upgrade path.
+
+Checking system uptime...
+System Uptime: 0 Days 0 Hours
+
+Checking for pending reboot...
+No pending reboot.
+
+Checking Windows activation...
+Windows is ACTIVATED.
+
+---------------------------------------------------------------------------
+
+
+Checking RAM configuration...
+Total Installed RAM : 16 GB
+Number of DIMMs     : 2
+Stick Sizes         : 8 GB, 8 GB
+
+16GB RAM detected. No upgrade required.
+
+---------------------------------------------------------------------------
+
+
+Checking disk health and drives...
+# Drives detected: 1 #
+
+Name                 Size     Firmware Type BusType Status Health  SerialNumber         Model               
+----                 ----     -------- ---- ------- ------ ------  ------------         -----               
+Micron MTFDKCD256TFK 238.5 GB 7003V5LN SSD  NVMe    OK     Healthy 00A0_7501_398E_0A29. Micron MTFDKCD256TFK
+# Partitions: 6 #
+
+DriveLetter FileSystemLabel FileSystem SizeRemaining          Size HealthStatus
+----------- --------------- ---------- -------------          ---- ------------
+            Recovery        NTFS          1985519616    2560618496 Healthy     
+            Recovery        NTFS         19401805824   20106727424 Healthy     
+            BOOT            FAT32          468287488     519045120 Healthy     
+            BOOT            FAT32          485654528     522199040 Warning     
+C           Windows         NTFS        142369398784  252736155648 Healthy     
+D           Windows11       NTFS       1891456974848 1979600523264 Healthy
+
+Checking disk space...
+Sufficient Free Space: 132.59 GB, no cleanup required.
+
+---------------------------------------------------------------------------
+
+
+Checking TPM...
+TPM detected.
+
+Checking Secure Boot...
+Secure Boot enabled.
+
+Checking Windows upgrade residue...
+No previous upgrade folder detected.
+
+Checking network connection...
+Connected, but unable to determine connection type.
+
+Refreshing C:\Temp
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows
+-------------------------------------------------------------------------------
+
+  Started : Wednesday 8 April 2026 11:25:27
+   Source : D:\W11\Temp\
+     Dest : C:\Temp\
+
+    Files : *.*
+
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /PURGE /MIR /R:1 /W:1
+
+------------------------------------------------------------------------------
+
+                           7    D:\W11\Temp\
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :         1         0         1         0         0         0
+   Files :         7         0         7         0         0         0
+   Bytes :    69.0 k         0    69.0 k         0         0         0
+   Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+   Ended : Wednesday 8 April 2026 11:25:27
+---------------------------------------------------------------------------
+
+
+Running D:\\Blocked apps checker\run_check.bat
+
+Running D:\\Profile checker\run_profile_check.bat
+
+Running D:\\Java Removal Tool & Checker\Run-JavaCheck.bat
+
+Running C:\Temp\W11 update fix commands.bat
+
+---------------------------------------------------------------------------
+Checking NetAcquire...
+NetAcquire installed.
+C:\Win11Scripts\NetAcquire folder missing. Applying NetAcquire Fix...
+Copying NetAcquire fix files to C:\Temp...
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows
+-------------------------------------------------------------------------------
+
+  Started : Wednesday 8 April 2026 11:25:58
+   Source : D:\NetAcquire Fix\Temp\
+     Dest : C:\Temp\
+
+    Files : *.*
+
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /R:1 /W:1
+
+------------------------------------------------------------------------------
+
+                           2    D:\NetAcquire Fix\Temp\
+          *EXTRA File               2580        ApplockerWin11scriptstask.ps1
+          *EXTRA File               5871        backendscripts.ps1
+          *EXTRA File               4049        excel_word_background_memory.vbs
+          *EXTRA File                293        how to run.txt
+          *EXTRA File              56304        softwareprotection.reg
+          *EXTRA File                690        upgrade.bat
+          *EXTRA File                955        W11 update fix commands.bat
+100%        New File                 165        Read Me.txt
+100%        New File                 558        Set-UKRegion.ps1
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :         1         0         1         0         0         0
+   Files :         2         2         0         0         0         7
+   Bytes :       723       723         0         0         0    69.0 k
+   Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+
+
+   Speed :               15382 Bytes/sec.
+   Speed :               0.880 MegaBytes/min.
+   Ended : Wednesday 8 April 2026 11:25:58
+Run-CreateUKRegionTask.bat not found in C:\Temp!
+Checking scheduled task...
+Scheduled task 'Set-UKRegionalSettings' NOT found.
+
+---------------------------------------------------------------------------
+
+
+Checking Lenovo System Update...
+System Update already installed: Lenovo System Update
+Launching Lenovo System Update...
+
+Checking DirectX and WDDM requirements...
+GPU: AMD Radeon (TM) Graphics
+DirectX Feature Levels: 12_1,12_0,11_1,11_0,10_1,10_0,9_3,9_2,9_1
+Driver Model (WDDM): WDDM 2.7
+Result: Meets Windows 11 graphics requirements.
+
+
+Preparing Windows Update environment...
+
+[CHECK] Update Orchestrator
+[OK] Update Orchestrator
+
+[CHECK] Windows Update
+[OK] Windows Update
+
+[CHECK] Windows Modules Installer
+[OK] Windows Modules Installer
+
+[CHECK] Windows Update Medic
+[OK] Windows Update Medic
+
+[CHECK] Windows Installer
+[OK] Windows Installer
+
+[CHECK] BITS
+[OK] BITS
+
+[CHECK] Cryptographic Services
+[OK] Cryptographic Services
+
+[CHECK] Windows Update Policies
+[OK] Windows Update Policies
+
+[CHECK] Disable Fast Startup
+[ISSUE] Disable Fast Startup
+ -> Attempting fix...
+
+
+HiberbootEnabled : 0
+PSPath           : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session
+                   Manager\Power
+PSParentPath     : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session
+                   Manager
+PSChildName      : Power
+PSDrive          : HKLM
+PSProvider       : Microsoft.PowerShell.Core\Registry
+
+ -> Fix applied
+
+[CHECK] Hosts file entries - windowsupdate
+[OK] Hosts file entries - windowsupdate
+
+[CHECK] Hosts file entries - update.microsoft
+[OK] Hosts file entries - update.microsoft
+
+Cleaning Windows Update cache...
+
+=== Windows Update environment prepared ===
+
+Cleaning old update and temporary files...
+This may take some time but helps prevent Windows 11 upgrade failures.
+
+SoftwareDistribution size : 0.03 GB
+SoftwareDistribution items: 6
+
+Catroot2 size             : 0.06 GB
+Catroot2 items            : 4
+
+Temp size                 : 0 GB
+Temp items                : 1
+
+Stopping Windows Update services...
+Cleaning folders...
+Restarting services...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+
+Cleanup completed successfully.
+
+Refreshing C:\Temp
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows
+-------------------------------------------------------------------------------
+
+  Started : Wednesday 8 April 2026 11:27:43
+   Source : D:\W11\Temp\
+     Dest : C:\Temp\
+
+    Files : *.*
+
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /PURGE /MIR /R:1 /W:1
+
+------------------------------------------------------------------------------
+
+                           7    D:\W11\Temp\
+          *EXTRA File                165        Read Me.txt
+          *EXTRA File                558        Set-UKRegion.ps1
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :         1         0         1         0         0         0
+   Files :         7         0         7         0         0         2
+   Bytes :    69.0 k         0    69.0 k         0         0       723
+   Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+   Ended : Wednesday 8 April 2026 11:27:43
+
+
+Select Upgrade Method:
+1 - Silent Upgrade (Win11Upgrade folder)
+2 - Windows11InstallationAssistant
+
+C:\Temp already exists. Skipping copy.
+
+Preparing Silent Upgrade...
+Copying Win11Upgrade folder...
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows
+-------------------------------------------------------------------------------
+
+  Started : Wednesday 8 April 2026 11:27:59
+   Source : D:\W11\Win11Upgrade\
+     Dest : C:\Win11Upgrade\
+
+    Files : *.*
+
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /R:1 /W:1
+
+------------------------------------------------------------------------------
+
+          New Dir          5    D:\W11\Win11Upgrade\
+100%        New File                 128        autorun.inf
+100%        New File              473364        bootmgr
+100%        New File               2.7 m        bootmgr.efi
+100%        New File               99896        setup.exe
+100%        New File                1140        silent-upgrade.cmd
+          New Dir          6    D:\W11\Win11Upgrade\boot\
+100%        New File               16384        bcd
+100%        New File               3.0 m        boot.sdi
+100%        New File                1024        bootfix.bin
+100%        New File              112048        bootsect.exe
+100%        New File                4096        etfsboot.com
+100%        New File               1.1 m        memtest.exe
+          New Dir          1    D:\W11\Win11Upgrade\boot\en-us\
+100%        New File               16384        bootsect.exe.mui
+          New Dir         20    D:\W11\Win11Upgrade\boot\fonts\
+100%        New File               3.5 m        chs_boot.ttf
+100%        New File               3.6 m        cht_boot.ttf
+100%        New File               1.8 m        jpn_boot.ttf
+100%        New File               2.2 m        kor_boot.ttf
+100%        New File              199444        malgunn_boot.ttf
+100%        New File              201992        malgun_boot.ttf
+100%        New File               83368        malgun_console.ttf
+100%        New File              174080        meiryon_boot.ttf
+100%        New File              176020        meiryo_boot.ttf
+100%        New File               92556        meiryo_console.ttf
+100%        New File              199204        msjhn_boot.ttf
+100%        New File              201260        msjh_boot.ttf
+100%        New File              204872        msjh_console.ttf
+100%        New File              187956        msyhn_boot.ttf
+100%        New File              189856        msyh_boot.ttf
+100%        New File               98568        msyh_console.ttf
+100%        New File               45896        segmono_boot.ttf
+100%        New File              102640        segoen_slboot.ttf
+100%        New File              103024        segoe_slboot.ttf
+100%        New File               50124        wgl4_boot.ttf
+          New Dir          2    D:\W11\Win11Upgrade\boot\resources\
+100%        New File              169264        bootres.dll
+100%        New File              111920        bootres_hci.dll
+          New Dir          0    D:\W11\Win11Upgrade\efi\
+          New Dir          1    D:\W11\Win11Upgrade\efi\boot\
+100%        New File               2.7 m        bootx64.efi
+          New Dir          0    D:\W11\Win11Upgrade\efi\microsoft\
+          New Dir          8    D:\W11\Win11Upgrade\efi\microsoft\boot\
+100%        New File               16384        bcd
+100%        New File               11030        boot.stl
+100%        New File             1037120        cdboot.efi
+100%        New File             1037216        cdboot_noprompt.efi
+100%        New File               1.4 m        efisys.bin
+100%        New File               1.4 m        efisys_noprompt.bin
+100%        New File               2.3 m        memtest.efi
+100%        New File               10341        winsipolicy.p7b
+          New Dir          0    D:\W11\Win11Upgrade\efi\microsoft\boot\cipolicies\
+          New Dir          3    D:\W11\Win11Upgrade\efi\microsoft\boot\cipolicies\active\
+100%        New File               10564        {5dac656c-21ad-4a02-ab49-649917162e70}.cip
+100%        New File               31409        {82443e1e-8a39-4b4a-96a8-f40ddc00b9f3}.cip
+100%        New File               10972        {cdd5cb55-db68-4d71-aa38-3df2b6473a52}.cip
+          New Dir         20    D:\W11\Win11Upgrade\efi\microsoft\boot\fonts\
+100%        New File               3.5 m        chs_boot.ttf
+100%        New File               3.6 m        cht_boot.ttf
+100%        New File               1.8 m        jpn_boot.ttf
+100%        New File               2.2 m        kor_boot.ttf
+100%        New File              199444        malgunn_boot.ttf
+100%        New File              201992        malgun_boot.ttf
+100%        New File               83368        malgun_console.ttf
+100%        New File              174080        meiryon_boot.ttf
+100%        New File              176020        meiryo_boot.ttf
+100%        New File               92556        meiryo_console.ttf
+100%        New File              199204        msjhn_boot.ttf
+100%        New File              201260        msjh_boot.ttf
+100%        New File              204872        msjh_console.ttf
+100%        New File              187956        msyhn_boot.ttf
+100%        New File              189856        msyh_boot.ttf
+100%        New File               98568        msyh_console.ttf
+100%        New File               45896        segmono_boot.ttf
+100%        New File              102640        segoen_slboot.ttf
+100%        New File              103024        segoe_slboot.ttf
+100%        New File               50124        wgl4_boot.ttf
+          New Dir          2    D:\W11\Win11Upgrade\efi\microsoft\boot\resources\
+100%        New File              169376        bootres.dll
+100%        New File              111920        bootres_hci.dll
+          New Dir        186    D:\W11\Win11Upgrade\sources\
+100%        New File              628128        acmigration.dll
+100%        New File              353664        acres.dll
+100%        New File              267584        actionqueue.dll
+100%        New File               75168        adfscomp.dll
+100%        New File              103976        admtv3check.dll
+100%        New File               1.0 m        aeinv.dll
+100%        New File                1046        alert.gif
+100%        New File               11673        appcompat.xsl
+100%        New File               95648        appcompatservicing.dll
+100%        New File               12498        appcompat_bidi.xsl
+100%        New File               13608        appcompat_detailed.xsl
+100%        New File               13732        appcompat_detailed_bidi.xsl
+100%        New File               13371        appcompat_detailed_bidi_txt.xsl
+100%        New File               13326        appcompat_detailed_txt.xsl
+100%        New File              488880        appextagent.dll
+100%        New File               2.5 m        appraiser.dll
+100%        New File               2.6 m        appraiser.sdb
+100%        New File               10699        appraiserdatasha1.cat
+100%        New File              161152        appraiserres.dll
+100%        New File                  90        appraisersdblatestoshash.txt
+100%        New File              152896        arunimg.dll
+100%        New File               25904        arunres.dll
+100%        New File              214448        autorun.dll
+100%        New File                4841        background_cli.bmp
+100%        New File              162520        bcd.dll
+100%        New File             565.6 m        boot.wim
+100%        New File              303072        bootsvc.dll
+100%        New File                1976        cdplib.mof
+100%        New File                 571        cdplibuninstall.mof
+100%        New File               50728        clustercompliance.dll
+100%        New File              226608        cmi2migxml.dll
+100%        New File              177472        cmisetup.dll
+100%        New File              230816        compatappraiserresources.dll
+100%        New File              234880        compatctrl.dll
+100%        New File               75184        compatplugin.dll
+100%        New File               2.2 m        compatresources.dll
+100%        New File                 780        compliance.ini
+100%        New File               50728        compres.dll
+100%        New File               50728        cryptosetup.dll
+100%        New File              718144        csiagent.dll
+100%        New File                  49        cversion.ini
+100%        New File                1499        db_msftproductionwindowssigningca.cer
+100%        New File              640416        deployprovider.dll
+100%        New File              861488        devinv.dll
+100%        New File               99632        diager.dll
+100%        New File              218416        diagnostic.dll
+100%        New File               1.3 m        diagtrack.dll
+100%        New File               88256        diagtrackrunner.exe
+100%        New File              329120        dism.exe
+100%        New File               1.1 m        dismapi.dll
+100%        New File              476464        dismcore.dll
+100%        New File              230816        dismcoreps.dll
+100%        New File              300352        dismprov.dll
+100%        New File              210352        du.dll
+100%        New File               1.0 m        facilitator.dll
+100%        New File               95552        folderprovider.dll
+100%        New File              243000        hwcompat.dll
+100%        New File              963297        hwcompat.txt
+100%        New File                 257        hwcompatPE.txt
+100%        New File                  51        hwexclude.txt
+100%        New File                  15        hwexcludePE.txt
+100%        New File              423344        hwreqchk.dll
+100%        New File              251448        hypervcomplcheck.dll
+100%        New File              783680        iasmigplugin.dll
+100%        New File                7222        icbexclusion.inf
+100%        New File                 122        idwbinfo.txt
+100%        New File               50744        iiscomp.dll
+100%        New File             1013168        imagelib.dll
+100%        New File              247104        imagingprovider.dll
+100%        New File              382368        input.dll
+100%        New File               6.3 g        install.wim
+100%        New File              116264        itgtupg.dll
+100%        New File                  78        lang.ini
+100%        New File              861992        locale.nls
+100%        New File              189856        logprovider.dll
+100%        New File               1.6 m        mediasetupuimgr.dll
+100%        New File              221248        microsoft.media.playready.appraiser.dll
+100%        New File              329120        migapp.dll
+100%        New File              654548        migapp.xml
+100%        New File               8.8 m        migcore.dll
+100%        New File              288064        mighost.exe
+100%        New File              148800        migisol.dll
+100%        New File               26016        migres.dll
+100%        New File               1.2 m        migstore.dll
+100%        New File              464304        migsys.dll
+100%        New File               75320        migtestplugin.dll
+100%        New File              337208        mitigation.dll
+100%        New File              386480        mxeagent.dll
+100%        New File              103728        nlsbres.dll
+100%        New File               54824        ntdsupg.dll
+100%        New File               75320        ntfrsupg.dll
+100%        New File                1475        nxquery.inf
+100%        New File               54728        nxquery.sys
+100%        New File               44544        offline.xml
+100%        New File              243120        offlineprofileutils.dll
+100%        New File              449323        oscomps.xml
+100%        New File               21299        osfilter.inf
+100%        New File              324912        osimageprovider.dll
+100%        New File                4780        outofbox_windows_db.bin
+100%        New File               99648        pnpibs.dll
+100%        New File              107952        pnppropmig.dll
+100%        New File               50608        rdsupgcheck.dll
+100%        New File                1240        reagent.admx
+100%        New File              742816        reagent.dll
+100%        New File                 837        reagent.xml
+100%        New File               75168        reportgen.dll
+100%        New File              341408        reservemanager.dll
+100%        New File               95664        rmsupg.dll
+100%        New File              161200        rollback.exe
+100%        New File              110592        schema.dat
+100%        New File              423344        sdbapiu.dll
+100%        New File              980960        segoeui.ttf
+100%        New File             1026112        servicingcommon.dll
+100%        New File              333216        setup.exe
+100%        New File              370088        setupcompat.dll
+100%        New File               2.7 m        setupcore.dll
+100%        New File              805856        setupdiag.exe
+100%        New File               74544        setuperror.exe
+100%        New File              906664        setuphost.exe
+100%        New File               1.1 m        setupmgr.dll
+100%        New File               23023        setupplatform.cfg
+100%        New File               9.2 m        setupplatform.dll
+100%        New File              255376        setupplatform.exe
+100%        New File               1.2 m        setupprep.exe
+100%        New File                1824        sfcn.dat
+100%        New File                1644        sflcid.dat
+100%        New File               5.3 m        sflistrs1.dat
+100%        New File               1.6 m        sflistw7.dat
+100%        New File               2.4 m        sflistw8.dat
+100%        New File               3.0 m        sflistwb.dat
+100%        New File               4.7 m        sflistwt.dat
+100%        New File               11602        sfpat.inf
+100%        New File              169730        sfpatrs1.inf
+100%        New File               17396        sfpatw7.inf
+100%        New File               79818        sfpatw8.inf
+100%        New File               91635        sfpatwb.inf
+100%        New File              165729        sfpatwt.inf
+100%        New File              927024        smiengine.dll
+100%        New File               58800        spflvrnt.dll
+100%        New File               83272        spprgrss.dll
+100%        New File              570672        spwizeng.dll
+100%        New File               95544        spwizimg.dll
+100%        New File               25920        spwizres.dll
+100%        New File               75856        sqmapi.dll
+100%        New File               75320        uddicomp.dll
+100%        New File              275872        unattend.dll
+100%        New File              390560        unattendmgr.dll
+100%        New File               1.0 m        unbcl.dll
+100%        New File                4639        uninstall.xml
+100%        New File               11122        uninstall_data.xml
+100%        New File               3.7 m        updateagent.dll
+100%        New File              542128        updatecompression.dll
+100%        New File              136608        upgloader.dll
+100%        New File               3.1 m        upgradeagent.dll
+100%        New File               70907        upgradeagent.xml
+100%        New File              211949        upgrade_bulk.xml
+100%        New File                6054        upgrade_comp.xml
+100%        New File               41750        upgrade_data.xml
+100%        New File               19157        upgrade_frmwrk.xml
+100%        New File              114707        upgwow_bulk.xml
+100%        New File               66864        utcapi.dll
+100%        New File              185648        uxlib.dll
+100%        New File               21824        uxlibres.dll
+100%        New File              599360        vhdprovider.dll
+100%        New File              312624        w32uiimg.dll
+100%        New File              222512        w32uires.dll
+100%        New File                 597        warning.gif
+100%        New File              484904        wdsclient.dll
+100%        New File              267816        wdsclientapi.dll
+100%        New File              341408        wdscommonlib.dll
+100%        New File              279872        wdscore.dll
+100%        New File              112048        wdscsl.dll
+100%        New File              128568        wdsimage.dll
+100%        New File              218664        wdstptc.dll
+100%        New File               46632        wdsupgcompl.dll
+100%        New File              353600        wdsutil.dll
+100%        New File              910640        wimgapi.dll
+100%        New File              697664        wimprovider.dll
+100%        New File              722240        win32ui.dll
+100%        New File               1.4 m        windlp.dll
+100%        New File               2.8 m        winsetup.dll
+100%        New File                8192        winsetupboot.hiv
+100%        New File              112040        winsetupboot.sys
+100%        New File                8192        winsetupmon.hiv
+100%        New File              169376        winsetupmon.sys
+100%        New File               1.3 m        wpx.dll
+          New Dir          7    D:\W11\Win11Upgrade\sources\asz\
+100%        New File              152992        arunimg.dll
+100%        New File               26032        arunres.dll
+100%        New File                4940        background_asz.bmp
+100%        New File                  25        setupmedia.cfg
+100%        New File               95536        spwizimg.dll
+100%        New File               26032        spwizres.dll
+100%        New File              222624        w32uires.dll
+          New Dir          3    D:\W11\Win11Upgrade\sources\asz\en-us\
+100%        New File                6144        arunres.dll.mui
+100%        New File                8704        spwizres.dll.mui
+100%        New File              205824        w32uires.dll.mui
+          New Dir          2    D:\W11\Win11Upgrade\sources\ca-es\
+100%        New File               80896        MediaSetupUIMgr.dll.mui
+100%        New File               14248        SetupPlatform.exe.mui
+          New Dir        137    D:\W11\Win11Upgrade\sources\dlmanifests\
+100%        New File                4705        accessibilitycpl-dl.man
+100%        New File                 670        activedirectory-webservices-dl.man
+100%        New File                1164        activedirectory-wmireplicationprovider-dl.man
+100%        New File                3725        adsi-ldap-extensions-dl.man
+100%        New File                1676        adsi-ldap-provider-dl.man
+100%        New File                1962        adsi-router-dl.man
+100%        New File                1655        adsi-winnt-provider-dl.man
+100%        New File                3193        browserservice-dl.man
+100%        New File                7079        capi2_certs-dl.man
+100%        New File                2879        commandprompt-dl.man
+100%        New File                1643        coreos-dl.man
+100%        New File                2224        credential-manager-dl.man
+100%        New File                1468        cryptoconfig-dl.man
+100%        New File                2947        crypto_keys-dl.man
+100%        New File                1685        dfsclient-dl.man
+100%        New File                2062        dfsmgmt-dl.man
+100%        New File                1514        dhcpclient-dl.man
+100%        New File                2199        directoryservices-adam-dl.man
+100%        New File                2054        directoryservices-domain-dl.man
+100%        New File                1837        directoryservices-ism-smtp-dl.man
+100%        New File                3754        dns-client-dl.man
+100%        New File                2305        dns-server-service-dl.man
+100%        New File                4533        dpapi_keys-dl.man
+100%        New File                1459        etw-core-dl.man
+100%        New File                6028        etwtracing.man
+100%        New File                1759        eventlog-dl.man
+100%        New File                2571        explorer-dl.man
+100%        New File                1613        feclient-dl.man
+100%        New File                 794        fonts-type1-dl.man
+100%        New File                4453        frs-core-dl.man
+100%        New File                7121        gpbase-dl.man
+100%        New File                1383        gpmc-dl.man
+100%        New File                1509        gpmgmt-dl.man
+100%        New File                1444        grouppolicy-admin-gpedit-dl.man
+100%        New File                1454        grouppolicy-admin-gpedit-snapin-dl.man
+100%        New File                1923        grouppolicy-cse-softwareinstallation-dl.man
+100%        New File                1734        grouppolicy-serveradmintools-gpmc-dl.man
+100%        New File                1085        ieframe-dl.man
+100%        New File                1534        ime-traditional-chinese-migration-dl.man
+100%        New File                2062        kerberos-key-distribution-center-dl.man
+100%        New File                1510        ldap-client-dl.man
+100%        New File                1614        microsoft-windows-bits-client-dl.man
+100%        New File                1865        microsoft-windows-certificateservices-ca-dl.man
+100%        New File                1439        microsoft-windows-certificateservices-camanagement-dl.man
+100%        New File                1721        microsoft-windows-certificateservices-mscep-dl.man
+100%        New File                1938        microsoft-windows-errorreportingcore-dl.man
+100%        New File                1298        microsoft-windows-errorreportingfaults-dl.man
+100%        New File                3761        microsoft-windows-fax-client-applications-dl.man
+100%        New File                1831        microsoft-windows-fax-client-proenterprise-dl.man
+100%        New File                4829        microsoft-windows-fax-common-dl.man
+100%        New File                1855        microsoft-windows-fax-server-dl.man
+100%        New File                7636        microsoft-windows-fax-service-dl.man
+100%        New File                1789        microsoft-windows-htmlhelp-dl.man
+100%        New File                2091        microsoft-windows-ie-esc-dl.man
+100%        New File                2339        microsoft-windows-ie-feeds-platform-dl.man
+100%        New File               13460        microsoft-windows-ie-internetexplorer-dl.man
+100%        New File                1461        microsoft-windows-iis-corewebengine-deployment-dl.man
+100%        New File                9028        microsoft-windows-netfx35-dl.man
+100%        New File                1273        microsoft-windows-netfx35cdfcomp-dl.man
+100%        New File               45175        microsoft-windows-netfxcorecomp-dl.man
+100%        New File                8158        microsoft-windows-storagemigration-dl.man
+100%        New File                2587        microsoft-windows-tapisetup-dl.man
+100%        New File                1320        microsoft-windows-terminalservices-clientactivexcore-dl.man
+100%        New File                2591        microsoft-windows-wab-dl.man
+100%        New File                4869        microsoft-windows-wcfcorecomp-dl.man
+100%        New File                1806        microsoft.windows.com.base-dl.man
+100%        New File                2383        microsoft.windows.com.complus.setup.dl.man
+100%        New File                1697        msmq-dcom-dl.man
+100%        New File                1546        msmq-domain-ic-dl.man
+100%        New File                2282        msmq-http-dl.man
+100%        New File                6789        msmq-messagingcoreservice-dl.man
+100%        New File                1544        msmq-multicast-dl.man
+100%        New File                1451        msmq-routing-dl.man
+100%        New File                1749        msmq-triggers-dl.man
+100%        New File                1533        mup-dl.man
+100%        New File                1215        netfx-wcf-http-activation-dl.man
+100%        New File                1621        netfx-wcf-msmqactivation-registration-dl.man
+100%        New File                1621        netfx-wcf-pipeactivation-registration-dl.man
+100%        New File                1615        netfx-wcf-tcpactivation-registration-dl.man
+100%        New File                1151        netfx-wcf-tcpportsharing-dl.man
+100%        New File                1576        netfx3-dl.man
+100%        New File                1550        netfx4-wcf-client-dl.man
+100%        New File                1466        netfx4-wcf-extended-dl.man
+100%        New File               15846        netfx4clientcorecomp-dl.man
+100%        New File                2053        netlogon-dl.man
+100%        New File                4052        ntfs-dl.man
+100%        New File                8035        ntoskrnl-dl.man
+100%        New File                4814        odbc32dll-dl.man
+100%        New File                1045        partmgr-dl.man
+100%        New File                2598        printing-spooler-core-dl.man
+100%        New File                2290        printing-spooler-networkclient-dl.man
+100%        New File                3288        rights-management-client-v1-api-dl.man
+100%        New File                3265        rights-management-services-server-dl.man
+100%        New File                1682        rpc-http-dl.man
+100%        New File                1429        rpc-http_proxy-dl.man
+100%        New File                1859        rpc-local-dl.man
+100%        New File                1973        rpc-remote-dl.man
+100%        New File                1461        schannel-dl.man
+100%        New File                1923        schedsvc-dl.man
+100%        New File                 803        security-digest-dl.man
+100%        New File                 803        security-kerberos-dl.man
+100%        New File                1458        security-ntlm-dl.man
+100%        New File                1079        security-ntlm-lmc.man
+100%        New File                1288        shutdown-event-tracker-dl.man
+100%        New File                3757        smartcardsubsystem-dl.man
+100%        New File               13993        smbserver-dl.man
+100%        New File                1694        smss-dl.man
+100%        New File                1164        smtpsvc-admin-dl.man
+100%        New File                1180        smtpsvc-service-dl.man
+100%        New File                2858        speechcommon-dl.man
+100%        New File                1737        tabletpc-tabbtn-dl.man
+100%        New File                1429        tabletpcinputpanel-dl.man
+100%        New File                8752        tabletpcjournal-dl.man
+100%        New File                1127        tabletpcplatforminput-core-dl.man
+100%        New File                1573        terminalservices-appserver-dl.man
+100%        New File                1305        terminalservices-appserver-licensing-dl.man
+100%        New File                1141        terminalservices-drivers-dl.man
+100%        New File                2253        terminalservices-licenseserver-dl.man
+100%        New File                1438        terminalservices-localsessionmanager-dl.man
+100%        New File               20861        terminalservices-rdp-winstationextensions-dl.man
+100%        New File                1438        terminalservices-remoteconnectionmanager-dl.man
+100%        New File                2240        terminalservices-sessiondirectory-client-dl.man
+100%        New File                2453        terminalservices-sessiondirectory-server-dl.man
+100%        New File                1919        terminalservices-terminalservicesclient-dl.man
+100%        New File                2841        textservicesframework-migration-dl.man
+100%        New File                2038        video-tvvideocontrol-dl.man
+100%        New File                1043        volsnap-dl.man
+100%        New File                2018        wcf-http-activation-dl.man
+100%        New File                1572        wcf-http-activation-postapply-dl.man
+100%        New File                1523        wcf-nonhttp-activation-dl.man
+100%        New File                1914        web-services-for-management-core-dl.man
+100%        New File                1676        webenroll-dl.man
+100%        New File               12503        win32k-settings-dl.man
+100%        New File                5855        windowssearchengine-dl.man
+100%        New File                2887        winlogon-dl.man
+100%        New File                2372        wmi-core-dl.man
+100%        New File                1811        workstationservice-dl.man
+          New Dir          1    D:\W11\Win11Upgrade\sources\dlmanifests\microsoft-activedirectory-webservices-dl\
+100%        New File              124320        adwsmigrate.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\dlmanifests\microsoft-windows-com-complus-setup-dl\
+100%        New File              198064        commig.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\dlmanifests\microsoft-windows-com-dtc-setup-dl\
+100%        New File              107824        msdtcstp.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\dlmanifests\microsoft-windows-dhcpservermigplugin-dl\
+100%        New File              128416        dhcpsrvmigplugin.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\dlmanifests\microsoft-windows-directoryservices-adam-dl\
+100%        New File              156976        adammigrate.dll
+          New Dir          2    D:\W11\Win11Upgrade\sources\dlmanifests\microsoft-windows-iasserver-migplugin\
+100%        New File              783680        iasmigplugin.dll
+100%        New File              511792        iasmigreader.exe
+          New Dir          1    D:\W11\Win11Upgrade\sources\dlmanifests\microsoft-windows-ie-clientnetworkprotocolimplem
+entation-migration\
+100%        New File               38192        wininetplugin.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\dlmanifests\microsoft-windows-internet-naming-service-runtim
+e\
+100%        New File               83360        winsplgn.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\dlmanifests\microsoft-windows-msmq-messagingcoreservice\
+100%        New File              189872        mqmigplugin.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\dlmanifests\microsoft-windows-networkbridge\
+100%        New File              136496        bridgemigplugin.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\dlmanifests\microsoft-windows-networkloadbalancing-core\
+100%        New File              144800        nlbmigplugin.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\dlmanifests\microsoft-windows-rasconnectionmanager\
+100%        New File               99632        cmmigr.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\dlmanifests\microsoft-windows-rasserver-migplugin\
+100%        New File              419248        rasmigplugin.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\dlmanifests\microsoft-windows-tapisetup\
+100%        New File               99760        tapimigplugin.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\dlmanifests\microsoft-windows-terminalservices-licenseserver
+\
+100%        New File              140720        tlsmigplugin.dll
+          New Dir          5    D:\W11\Win11Upgrade\sources\dlmanifests\microsoft-windows-textservicesframework-migratio
+n-dl\
+100%        New File              169392        chxmig.dll
+100%        New File              214448        imjpmig.dll
+100%        New File              140704        imkrmig.dll
+100%        New File              173376        msctfmig.dll
+100%        New File              112048        tabletextservicemig.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\dlmanifests\microsoft-windows-unimodem-config\
+100%        New File              124224        modemmigplugin.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\dlmanifests\microsoft-windows-winsock-core-infrastructure-up
+grade\
+100%        New File              255304        wsupgrade.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\dlmanifests\microsoft-windows-wmi-core\
+100%        New File              714032        wmimigrationplugin.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\dlmanifests\networking-mpssvc-svc\
+100%        New File              169376        icfupgd.dll
+          New Dir         51    D:\W11\Win11Upgrade\sources\en-us\
+100%        New File              333824        acres.dll.mui
+100%        New File                3584        actionqueue.dll.mui
+100%        New File                3584        appraiser.dll.mui
+100%        New File                5632        arunres.dll.mui
+100%        New File                4608        cmisetup.dll.mui
+100%        New File                7168        compatappraiserresources.dll.mui
+100%        New File                4608        compatctrl.dll.mui
+100%        New File               23552        compatresources.dll.mui
+100%        New File               30720        compres.dll.mui
+100%        New File               6.9 m        credits.htm
+100%        New File              10.1 m        credits.txt
+100%        New File                2560        deployprovider.dll.mui
+100%        New File               30208        dism.exe.mui
+100%        New File                5120        dismapi.dll.mui
+100%        New File                7680        dismcore.dll.mui
+100%        New File                2560        dismprov.dll.mui
+100%        New File                 276        erofflps.txt
+100%        New File                2560        folderprovider.dll.mui
+100%        New File               18944        imagingprovider.dll.mui
+100%        New File               25600        input.dll.mui
+100%        New File                6144        logprovider.dll.mui
+100%        New File               80896        mediasetupuimgr.dll.mui
+100%        New File                7680        migres.dll.mui
+100%        New File               66560        nlsbres.dll.mui
+100%        New File              111188        oobe_help_opt_in_details.rtf
+100%        New File                3072        osimageprovider.dll.mui
+100%        New File                5120        pnpibs.dll.mui
+100%        New File                 771        privacy.rtf
+100%        New File                1817        reagent.adml
+100%        New File               10752        reagent.dll.mui
+100%        New File                4608        rollback.exe.mui
+100%        New File               18432        setup.exe.mui
+100%        New File                3072        setupcompat.dll.mui
+100%        New File               18944        setupcore.dll.mui
+100%        New File                3584        setuperror.exe.mui
+100%        New File                2560        setupmgr.dll.mui
+100%        New File               14248        setupplatform.exe.mui
+100%        New File               26624        setupprep.exe.mui
+100%        New File               12288        smiengine.dll.mui
+100%        New File                8192        spwizres.dll.mui
+100%        New File                4608        upgloader.dll.mui
+100%        New File                3072        uxlibres.dll.mui
+100%        New File                7680        vhdprovider.dll.mui
+100%        New File                 769        vofflps.rtf
+100%        New File              205824        w32uires.dll.mui
+100%        New File                7680        wdsclient.dll.mui
+100%        New File                6144        wdsimage.dll.mui
+100%        New File               16384        wimgapi.dll.mui
+100%        New File               28160        wimprovider.dll.mui
+100%        New File                5632        windlp.dll.mui
+100%        New File               53760        winsetup.dll.mui
+          New Dir         11    D:\W11\Win11Upgrade\sources\etwproviders\
+100%        New File               21944        actionqueueetw.dll
+100%        New File               26168        auditetw.dll
+100%        New File               26168        cmisetupetw.dll
+100%        New File                6868        etwproviderinstall.vbs
+100%        New File               26040        oobeldretw.dll
+100%        New File               30248        setupcletw.dll
+100%        New File               30112        setupetw.dll
+100%        New File               26056        setupugcetw.dll
+100%        New File               30136        sysprepetw.dll
+100%        New File               26152        windeployetw.dll
+100%        New File               75320        winsetupetw.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\etwproviders\en-us\
+100%        New File                3584        actionqueueetw.dll.mui
+          New Dir          2    D:\W11\Win11Upgrade\sources\eu-es\
+100%        New File               80896        MediaSetupUIMgr.dll.mui
+100%        New File               14232        SetupPlatform.exe.mui
+          New Dir          2    D:\W11\Win11Upgrade\sources\gl-es\
+100%        New File               80896        MediaSetupUIMgr.dll.mui
+100%        New File               14208        SetupPlatform.exe.mui
+          New Dir          2    D:\W11\Win11Upgrade\sources\id-id\
+100%        New File               80896        MediaSetupUIMgr.dll.mui
+100%        New File               14248        SetupPlatform.exe.mui
+          New Dir          1    D:\W11\Win11Upgrade\sources\inf\
+100%        New File                3616        setup.cfg
+          New Dir          0    D:\W11\Win11Upgrade\sources\migration\
+          New Dir         16    D:\W11\Win11Upgrade\sources\migration\wtr\
+100%        New File                 651        adminpack_en-us.inf
+100%        New File                 414        adminpack_en-us_noloc.inf
+100%        New File               17201        appmanwtr.inf
+100%        New File                7194        browserchoice_win7.inf
+100%        New File                1589        browserchoice_win8.inf
+100%        New File                1619        compattelemetry.inf
+100%        New File                1643        ftp_7.0.inf
+100%        New File                2108        ftp_7.5_en-us_noloc.inf
+100%        New File                2773        ftp_7.5_loc.inf
+100%        New File                1078        gwxmig.inf
+100%        New File                1002        powershell_en-us_noloc.inf
+100%        New File                2551        powershell_loc.inf
+100%        New File               10086        unpmig.inf
+100%        New File                 724        webdav_7.0.inf
+100%        New File                 961        webdav_7.5_en-us_noloc.inf
+100%        New File                1265        webdav_7.5_loc.inf
+          New Dir        378    D:\W11\Win11Upgrade\sources\replacementmanifests\
+100%        New File                1702        activedirectory-webservices-replacement.man
+100%        New File                1995        adsi-router-replacement.man
+100%        New File               12020        application-experience-program-compatibility-assistant-replacement.man
+100%        New File                2097        appmanmigration-replacement.man
+100%        New File                2057        appxalluserstore-replacement.man
+100%        New File               10650        appxdeploymentserver-replacement.man
+100%        New File                3300        audio-audiocore-client-replacement.man
+100%        New File                1285        audiommecore-mm-other-migration-replacement.man
+100%        New File                8193        authui-migration-replacement.man
+100%        New File               11555        authui-migration-win8-replacement.man
+100%        New File                 869        azshci-service-migration-replacement.man
+100%        New File                1511        bisrv-replacement.man
+100%        New File               13032        capi2_certs-repl.man
+100%        New File                 976        certificateenrollment-replacement.man
+100%        New File                4021        cliplicensemigration-replacement.man
+100%        New File                1724        cloudapreplacement.man
+100%        New File                 972        cloudexperiencehostonecore-replacement.man
+100%        New File                3266        codeintegrity-repl.man
+100%        New File                2781        commandprompt-win7-replacement.man
+100%        New File               11675        commandprompt-win8-replacement.man
+100%        New File                4021        Content-Indexing-Common-Replacement.man
+100%        New File                7419        contentdeliverymanager.utilities-replacement.man
+100%        New File                1147        coremmres-replacement.man
+100%        New File                1644        coreos-repl.man
+100%        New File                5419        credential-manager-replacement.man
+100%        New File                2834        crypto_keys-repl.man
+100%        New File                1225        dataintegrityscan-replacement.man
+100%        New File                 734        dcb-repl.man
+100%        New File                5314        desktopux-replacement.man
+100%        New File                1543        deviceassociationframework-replacement.man
+100%        New File                1222        devicedirectory-devicedirectoryclient-desktop-replacement.man
+100%        New File                1053        deviceregistration-replacement.man
+100%        New File                4144        dhcpclientdll-repl.man
+100%        New File                 654        dhcpserver-tools-replacement.man
+100%        New File               12795        dhcpservermigplugin-rep.man
+100%        New File                6093        dhcpservermigpluginwin8-replacement.man
+100%        New File                1228        directaccessservermanagement-repl.man
+100%        New File                1064        directoryservices-adam-client-replacement.man
+100%        New File                 682        directoryservices-adam-tools-replacement.man
+100%        New File                 684        directoryservices-administrativecenter-replacement.man
+100%        New File                1170        directoryservices-domaincontroller-servercoreupg-replacement.man
+100%        New File                 700        directoryservices-domaincontroller-tools-replacement.man
+100%        New File                1676        directoryservices-sm-plugin.registration-replacement.man
+100%        New File                2206        displayconfigsettings_win7update.man
+100%        New File                2845        dmrcwin7replacement.man
+100%        New File                7700        dns-client-mw-replacement.man
+100%        New File                2300        dns-client-replacement.man
+100%        New File                 820        dns-server-role-replacement.man
+100%        New File                 652        dns-server-tools-replacement.man
+100%        New File                4308        dpapi_keys-repl.man
+100%        New File                1589        dsreg-replacement.man
+100%        New File                 923        edgemigrationplugin.man
+100%        New File                 830        edpnotify-replacement.man
+100%        New File                1016        elam-replacement.man
+100%        New File                1377        etw-core-replacement.man
+100%        New File                2153        eudcedit-replacement.man
+100%        New File                4870        explorer-repl.man
+100%        New File                3019        extensibleauthenticationprotocolhostservice-rep.man
+100%        New File                2481        FailoverCluster-ClusSvc-Replacement.man
+100%        New File                 932        failovercluster-core-wow64-rm.man
+100%        New File                2731        failovercluster-updating-powershellcore-replacement.man
+100%        New File                1017        feclient-replacement-th.man
+100%        New File                1585        fidocredprov_dll_repl.man
+100%        New File                1290        fileserver-replacement.man
+100%        New File              101661        font-truetype-fontsregistrysettingsmigration-replacement.man
+100%        New File                1380        fonts-type1-replacement.man
+100%        New File                 916        fsdepends-replacement.man
+100%        New File                1392        fundisc-replacement.man
+100%        New File                1101        fveapi-replacement.man
+100%        New File                1735        gatewayservice-replacement.man
+100%        New File               10121        gpbase-replacement.man
+100%        New File                1216        gpiobuttons-replacement.man
+100%        New File                1211        hal-repl.man
+100%        New File                1033        helpandsupport-replacement.man
+100%        New File                 948        http-replacement.man
+100%        New File                1070        hwvid-migration-replacement-2.man
+100%        New File                1879        hyperv-compute-host-service-replacement.man
+100%        New File                6438        iasruntime-repl.man
+100%        New File                1481        identityserver-migration-replacement.man
+100%        New File                1981        identityserver-proxymigration-replacement.man
+100%        New File                1233        identitystore-replacement.man
+100%        New File                 978        iis-adminservice-rm.man
+100%        New File                1051        iis-appwarmup-rm.man
+100%        New File                 975        iis-ftpsvc-rm.man
+100%        New File                 751        iis-managementconsole-rm.man
+100%        New File                1887        iis-sharedlibraries-rm.man
+100%        New File                1308        iis-w3logsvc-rm.man
+100%        New File                1294        iis-w3svc-rm.man
+100%        New File                1553        ime-eashared-migration-replacement.man
+100%        New File                4905        international-core-replacement.man
+100%        New File                3606        international-timezones-replacement.man
+100%        New File                4643        internet-naming-service-runtime-rep.man
+100%        New File                 660        internet-naming-tools-replacement.man
+100%        New File                 917        ioschedfilter-replacement.man
+100%        New File                3805        ipv4ipv6coexistencemigration-net-replacement.man
+100%        New File                1338        kernel-pnp-repl.man
+100%        New File                1340        kernel-server-replacement.man
+100%        New File                 896        kernel32-replacement.man
+100%        New File                 657        kernel32-server-replacement.man
+100%        New File                1095        keyboardfilter-replacement.man
+100%        New File                1431        ldap-client-replacement.man
+100%        New File                4791        legacy-sapi-repl.man
+100%        New File               25564        mdm_migration-replacement.man
+100%        New File                 993        media-settings-migration-replacement.man
+100%        New File                1975        memextdriver-replacement.man
+100%        New File                1030        mfmpeg2srcsnk-migration-replacement.man
+100%        New File                2859        mfplat-migration-replacement.man
+100%        New File                1164        mfsrcsnk-migration-replacement.man
+100%        New File                 721        microsoft-activedirectory-powershell-replacement.man
+100%        New File                1941        microsoft-certificateauthority-enrollment-serverupgrade-replacement.man
+100%        New File                2088        microsoft-certificateservices-ca-serverupgrade-replacement.man
+100%        New File                2018        microsoft-certificateservices-mscep-serverupgrade-replacement.man
+100%        New File                1959        microsoft-certificateservices-ocsp-serverupgrade-replacement.man
+100%        New File                1936        microsoft-certificateservices-policy-serverupgrade-replacement.man
+            New File                2057        microsoft-certificateservices-webenrollment-serverupgrade-replacement.ma
+100%
+100%        New File                1335        microsoft-hyper-v-client-migration-replacement.man
+100%        New File                 634        microsoft-hyper-v-drivers-migration-replacement.man
+100%        New File                6082        microsoft-hyper-v-migration-replacement.man
+100%        New File                 933        microsoft-onecore-tiledatarepository-replacement.man
+100%        New File                1242        microsoft-windows-advertisingid-replacement.man
+100%        New File                 898        microsoft-windows-coresystem-initmachineconfig-replacement.man
+100%        New File                1962        microsoft-windows-credentialmanagementrole-replacement.man
+100%        New File                1331        microsoft-windows-credentialmanagementrole-tools-replacement.man
+100%        New File                 690        microsoft-windows-deployment-services-admin-pack-replacement.man
+100%        New File                1446        microsoft-windows-deviceaccess-replacement.man
+100%        New File                1266        microsoft-windows-enterprisemgmt-replacement.man
+100%        New File               18143        microsoft-windows-errorreportingcore-replacement.man
+100%        New File                1291        microsoft-windows-errorreportingfaults-replacement.man
+100%        New File                 657        microsoft-windows-failovercluster-adminpak-replacement.man
+100%        New File                2038        microsoft-windows-familysafety-refreshtask-replacement.man
+100%        New File                3998        microsoft-windows-fax-service-replacement.man
+100%        New File                1436        microsoft-windows-feedback-service-replacement.man
+100%        New File                4915        microsoft-windows-flighting-settings.replacement.man
+100%        New File                1884        microsoft-windows-geolocation-replacement.man
+100%        New File                2107        microsoft-windows-identity-foundation-migration-replacement.man
+100%        New File                4225        microsoft-windows-ie-adminkitbranding-repl.man
+100%        New File               19519        microsoft-windows-ie-clientnetworkprotocolimplementation-repl.man
+100%        New File               19973        microsoft-windows-ie-internetexplorer-repl-2.man
+100%        New File               16882        microsoft-windows-ie-internetexplorer-repl.man
+100%        New File                2837        microsoft-windows-ie-pdm-replacement.man
+100%        New File                9200        microsoft-windows-ime-traditional-chinese-core-replacement.man
+100%        New File                 869        microsoft-windows-netfx35cdfcomp-replacement.man
+100%        New File               45739        microsoft-windows-netfxcorecomp-repl.man
+100%        New File                 895        microsoft-windows-network-setup-replacement.man
+100%        New File                 707        microsoft-windows-networkbridge-replacement.man
+100%        New File                 959        microsoft-windows-networkcontroller-framework-replacement.man
+100%        New File                8092        microsoft-windows-offlinefiles-replacement.man
+100%        New File                3476        microsoft-windows-powershell-replacement.man
+100%        New File                1148        microsoft-windows-powershell-ws08-replacement.man
+            New File                 876        microsoft-windows-powershellwebaccess-commands-powershell-migration-repl
+100%  t.man
+100%        New File                1708        microsoft-windows-rmapi-replacement.man
+100%        New File                4203        microsoft-windows-securestartup-filterdriver-replacement.man
+100%        New File                1766        microsoft-windows-security-ngc-credprov-replacement.man
+100%        New File                1297        microsoft-windows-security-ngc-ctnrsvc-repl.man
+100%        New File                 704        microsoft-windows-servermanager-rsat-featuretools-replacement.man
+100%        New File                 677        microsoft-windows-servermanager-rsat-replacement.man
+100%        New File                 698        microsoft-windows-servermanager-rsat-roletools-replacement.man
+100%        New File                 747        microsoft-windows-servermanager-shell-replacement.man
+100%        New File                 793        microsoft-windows-services-targetedcontent-replacement.man
+100%        New File                1927        microsoft-windows-slb-mux-replacement.man
+100%        New File                 936        microsoft-windows-smb1-replacement.man
+            New File                1059        microsoft-windows-softwareinventorylogging-scheduledtasks-replacement.ma
+100%
+100%        New File                1535        microsoft-windows-storagemigration-od-replacement.man
+100%        New File                6368        microsoft-windows-storagemigration-replacement.man
+100%        New File                1489        microsoft-windows-sxs-replacement.man
+100%        New File                3573        microsoft-windows-unified-telemetry-client-replacement.man
+100%        New File                1956        microsoft-windows-virtualization-vmswitch-migration-replacement.man
+100%        New File                 837        microsoft-windows-wcfcorecomp-replacement.man
+100%        New File                1290        microsoft-windows-workstationservice-replacement.man
+100%        New File                1943        microsoft.windows.com.complus.setup-replacement.man
+100%        New File                4467        microsoft.windows.com.dtc.setup-replacement.man
+100%        New File                1534        microsoftwindowsdefragcore-replacement.man
+100%        New File                3710        mmdeviceapi-migration-replacement.man
+100%        New File                1375        mmsys-migration-replacement.man
+100%        New File                 770        mpr-replacement.man
+100%        New File                1210        msmpeg2vdec-migration-replacement.man
+100%        New File                1678        muisettings-replacement.man
+100%        New File                2520        mup-replacement.man
+100%        New File                3131        nchostagent-replacement.man
+100%        New File                3381        ndis-repl.man
+100%        New File                1853        netfx-wcf-http-activation-replacement.man
+100%        New File                1043        netfx-wcf-msmqactivation-registration-replacement.man
+100%        New File                1043        netfx-wcf-pipeactivation-registration-replacement.man
+100%        New File                1041        netfx-wcf-tcpactivation-registration-replacement.man
+100%        New File                 601        netfx3-replacement.man
+100%        New File                 851        netfx4-policy-replacement.man
+100%        New File                 668        netfx4-replacement.man
+100%        New File                1520        netfx4-wcf-client-replacement.man
+100%        New File                1436        netfx4-wcf-extended-replacement.man
+100%        New File               17499        netfx4clientcorecomp-replacement.man
+100%        New File                1727        networking-mpssvc-svc.replacement.man
+100%        New File                 692        networkloadbalancingmanagementclient-replacement.man
+100%        New File                 691        networkloadbalancingmanagementheadlessserver-replacement.man
+100%        New File                2117        networkprofile-replacement.man
+100%        New File               10566        networksecurity.replacement.man
+100%        New File                1276        nfs-admincore-repl.man
+100%        New File                1198        nfs-clientcore-repl.man
+100%        New File                1192        nfs-servercore-repl.man
+100%        New File                1087        nfs-servercoreupg-clientcore-repl.man
+100%        New File                1086        nfs-servercoreupg-servercore-repl.man
+100%        New File                1336        ngclocalaccountmigplugin-replacement.man
+100%        New File                 907        ngcpopkeysrv_dll-repl.man
+100%        New File                 943        nlasvc-replace.man
+100%        New File                1041        notepad-repl.man
+100%        New File                 771        npas-role-replacement.man
+100%        New File                 651        npsui-replacement.man
+100%        New File               13893        odbc32dll-repl.man
+100%        New File               11188        onecore_speechcommon-rep.man
+100%        New File                 910        openssh-common-components-onecore-replacement.man
+100%        New File                 905        openssh-server-components-onecore-replacement.man
+100%        New File                3628        pcpksp_dll-repl.man
+100%        New File                6356        peerdist-client-migration-replacement.man
+100%        New File                6363        peerdist-server-migration-replacement.man
+100%        New File                3261        peerdist-upgrade-replacement.man
+100%        New File                1669        performancecounterinfrastructurenonexecutable-replacement.man
+100%        New File                1389        personalizationcsp-repl.man
+100%        New File                 896        pnpmigration-replacement.man
+100%        New File                1303        posproviders-replacement.man
+100%        New File                6431        power-energyestimationengine-replacement.man
+100%        New File                2577        powercpl-replacement.man
+100%        New File                6423        powermanagement-powerpolicy-definitions-replacement-v1019h1.man
+100%        New File                5934        powermanagement-powerpolicy-definitions-replacement-v1119h1.man
+100%        New File                5939        powermanagement-powerpolicy-definitions-replacement-v12vb.man
+100%        New File                6414        powermanagement-powerpolicy-definitions-replacement-v13vb.man
+100%        New File                7036        powermanagement-powerpolicy-definitions-replacement-v16sv1sv2.man
+100%        New File                4384        powermanagement-powerpolicy-definitions-replacement-v4rs1.man
+100%        New File                4384        powermanagement-powerpolicy-definitions-replacement-v5rs1.man
+100%        New File                4384        powermanagement-powerpolicy-definitions-replacement-v6rs2.man
+100%        New File                5654        powermanagement-powerpolicy-definitions-replacement-v7rs2.man
+100%        New File                6154        powermanagement-powerpolicy-definitions-replacement-v8rs4.man
+100%        New File                6273        powermanagement-powerpolicy-definitions-replacement-v9rs5.man
+100%        New File                1897        powermanagement-powerpolicy-definitions-replacement-vista.man
+100%        New File                3373        powermanagement-powerpolicy-definitions-replacement-win10.man
+100%        New File                2618        powermanagement-powerpolicy-definitions-replacement-win7.man
+100%        New File               27151        powermanagement-powerpolicy-definitions-replacement-win8.man
+100%        New File                 654        powermanagement-powerpolicy-migration-replacement.man
+100%        New File                3623        printing-localprinting-replacement.man
+100%        New File                1400        printing-server-foundation-features-upgrade.man
+100%        New File                 933        printing-servercore-wow64-rm.man
+100%        New File                 933        printing-spooler-core-replacement.man
+100%        New File                1870        processmodel-cpt-rm.man
+100%        New File                1054        profsvcreplacement.man
+100%        New File                2282        propsys-replacement.man
+100%        New File                1767        quickactions-windows-replacement.man
+100%        New File                3203        rasapi-repl.man
+100%        New File                6129        rasbase-rassstp-repl.man
+100%        New File                5956        rasbase-repl.man
+100%        New File                2526        rasddm-repl.man
+100%        New File                2272        rasmanservice-repl.man
+100%        New File                2701        rasmanservice-replv2.man
+100%        New File                2805        rasmanservice-replv3.man
+100%        New File                2976        rasppp-repl.man
+100%        New File                1815        rasrqs-repl.man
+100%        New File               27475        rasserver-repl.man
+100%        New File                 660        rasserveradmintools-replacement.man
+100%        New File                1159        refs-replacement.man
+100%        New File                 457        refs-v1-replacement.man
+100%        New File                1134        retaildemo.deployment.replacement.man
+100%        New File                4465        rights-management-client-v1-api-replacement.man
+100%        New File                1051        rights-management-services-admin-tools-replacement.man
+100%        New File                1060        rights-management-services-management-tools-replacement.man
+100%        New File                1038        rights-management-services-role-replacement.man
+100%        New File                2317        schedsvc-replacement.man
+100%        New File                2609        security-malware-windows-defender-repl.man
+100%        New File                2848        security-spp-migration-replacement.man
+100%        New File                 970        securitycenter-core-replacement.man
+100%        New File                 766        servercore-wow64-rm.man
+100%        New File                 983        settingshandlers_accessibility-replacement.man
+100%        New File                1283        sharedpccsp-repl.man
+100%        New File                 643        sharemgmt-rsatclient-tools-replacement.man
+100%        New File               19767        shell32-replacement.man
+100%        New File                2843        shmig-replacement.man
+100%        New File                1170        shutdown-event-tracker-repl.man
+100%        New File                1036        signalmanager-replacement.man
+100%        New File                2906        signature-replacement.man
+100%        New File                2416        smartcardsubsystem-repl.man
+100%        New File                2053        smsroutersvc-replacement.man
+100%        New File                 880        snippingtoolsettingsmigration-replacement.man
+100%        New File                 652        snmp-gui-tools-replacement.man
+100%        New File                2423        sounds-migration-replacement.man
+100%        New File                 858        spectrum-replacement.man
+100%        New File                2610        srm-cbadriver-repl.man
+100%        New File                2621        srm-datascrndriver-repl.man
+100%        New File                 713        srm-infrastructure-repl.man
+100%        New File                 639        srm-management-repl.man
+100%        New File                2590        srm-quotadriver-repl.man
+100%        New File                4084        srm-service-repl.man
+100%        New File                2827        srm-service-reports-repl.man
+100%        New File                2410        srm-ui-repl.man
+100%        New File                1307        srumon-replacement.man
+100%        New File                4540        starttiledata-replacement.man
+100%        New File                2541        storsvc-replacement.man
+100%        New File                2694        sysdm-replacement.man
+100%        New File                1823        sysmain-replacement.man
+100%        New File                1026        systemsettingsthreshold-replacement.man
+100%        New File                 992        systemsettings_handlers_cortana-replacement.man
+100%        New File               15619        tabletpcplatforminput-core-replacement.man
+100%        New File                1935        tcblaunch-replacement.man
+100%        New File               17158        tcpip-replacement.man
+100%        New File                1141        terminalservices-appserver-licensing-replacement.man
+100%        New File                1048        terminalservices-gateway-package-r-replacement.man
+100%        New File                1048        terminalservices-gateway-package-replacement.man
+100%        New File                1061        terminalservices-gateway-ui-package-r-replacement.man
+100%        New File                1061        terminalservices-gateway-ui-package-replacement.man
+100%        New File                1744        terminalservices-licenseserver-replacement.man
+100%        New File                1377        terminalservices-localsessionmanager-replacement.man
+100%        New File                 905        terminalservices-publishing-wmiprovider-replacement.man
+100%        New File                 863        terminalservices-rapweb-replacement.man
+100%        New File                1086        terminalservices-rapwebpart-replacement.man
+100%        New File                3390        terminalservices-rdp-winstationextensions-replacement.man
+100%        New File                5441        terminalservices-remoteconnectionmanager-replacement.man
+100%        New File                1053        terminalservices-role-package-r-replacement.man
+100%        New File                1053        terminalservices-role-package-replacement.man
+100%        New File                2743        terminalservices-sessiondirectory-client-replacement.man
+100%        New File                4206        terminalservices-sessiondirectory-server-replacement.man
+100%        New File                1298        terminalservices-tsv-vmhostagent-replacement.man
+100%        New File                1065        tetheringservice-repl.man
+100%        New File                6471        textservicesframework-migration-replacement.man
+100%        New File                1194        time-service-replacement.man
+100%        New File                2599        tpmdriverwmi-replacement.man
+100%        New File                 916        tpmvsc-repl.man
+100%        New File               12467        twinui-replacement.man
+100%        New File                1614        twinui.pcshell-replacement.man
+100%        New File                1561        udfs-replacement.man
+100%        New File                1125        updateagent-replacement.man
+100%        New File                 879        updateservices-common-replacement.man
+100%        New File                2854        updateservices-services-replacement.man
+100%        New File                2460        upnpdevicehost-replacement.man
+100%        New File                2467        upnpdevicehost-server-replacement.man
+100%        New File                2323        upnpssdp-replacement.man
+100%        New File                2330        upnpssdp-server-replacement.man
+100%        New File                1685        usbmigration-replacement.man
+100%        New File                1318        userchoiceprotection-replacement.man
+100%        New File                2188        vault-replacement.man
+100%        New File                 928        video-tvvideocontrol-replacement.man
+100%        New File                1785        virtualdiskservice-repl.man
+100%        New File                2954        volsnap-repl.man
+100%        New File                4048        volumecontrol.replacement.man
+100%        New File                4120        vssservice-repl.man
+100%        New File                1385        wbiosrvc-replacement.man
+100%        New File                 823        wcf-http-activation-replacement.man
+100%        New File                 833        wcf-nonhttp-activation-replacement.man
+100%        New File               13907        web-services-for-management-core-replacement.man
+100%        New File                2138        webdavredir-clientonly-replacement.man
+100%        New File                2138        webdavredir-serveronly-replacement.man
+100%        New File                 969        wia-coreservices-replacement.man
+100%        New File                9786        wicamigrationav-rl.man
+100%        New File                1029        wid8-migration.man
+100%        New File               20369        win32k-settings-repl.man
+100%        New File                1552        Windows-Internal-Shell-AIX-Config-Replacement.man
+100%        New File                1134        windows-secdriver-rep.man
+100%        New File                1137        windows-secwfpdriver-rep.man
+100%        New File                2008        windows-senseclient-service-rep.man
+100%        New File                1532        windows.cortana.desktop-repl.man
+100%        New File                2608        windows.holographic.displaythrottling-replacement.man
+100%        New File                 993        windows.media-migration-replacement.man
+100%        New File                1422        windows.sharedpc.accountmanager-repl.man
+100%        New File                2054        windows.storage-replacement.man
+100%        New File                2074        windows.ui.shell-repl.man
+100%        New File                1272        windowspushnotifications-platform-library-replacement.man
+100%        New File                6327        windowssearchengine-replacement.man
+100%        New File                1175        windowsstoreapi-replacement.man
+100%        New File                1769        windowsupdate-replacement.man
+100%        New File                1137        windowswebapphost-replacement.man
+100%        New File               12599        winlogon-replacement.man
+100%        New File                1016        winmde-migration-replacement.man
+100%        New File                1160        winnat-replacement.man
+100%        New File                 937        winsat-cmi-replacement.man
+100%        New File                4918        wlidsvc-replacement.man
+100%        New File                4190        wlidsvc.vista-win7.man
+100%        New File                4165        wmdmigration-replacement.man
+100%        New File                2738        wmi-core-replacement.man
+100%        New File                1128        wmiacpi-replacement.man
+100%        New File                1758        wmpnsservice-migration-replacement.man
+100%        New File                2824        wmpplayer-migration-replacement.man
+100%        New File                1174        wsinfra-other-mw-replacement.man
+100%        New File                1552        wsinfra-upgrade-replacement.man
+100%        New File                1042        wwansvc-servercfg-repl.man
+          New Dir          1    D:\W11\Win11Upgrade\sources\replacementmanifests\hwvid-migration-2\
+100%        New File              103856        hwvidmigplugin.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\replacementmanifests\microsoft-activedirectory-webservices\
+100%        New File              124336        adwsmigrate.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\replacementmanifests\microsoft-azurestack-hci-plugin\
+100%        New File              112032        azshcimigplugin.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\replacementmanifests\microsoft-client-license-platform-servi
+ce-migration\
+100%        New File              271680        clipmigplugin.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\replacementmanifests\microsoft-edge-migration-plugin\
+100%        New File              161184        edgemigrationplugin.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\replacementmanifests\microsoft-onecore-tiledatarepository\
+100%        New File              161184        tilestoremigrationplugin.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\replacementmanifests\microsoft-windows-appmanagement-migrati
+on\
+100%        New File               1.1 m        appmanmigrationplugin.dll
+          New Dir          4    D:\W11\Win11Upgrade\sources\replacementmanifests\microsoft-windows-appx-deployment-serve
+r\
+100%        New File               22771        appxprovisioning.xml
+100%        New File              599424        appxupgrademigrationplugin.dll
+            New File                1692        microsoft.windows.secondarytileexperience_10.0.0.0_neutral__cw5n1h2txyew
+100%
+100%        New File                1498        windows.miracastview_6.3.0.0_neutral_neutral_cw5n1h2txyewy.xml
+          New Dir          1    D:\W11\Win11Upgrade\sources\replacementmanifests\microsoft-windows-audio-mmecore-other\
+100%        New File              124336        audmigplugin.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\replacementmanifests\microsoft-windows-clusterupgradeplugin\
+
+100%        New File              112040        ClusterUpgradePlugin.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\replacementmanifests\microsoft-windows-com-complus-setup\
+100%        New File              198064        commig.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\replacementmanifests\microsoft-windows-deviceassociationfram
+eworkmigration\
+100%        New File              333216        dafmigplugin.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\replacementmanifests\microsoft-windows-directoryservices-ada
+m-client\
+100%        New File              157088        adammigrate.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\replacementmanifests\microsoft-windows-diskmonitor\
+100%        New File              176128        diskmonmigplugin.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\replacementmanifests\microsoft-windows-iis-rm\
+100%        New File              398768        iismig.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\replacementmanifests\microsoft-windows-mapscontrol-migration
+\
+100%        New File              128320        mapsmigplugin.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\replacementmanifests\microsoft-windows-mup\
+100%        New File              148896        mupmigplugin.dll
+          New Dir          3    D:\W11\Win11Upgrade\sources\replacementmanifests\microsoft-windows-network-setup\
+100%        New File              181664        netsetupapi.dll
+100%        New File              910768        netsetupengine.dll
+100%        New File              382256        networkbindingenginemigplugin.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\replacementmanifests\microsoft-windows-offlinefiles-core\
+100%        New File              169280        cscmig.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\replacementmanifests\microsoft-windows-offlinefiles-core\en-
+us\
+100%        New File                3072        cscmig.dll.mui
+          New Dir          3    D:\W11\Win11Upgrade\sources\replacementmanifests\microsoft-windows-pnpmigration\
+100%        New File              427440        pnpmig.dll
+100%        New File               25391        pnpmig.inf
+100%        New File             1026200        servicingcommon.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\replacementmanifests\microsoft-windows-rasapi-mig\
+100%        New File              107936        pbkmigr.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\replacementmanifests\microsoft-windows-rasserver-migplugin\
+100%        New File              419248        rasmigplugin.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\replacementmanifests\microsoft-windows-security-ngc-localacc
+ountmigplugin\
+100%        New File              120128        ngclocalaccountmigplugin.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\replacementmanifests\microsoft-windows-shmig\
+100%        New File              308656        shmig.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\replacementmanifests\microsoft-windows-shmig\en-us\
+100%        New File                4096        shmig.dll.mui
+          New Dir          2    D:\W11\Win11Upgrade\sources\replacementmanifests\microsoft-windows-sxs\
+100%        New File             1026096        servicingcommon.dll
+100%        New File              148912        sxsmigplugin.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\replacementmanifests\microsoft-windows-sxs\en-us\
+100%        New File                2560        sxsmigplugin.dll.mui
+          New Dir          1    D:\W11\Win11Upgrade\sources\replacementmanifests\microsoft-windows-terminalservices-apps
+erver-licensing\
+100%        New File              124208        tsmigplugin.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\replacementmanifests\microsoft-windows-terminalservices-lice
+nseserver\
+100%        New File              140608        tlsrepplugin.dll
+          New Dir          5    D:\W11\Win11Upgrade\sources\replacementmanifests\microsoft-windows-textservicesframework
+-migration\
+100%        New File              169376        chxmig.dll
+100%        New File              214320        imjpmig.dll
+100%        New File              140704        imkrmig.dll
+100%        New File              173376        msctfmig.dll
+100%        New File              112032        tabletextservicemig.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\replacementmanifests\microsoft-windows-virtualization-vmswit
+ch\
+100%        New File              308544        vmswitchmigrationplugin.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\replacementmanifests\microsoft-windows-vsmkey\
+100%        New File              112032        VsmKeyMigPlugin.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\replacementmanifests\networkbridge\
+100%        New File              136624        bridgemigplugin.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\replacementmanifests\networking-mpssvc-svc\
+100%        New File              169376        icfupgd.dll
+          New Dir          2    D:\W11\Win11Upgrade\sources\replacementmanifests\printing-localprinting-replacement\
+100%        New File              161088        apmonportmig.dll
+100%        New File              156992        usbportmig.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\replacementmanifests\sppmig\
+100%        New File               71072        sppmig.dll
+          New Dir          1    D:\W11\Win11Upgrade\sources\replacementmanifests\windowssearchengine\
+100%        New File              165184        wsearchmigplugin.dll
+          New Dir          3    D:\W11\Win11Upgrade\sources\sxs\
+            New File               30781        Microsoft-Windows-InternetExplorer-Optional-Package~31bf3856ad364e35~amd
+100%  US~.cab
+            New File              304859        microsoft-windows-internetexplorer-optional-package~31bf3856ad364e35~amd
+100%  ab
+100%        New File              68.0 m        microsoft-windows-netfx3-ondemand-package~31bf3856ad364e35~amd64~~.cab
+          New Dir          0    D:\W11\Win11Upgrade\sources\uup\
+          New Dir          3    D:\W11\Win11Upgrade\sources\uup\metadata\
+100%        New File               18873        desktoptargetcompdb_conditions.xml.cab
+100%        New File               47682        desktoptargetcompdb_fod_neutral.xml.cab
+100%        New File               12406        desktoptargetcompdb_neutral.xml.cab
+          New Dir          2    D:\W11\Win11Upgrade\sources\vi-vn\
+100%        New File               80896        MediaSetupUIMgr.dll.mui
+100%        New File               14248        SetupPlatform.exe.mui
+          New Dir          0    D:\W11\Win11Upgrade\sources\_manifest\
+          New Dir          3    D:\W11\Win11Upgrade\sources\_manifest\spdx_2.2\
+100%        New File                5350        manifest.spdx.cose
+100%        New File              619136        manifest.spdx.json
+100%        New File                  64        manifest.spdx.json.sha256
+          New Dir          0    D:\W11\Win11Upgrade\support\
+          New Dir         21    D:\W11\Win11Upgrade\support\logging\
+100%        New File               22072        actionqueueetw.dll
+100%        New File               26168        auditetw.dll
+100%        New File               26040        cmisetupetw.dll
+100%        New File                6868        etwproviderinstall.vbs
+100%        New File                6348        microsoft-windows-actionqueue-instrumentation.man
+100%        New File                6729        microsoft-windows-audit-instrumentation.man
+100%        New File                7231        microsoft-windows-cmisetup-instrumentation.man
+100%        New File                8649        microsoft-windows-oobeldr-instrumentation.man
+100%        New File               20392        microsoft-windows-setup-events.man
+100%        New File                9186        microsoft-windows-setup-instrumentation.man
+100%        New File               15365        microsoft-windows-setupcl-instrumentation.man
+100%        New File                7222        microsoft-windows-setupugc-instrumentation.man
+100%        New File               13873        microsoft-windows-sysprep-instrumentation.man
+100%        New File                9233        microsoft-windows-windeploy-instrumentation.man
+100%        New File               26056        oobeldretw.dll
+100%        New File               30248        setupcletw.dll
+100%        New File               30128        setupetw.dll
+100%        New File               26056        setupugcetw.dll
+100%        New File               30152        sysprepetw.dll
+100%        New File               26152        windeployetw.dll
+100%        New File               75304        winsetupetw.dll
+          New Dir          1    D:\W11\Win11Upgrade\support\logging\en-us\
+100%        New File                3584        actionqueueetw.dll.mui
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :        95        95         0         0         0         0
+   Files :       976       976         0         0         0         0
+   Bytes :   7.199 g   7.199 g         0         0         0         0
+   Times :   0:03:50   0:03:49                       0:00:00   0:00:01
+
+
+   Speed :            33707829 Bytes/sec.
+   Speed :            1928.777 MegaBytes/min.
+   Ended : Wednesday 8 April 2026 11:31:50
+Starting silent Windows 11 upgrade...
+Running upgrade.bat...
+PS>TerminatingError(Start-Process): "Cannot validate argument on parameter 'FilePath'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again."
+>> TerminatingError(Start-Process): "Cannot validate argument on parameter 'FilePath'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again."
+Cannot validate argument on parameter 'FilePath'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+Start-Process : Cannot validate argument on parameter 'FilePath'. The argument is null or empty. Provide an argument
+that is not null or empty, and then try the command again.
+At D:\Run-All.ps1:1248 char:15
++ Start-Process $UpgradeBat -WorkingDirectory "C:\Temp" -Wait
++               ~~~~~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Start-Process], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : ParameterArgumentValidationError,Microsoft.PowerShell.Commands.StartProcessCommand
+
+**********************
+Windows PowerShell transcript end
+End time: 20260408113150
+**********************

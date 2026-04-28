@@ -1,0 +1,226 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260330114237
+Username: DSKML18878\HSE.Installer
+RunAs User: DSKML18878\HSE.Installer
+Configuration Name: 
+Machine: DSKML18878 (Microsoft Windows NT 10.0.19045.0)
+Host Application: powershell -NoProfile -ExecutionPolicy Bypass -File Run-All.ps1
+Process ID: 6524
+PSVersion: 5.1.19041.6456
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.6456
+BuildVersion: 10.0.19041.6456
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is D:\Scripts\FullScriptLog\FullScriptLog_2026-03-30_11-42-37.txt
+Logging to D:\Scripts\FullScriptLog\FullScriptLog_2026-03-30_11-42-37.txt
+
+===== SYSTEM INFORMATION =====
+ComputerName      : DSKML18878
+SerialNumber      : GM02ZWD9
+Model             : 11JQS1H700
+Domain            : healthirl.net
+InstalledRAM      : 7.38 GB
+OSName            : Microsoft Windows 10 Pro
+Version           : 10.0.19045
+BuildNumber       : 19045
+WindowsRelease    : 22H2
+SystemDrive       : C:
+OSArchitecture    : 64-bit
+SystemDirectory   : C:\windows\system32
+==============================
+
+Checking Windows version...
+Detected Version: 22H2
+Windows version meets minimum requirement for Windows 11 upgrade path.
+
+Checking system uptime...
+System Uptime: 5 Days 23 Hours
+Restart recommended: uptime > 1 day.
+
+Checking for pending reboot...
+No pending reboot.
+
+Checking Windows activation...
+Windows is ACTIVATED.
+
+---------------------------------------------------------------------------
+
+
+Checking RAM configuration...
+Total Installed RAM : 8 GB
+Number of DIMMs     : 2
+Stick Sizes         : 4 GB, 4 GB
+
+2x4GB RAM detected.
+Recommendation: Replace with 2x8GB RAM (total 16GB).
+
+---------------------------------------------------------------------------
+
+
+Checking disk health and drives...
+# Drives detected: 1 #
+
+Name     Size     Firmware Type BusType Status Health  SerialNumber         Model   
+----     ----     -------- ---- ------- ------ ------  ------------         -----   
+PCIe SSD 238.5 GB EDFMG1.5 SSD  NVMe    OK     Healthy 6479_A776_CA30_0FDB. PCIe SSD
+# Partitions: 6 #
+
+DriveLetter FileSystemLabel FileSystem SizeRemaining          Size HealthStatus
+----------- --------------- ---------- -------------          ---- ------------
+            Recovery        NTFS         19401805824   20106727424 Healthy     
+            BOOT            FAT32          488067072     519045120 Healthy     
+            Recovery        NTFS          1943728128    2560618496 Healthy     
+            BOOT            FAT32          485654528     522199040 Warning     
+C           Windows         NTFS        120690556928  252841029632 Healthy     
+D           Windows11       NTFS       1891457703936 1979600523264 Healthy
+
+Checking disk space...
+Sufficient Free Space: 112.4 GB, no cleanup required.
+
+---------------------------------------------------------------------------
+
+
+Checking TPM...
+TPM detected.
+
+Checking Secure Boot...
+Secure Boot enabled.
+
+Checking Windows upgrade residue...
+No previous upgrade folder detected.
+
+Checking network connection...
+Connected, but unable to determine connection type.
+
+Refreshing C:\Temp
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows
+-------------------------------------------------------------------------------
+
+  Started : 30 March 2026 11:43:53
+   Source : D:\W11\Temp\
+     Dest : C:\Temp\
+
+    Files : *.*
+
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /PURGE /MIR /R:1 /W:1
+
+------------------------------------------------------------------------------
+
+                           7    D:\W11\Temp\
+          *EXTRA File             418448        Applocker_log.txt
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :         1         0         1         0         0         0
+   Files :         7         0         7         0         0         1
+   Bytes :    69.0 k         0    69.0 k         0         0   408.6 k
+   Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+   Ended : 30 March 2026 11:43:53
+---------------------------------------------------------------------------
+
+
+Running D:\\Blocked apps checker\run_check.bat
+
+Running D:\\Profile checker\run_profile_check.bat
+
+Running D:\\Java Removal Tool & Checker\Run-JavaCheck.bat
+
+Running C:\Temp\W11 update fix commands.bat
+
+---------------------------------------------------------------------------
+Checking NetAcquire...
+NetAcquire installed.
+C:\Win11Scripts\NetAcquire already exists. NetAcquire fix not required.
+
+---------------------------------------------------------------------------
+
+
+Checking Lenovo System Update...
+Lenovo System Update not found. Installing...
+Installation completed.
+Launching Lenovo System Update...
+
+Checking DirectX and WDDM requirements...
+GPU: AMD Radeon(TM) Graphics
+DirectX Feature Levels: 12_1,12_0,11_1,11_0,10_1,10_0,9_3,9_2,9_1
+Driver Model (WDDM): WDDM 2.7
+Result: Meets Windows 11 graphics requirements.
+
+
+Preparing Windows Update environment...
+
+[CHECK] Update Orchestrator
+[OK] Update Orchestrator
+
+[CHECK] Windows Update
+[OK] Windows Update
+
+[CHECK] Windows Modules Installer
+[OK] Windows Modules Installer
+
+[CHECK] Windows Update Medic
+[OK] Windows Update Medic
+
+[CHECK] Windows Installer
+[OK] Windows Installer
+
+[CHECK] BITS
+[OK] BITS
+
+[CHECK] Cryptographic Services
+[OK] Cryptographic Services
+
+[CHECK] Windows Update Policies
+[OK] Windows Update Policies
+
+[CHECK] Disable Fast Startup
+[ISSUE] Disable Fast Startup
+ -> Attempting fix...
+
+
+HiberbootEnabled : 0
+PSPath           : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session
+                   Manager\Power
+PSParentPath     : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session
+                   Manager
+PSChildName      : Power
+PSDrive          : HKLM
+PSProvider       : Microsoft.PowerShell.Core\Registry
+
+ -> Fix applied
+
+[CHECK] Hosts file entries - windowsupdate
+[OK] Hosts file entries - windowsupdate
+
+[CHECK] Hosts file entries - update.microsoft
+[OK] Hosts file entries - update.microsoft
+
+Cleaning Windows Update cache...
+
+=== Windows Update environment prepared ===
+
+Cleaning old update and temporary files...
+This may take some time but helps prevent Windows 11 upgrade failures.
+
+PS>TerminatingError(Measure-Object): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: The property "Length" cannot be found in the input for any objects."
+>> TerminatingError(Measure-Object): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: The property "Length" cannot be found in the input for any objects."
+>> TerminatingError(Measure-Object): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: The property "Length" cannot be found in the input for any objects."
+The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: The property "Length" cannot be found in the input for any objects.
+Measure-Object : The property "Length" cannot be found in the input for any objects.
+At D:\Run-All.ps1:1080 char:13
++             Measure-Object -Property Length -Sum
++             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Measure-Object], PSArgumentException
+    + FullyQualifiedErrorId : GenericMeasurePropertyNotFound,Microsoft.PowerShell.Commands.MeasureObjectCommand
+**********************
+Windows PowerShell transcript end
+End time: 20260330114704
+**********************

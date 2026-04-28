@@ -1,0 +1,37 @@
+
+# --- Create-UKRegionTask.ps1 ---
+
+$TaskName = "Set-UKRegionalSettings"
+$ScriptPath = "C:\Temp\Set-UKRegion.ps1"
+
+# Ensure the region-setting script exists
+if (-not (Test-Path $ScriptPath)) {
+    Write-Error "Cannot find script at $ScriptPath. Please create Set-UKRegion.ps1 first."
+    exit 1
+}
+
+# Remove existing task if it exists
+if (Get-ScheduledTask -TaskName $TaskName -ErrorAction SilentlyContinue) {
+    Unregister-ScheduledTask -TaskName $TaskName -Confirm:$false
+}
+
+# Define action to run the script at logon
+$Action = New-ScheduledTaskAction -Execute "powershell.exe" `
+    -Argument "-NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File `"$ScriptPath`""
+
+# Trigger when any user logs on
+$Trigger = New-ScheduledTaskTrigger -AtLogOn
+
+# Target built-in "Users" group (SID: S-1-5-32-545)
+# RunLevel Limited = No admin rights required
+$Principal = New-ScheduledTaskPrincipal -GroupId "S-1-5-32-545" -RunLevel Limited
+
+# Register the task
+Register-ScheduledTask -TaskName $TaskName `
+    -Action $Action `
+    -Trigger $Trigger `
+    -Principal $Principal `
+    -Description "Applies UK regional format settings at logon for all standard users" `
+    -Force
+
+Write-Host "Scheduled task '$TaskName' registered for built-in Users group."

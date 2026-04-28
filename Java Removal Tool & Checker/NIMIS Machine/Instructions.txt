@@ -1,0 +1,6 @@
+1. Copy the NMC folder to C:\
+2. Run the NMC.bat file as Administrator
+
+Installation takes about 5 Minutes
+
+3. Confirm Nimis functionality

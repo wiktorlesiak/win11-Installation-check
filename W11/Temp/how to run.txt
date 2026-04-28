@@ -1,0 +1,8 @@
+1. Log in to device with admin permissions
+2. Copy temp folder to C drive
+3. Run PowerShell as Administrator
+4.Paste below and press enter - script will restart device automatically once finished
+
+
+Set-ExecutionPolicy Bypass -Scope Process -Force
+C:\temp\ApplockerWin11scriptstask.ps1

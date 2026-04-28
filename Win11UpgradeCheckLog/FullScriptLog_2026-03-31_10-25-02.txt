@@ -1,0 +1,48 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260331102502
+Username: HEALTHIRL\pfhwlesiak
+RunAs User: HEALTHIRL\pfhwlesiak
+Configuration Name: 
+Machine: LAP250600040 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File E:\Run-All.ps1
+Process ID: 21272
+PSVersion: 5.1.19041.6456
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.6456
+BuildVersion: 10.0.19041.6456
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is E:\Scripts\FullScriptLog\FullScriptLog_2026-03-31_10-25-02.txt
+Logging to E:\Scripts\FullScriptLog\FullScriptLog_2026-03-31_10-25-02.txt
+
+===== SYSTEM INFORMATION =====
+ComputerName      : LAP250600040
+CanonicalName     : N/A
+SerialNumber      : PF50HA6G
+Model             : 21JN00HCUK
+Domain            : healthirl.net
+InstalledRAM      : 15.68 GB
+OSName            : Microsoft Windows 10 Pro
+Version           : 10.0.19045
+BuildNumber       : 19045
+WindowsRelease    : 22H2
+SystemDrive       : C:
+OSArchitecture    : 64-bit
+SystemDirectory   : C:\windows\system32
+==============================
+
+Checking Windows version...
+Detected Version: 22H2
+Windows version meets minimum requirement for Windows 11 upgrade path.
+
+Checking system uptime...
+System Uptime: 0 Days 20 Hours
+
+Checking for pending reboot...
+No pending reboot.
+
+Checking Windows activation...

@@ -1,0 +1,95 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260327092403
+Username: DSKML17499\HSE.Installer
+RunAs User: DSKML17499\HSE.Installer
+Configuration Name: 
+Machine: DSKML17499 (Microsoft Windows NT 10.0.19045.0)
+Host Application: powershell -NoProfile -ExecutionPolicy Bypass -File Run-All.ps1
+Process ID: 9996
+PSVersion: 5.1.19041.6456
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.6456
+BuildVersion: 10.0.19041.6456
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is D:\Scripts\FullScriptLog\FullScriptLog_2026-03-27_09-24-03.txt
+Logging to D:\Scripts\FullScriptLog\FullScriptLog_2026-03-27_09-24-03.txt
+
+===== SYSTEM INFORMATION =====
+ComputerName      : DSKML17499
+SerialNumber      : PC28MXRV
+Model             : 11MY002PUK
+Domain            : healthirl.net
+InstalledRAM      : 15.69 GB
+OSName            : Microsoft Windows 10 Pro
+Version           : 10.0.19045
+BuildNumber       : 19045
+WindowsRelease    : 22H2
+SystemDrive       : C:
+OSArchitecture    : 64-bit
+SystemDirectory   : C:\windows\system32
+==============================
+
+Checking Windows version...
+Detected Version: 22H2
+Windows version meets minimum requirement for Windows 11 upgrade path.
+
+Checking system uptime...
+System Uptime: 0 Days 22 Hours
+
+Checking for pending reboot...
+No pending reboot.
+
+Checking Windows activation...
+Windows is ACTIVATED.
+
+---------------------------------------------------------------------------
+
+
+Checking RAM configuration...
+Total Installed RAM : 16 GB
+Number of DIMMs     : 2
+Stick Sizes         : 8 GB, 8 GB
+
+16GB RAM detected. No upgrade required.
+
+---------------------------------------------------------------------------
+
+
+Checking disk health and drives...
+# Drives detected: 1 #
+
+Name                 Size     Firmware Type BusType Status Health  SerialNumber         Model               
+----                 ----     -------- ---- ------- ------ ------  ------------         -----               
+UMIS RPIRJ256VME2MWD 238.5 GB 1.9Q1908 SSD  NVMe    OK     Healthy 044A_5011_8165_7099. UMIS RPIRJ256VME2MWD
+# Partitions: 6 #
+
+DriveLetter FileSystemLabel FileSystem SizeRemaining          Size HealthStatus
+----------- --------------- ---------- -------------          ---- ------------
+            Recovery        NTFS         19401805824   20106727424 Healthy     
+            BOOT            FAT32          464130048     519045120 Healthy     
+            BOOT            FAT32          485654528     522199040 Warning     
+            Recovery        NTFS          1853300736    2560618496 Healthy     
+C           Windows         NTFS         20944105472  252841029632 Healthy     
+D           Windows11       NTFS       1891457859584 1979600523264 Healthy
+
+Checking disk space...
+Sufficient Free Space: 19.51 GB, no cleanup required.
+Not enough space. Running Disk Cleanup...
+Free Space After Cleanup: 19.5 GB
+
+---------------------------------------------------------------------------
+
+
+Checking TPM...
+TPM detected.
+
+Checking Secure Boot...
+Secure Boot enabled.
+
+Checking Windows upgrade residue...
+Taking ownership and removing hidden/system attributes...

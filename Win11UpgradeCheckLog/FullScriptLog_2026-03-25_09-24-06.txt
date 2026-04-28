@@ -1,0 +1,334 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260325092406
+Username: DSKML17499\HSE.Installer
+RunAs User: DSKML17499\HSE.Installer
+Configuration Name: 
+Machine: DSKML17499 (Microsoft Windows NT 10.0.19045.0)
+Host Application: powershell -NoProfile -ExecutionPolicy Bypass -File Run-All.ps1
+Process ID: 5444
+PSVersion: 5.1.19041.6456
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.6456
+BuildVersion: 10.0.19041.6456
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is D:\Scripts\FullScriptLog\FullScriptLog_2026-03-25_09-24-06.txt
+Logging to D:\Scripts\FullScriptLog\FullScriptLog_2026-03-25_09-24-06.txt
+
+===== SYSTEM INFORMATION =====
+ComputerName      : DSKML17499
+SerialNumber      : PC28MXRV
+Model             : 11MY002PUK
+Domain            : healthirl.net
+InstalledRAM      : 15.69 GB
+OSName            : Microsoft Windows 10 Pro
+Version           : 10.0.19045
+BuildNumber       : 19045
+WindowsRelease    : 22H2
+SystemDrive       : C:
+OSArchitecture    : 64-bit
+SystemDirectory   : C:\windows\system32
+==============================
+
+Checking Windows version...
+Detected Version: 22H2
+Windows version meets minimum requirement for Windows 11 upgrade path.
+
+Checking system uptime...
+System Uptime: 0 Days 0 Hours
+
+Checking for pending reboot...
+No pending reboot.
+
+Checking Windows activation...
+Windows is ACTIVATED.
+
+---------------------------------------------------------------------------
+
+
+Checking RAM configuration...
+Total Installed RAM : 16 GB
+Number of DIMMs     : 2
+Stick Sizes         : 8 GB, 8 GB
+
+16GB RAM detected. No upgrade required.
+
+---------------------------------------------------------------------------
+
+
+Checking disk health and drives...
+# Drives detected: 1 #
+
+Name                 Size     Firmware Type BusType Status Health  SerialNumber         Model               
+----                 ----     -------- ---- ------- ------ ------  ------------         -----               
+UMIS RPIRJ256VME2MWD 238.5 GB 1.9Q1908 SSD  NVMe    OK     Healthy 044A_5011_8165_7099. UMIS RPIRJ256VME2MWD
+# Partitions: 6 #
+
+DriveLetter FileSystemLabel FileSystem SizeRemaining          Size HealthStatus
+----------- --------------- ---------- -------------          ---- ------------
+            Recovery        NTFS         19401805824   20106727424 Healthy     
+            BOOT            FAT32          471490560     519045120 Healthy     
+            BOOT            FAT32          485654528     522199040 Warning     
+            Recovery        NTFS          1853300736    2560618496 Healthy     
+C           Windows         NTFS         12934086656  252841029632 Healthy     
+D           Windows11       NTFS       1897930293248 1979600523264 Healthy
+
+Checking disk space...
+Sufficient Free Space: 12.05 GB, no cleanup required.
+Not enough space. Running Disk Cleanup...
+Free Space After Cleanup: 12.03 GB
+
+---------------------------------------------------------------------------
+
+
+Checking TPM...
+TPM detected.
+
+Checking Secure Boot...
+Secure Boot enabled.
+
+Checking Windows upgrade residue...
+No previous upgrade folder detected.
+
+Checking network connection...
+Connected via Ethernet.
+
+Refreshing C:\Temp
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows
+-------------------------------------------------------------------------------
+
+  Started : Wednesday 25 March 2026 09:27:41
+   Source : D:\W11\Temp\
+     Dest : C:\Temp\
+
+    Files : *.*
+
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /PURGE /MIR /R:1 /W:1
+
+------------------------------------------------------------------------------
+
+                           7    D:\W11\Temp\
+          *EXTRA File              1.0 m        Microsoft Teams Installer.exe
+          *EXTRA File              31648        Microsoft.Management.Deployment.winmd
+          *EXTRA File              1.3 m        MSTeamsSetup.exe
+          *EXTRA File              1.0 m        Webex Installer.exe
+100%        New File                2580        ApplockerWin11scriptstask.ps1
+100%        New File                5871        backendscripts.ps1
+100%        New File                4049        excel_word_background_memory.vbs
+100%        New File                 293        how to run.txt
+100%        New File               56304        softwareprotection.reg
+100%        New File                 690        upgrade.bat
+100%        New File                 955        W11 update fix commands.bat
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :         1         0         1         0         0         0
+   Files :         7         7         0         0         0         4
+   Bytes :    69.0 k    69.0 k         0         0         0    3.50 m
+   Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+
+
+   Speed :              150835 Bytes/sec.
+   Speed :               8.630 MegaBytes/min.
+   Ended : Wednesday 25 March 2026 09:27:42
+---------------------------------------------------------------------------
+
+
+Running D:\\Blocked apps checker\run_check.bat
+
+Running D:\\Profile checker\run_profile_check.bat
+
+Running D:\\Java Removal Tool & Checker\Run-JavaCheck.bat
+
+Running C:\Temp\W11 update fix commands.bat
+
+---------------------------------------------------------------------------
+Checking NetAcquire...
+NetAcquire not installed.
+
+---------------------------------------------------------------------------
+
+
+Checking Lenovo System Update...
+Lenovo System Update not found. Installing...
+Installation completed.
+Launching Lenovo System Update...
+
+Checking DirectX and WDDM requirements...
+GPU: Intel(R) UHD Graphics 630
+DirectX Feature Levels: 12_1,12_0,11_1,11_0,10_1,10_0,9_3,9_2,9_1
+Driver Model (WDDM): WDDM 2.7
+Result: Meets Windows 11 graphics requirements.
+
+
+Preparing Windows Update environment...
+
+[CHECK] Update Orchestrator
+[OK] Update Orchestrator
+
+[CHECK] Windows Update
+[OK] Windows Update
+
+[CHECK] Windows Modules Installer
+[OK] Windows Modules Installer
+
+[CHECK] Windows Update Medic
+[OK] Windows Update Medic
+
+[CHECK] Windows Installer
+[OK] Windows Installer
+
+[CHECK] BITS
+[OK] BITS
+
+[CHECK] Cryptographic Services
+[OK] Cryptographic Services
+
+[CHECK] Windows Update Policies
+[OK] Windows Update Policies
+
+[CHECK] Disable Fast Startup
+[ISSUE] Disable Fast Startup
+ -> Attempting fix...
+
+
+HiberbootEnabled : 0
+PSPath           : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session
+                   Manager\Power
+PSParentPath     : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session
+                   Manager
+PSChildName      : Power
+PSDrive          : HKLM
+PSProvider       : Microsoft.PowerShell.Core\Registry
+
+ -> Fix applied
+
+[CHECK] Hosts file entries - windowsupdate
+[OK] Hosts file entries - windowsupdate
+
+[CHECK] Hosts file entries - update.microsoft
+[OK] Hosts file entries - update.microsoft
+
+Cleaning Windows Update cache...
+
+=== Windows Update environment prepared ===
+
+Cleaning old update and temporary files...
+This may take some time but helps prevent Windows 11 upgrade failures.
+
+SoftwareDistribution size : 0.03 GB
+SoftwareDistribution items: 6
+
+Catroot2 size             : 0.06 GB
+Catroot2 items            : 6
+
+Temp size                 : 0 GB
+Temp items                : 1
+
+Stopping Windows Update services...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to stop...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to stop...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to stop...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to stop...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to stop...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to stop...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to stop...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to stop...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to stop...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to stop...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to stop...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to stop...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to stop...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to stop...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to stop...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to stop...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to stop...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to stop...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to stop...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to stop...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to stop...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to stop...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to stop...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to stop...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to stop...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to stop...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to stop...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to stop...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to stop...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to stop...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to stop...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to stop...
+Cleaning folders...
+Restarting services...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+
+Cleanup completed successfully.
+
+Refreshing C:\Temp
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows
+-------------------------------------------------------------------------------
+
+  Started : Wednesday 25 March 2026 09:32:50
+   Source : D:\W11\Temp\
+     Dest : C:\Temp\
+
+    Files : *.*
+
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /PURGE /MIR /R:1 /W:1
+
+------------------------------------------------------------------------------
+
+                           7    D:\W11\Temp\
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :         1         0         1         0         0         0
+   Files :         7         0         7         0         0         0
+   Bytes :    69.0 k         0    69.0 k         0         0         0
+   Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+   Ended : Wednesday 25 March 2026 09:32:50
+
+
+Select Upgrade Method:
+1 - Silent Upgrade (Win11Upgrade folder)
+2 - Windows11InstallationAssistant
+
+C:\Temp already exists. Skipping copy.
+
+Source Windows11InstallationAssistant.exe not found!
+Running upgrade.bat...
+
+Upgrade process started successfully.
+**********************
+Windows PowerShell transcript end
+End time: 20260325093330
+**********************

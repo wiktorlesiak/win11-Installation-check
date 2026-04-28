@@ -1,0 +1,677 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260324143912
+Username: HEALTHIRL\pfhwlesiak
+RunAs User: HEALTHIRL\pfhwlesiak
+Configuration Name: 
+Machine: LAPSE95251 (Microsoft Windows NT 10.0.19045.0)
+Host Application: powershell -NoProfile -ExecutionPolicy Bypass -File Run-All.ps1
+Process ID: 6016
+PSVersion: 5.1.19041.6456
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.6456
+BuildVersion: 10.0.19041.6456
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is E:\Scripts\FullScriptLog\FullScriptLog_2026-03-24_14-39-12.txt
+Logging to E:\Scripts\FullScriptLog\FullScriptLog_2026-03-24_14-39-12.txt
+
+===== SYSTEM INFORMATION =====
+ComputerName      : LAPSE95251
+SerialNumber      : PF44CVLM
+Model             : 21EES02500
+Domain            : healthirl.net
+InstalledRAM      : 14.83 GB
+OSName            : Microsoft Windows 10 Pro
+Version           : 10.0.19045
+BuildNumber       : 19045
+WindowsRelease    : 22H2
+SystemDrive       : C:
+OSArchitecture    : 64-bit
+SystemDirectory   : C:\Windows\system32
+==============================
+
+Checking Windows version...
+Detected Version: 22H2
+Windows version meets minimum requirement for Windows 11 upgrade path.
+
+Checking system uptime...
+System Uptime: 0 Days 0 Hours
+
+Checking for pending reboot...
+No pending reboot.
+
+Checking Windows activation...
+Windows is ACTIVATED.
+
+---------------------------------------------------------------------------
+
+
+Checking RAM configuration...
+Total Installed RAM : 16 GB
+Number of DIMMs     : 2
+Stick Sizes         : 8 GB, 8 GB
+
+16GB RAM detected. No upgrade required.
+
+---------------------------------------------------------------------------
+
+
+Checking disk health and drives...
+# Drives detected: 1 #
+
+Name                 Size     Firmware Type BusType Status Health  SerialNumber         Model               
+----                 ----     -------- ---- ------- ------ ------  ------------         -----               
+Micron MTFDKCD256TFK 238.5 GB 7003V5LN SSD  NVMe    OK     Healthy 00A0_7501_3861_0663. Micron MTFDKCD256TFK
+# Partitions: 6 #
+
+DriveLetter FileSystemLabel FileSystem SizeRemaining          Size HealthStatus
+----------- --------------- ---------- -------------          ---- ------------
+            Recovery        NTFS         19401805824   20106727424 Healthy     
+            Recovery tools  NTFS           509657088     524283904 Healthy     
+            BOOT            FAT32          485654528     522199040 Warning     
+            SYSTEM          FAT32           50309120     100663296 Healthy     
+C           Windows         NTFS         78153555968  255308312576 Healthy     
+E           Windows11       NTFS       1896719118336 1979600523264 Healthy
+
+Checking disk space...
+Sufficient Free Space: 72.79 GB, no cleanup required.
+
+---------------------------------------------------------------------------
+
+
+Checking TPM...
+TPM detected.
+
+Checking Secure Boot...
+Secure Boot enabled.
+
+Checking Windows upgrade residue...
+No previous upgrade folder detected.
+
+Checking network connection...
+Connected, but unable to determine connection type.
+
+Refreshing C:\Temp
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows
+-------------------------------------------------------------------------------
+
+  Started : 24 March 2026 14:39:54
+   Source : E:\W11\Temp\
+     Dest : C:\Temp\
+
+    Files : *.*
+
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /PURGE /MIR /R:1 /W:1
+
+------------------------------------------------------------------------------
+
+                           7    E:\W11\Temp\
+        *EXTRA Dir        -1    C:\Temp\dart\
+        *EXTRA Dir        -1    C:\Temp\dart\The Plumtree Group\
+        *EXTRA Dir        -1    C:\Temp\dart\The Plumtree Group\DartViewer\
+          *EXTRA File              69632        1070541.CHN
+          *EXTRA File              30208        1070541.CHW
+          *EXTRA File              57344        ADDSCAN.EXE
+          *EXTRA File               8704        AxInterop.AcroPDFLib.dll
+          *EXTRA File             129024        DartViewer.exe
+          *EXTRA File               2247        DartViewer.exe - Shortcut.lnk
+          *EXTRA File               2058        DartViewer.exe.config
+          *EXTRA File             122368        DartViewer.pdb
+          *EXTRA File              69632        DartViewer.XmlSerializers.dll
+          *EXTRA File              12800        Interop.AcroPDFLib.dll
+          *EXTRA File             102400        Interop.ADODB.dll
+          *EXTRA File              36864        Interop.PDFSHELLSERVERLib.dll
+          *EXTRA File             126976        Interop.SHDocVw.dll
+          *EXTRA File              45056        PIXLOADD.EXE
+          *EXTRA File              45056        PixTools.DLL
+          *EXTRA File             135168        PixTools.EZ.Dll
+          *EXTRA File             294912        PixTools.EZ.SampleDialogs.dll
+          *EXTRA File             409600        PixTools.IP.Dll
+          *EXTRA File             315392        PixTools.IP.SampleDialogs.dll
+          *EXTRA File              26694        Search.ico
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\
+          *EXTRA File                371        readme.htm
+          *EXTRA File             779456        setup.dll
+          *EXTRA File             262336        setup.exe
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\acc
+ess.en-us\
+          *EXTRA File              1.3 m        accessmuiset.msi
+          *EXTRA File               1032        accessmuiset.xml
+          *EXTRA File               2584        setup.xml
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\acc
+ess.en-us\access.en-us\
+          *EXTRA File              2.9 m        accessmui.msi
+          *EXTRA File               1449        accessmui.xml
+          *EXTRA File              5.1 m        acclr.cab
+          *EXTRA File             336313        branding.xml
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\adm
+in\
+          *EXTRA File              64158        access16.opax
+          *EXTRA File             204078        excel16.opax
+          *EXTRA File              5.8 m        oct.dll
+          *EXTRA File             151720        octca.dll
+          *EXTRA File              1.2 m        office16.opax
+          *EXTRA File             116530        onent16.opax
+          *EXTRA File             561742        outlk16.opax
+          *EXTRA File             134886        ppt16.opax
+          *EXTRA File             277644        proj16.opax
+          *EXTRA File              38120        pub16.opax
+          *EXTRA File              20350        spd16.opax
+          *EXTRA File             100134        visio16.opax
+          *EXTRA File             368842        word16.opax
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\adm
+in\de-de\
+          *EXTRA File             143930        access16.opal
+          *EXTRA File             285482        excel16.opal
+          *EXTRA File              28138        lync16.opal
+          *EXTRA File             436968        octres.dll
+          *EXTRA File              1.0 m        office16.opal
+          *EXTRA File             108598        onent16.opal
+          *EXTRA File             716550        outlk16.opal
+          *EXTRA File             227732        ppt16.opal
+          *EXTRA File             247444        proj16.opal
+          *EXTRA File              65550        pub16.opal
+          *EXTRA File              19104        spd16.opal
+          *EXTRA File             156962        visio16.opal
+          *EXTRA File             360292        word16.opal
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\adm
+in\en-us\
+          *EXTRA File             124628        access16.opal
+          *EXTRA File             244138        excel16.opal
+          *EXTRA File             418016        octres.dll
+          *EXTRA File             959504        office16.opal
+          *EXTRA File              95882        onent16.opal
+          *EXTRA File             619324        outlk16.opal
+          *EXTRA File             195182        ppt16.opal
+          *EXTRA File             218778        proj16.opal
+          *EXTRA File              54498        pub16.opal
+          *EXTRA File              17426        spd16.opal
+          *EXTRA File             136500        visio16.opal
+          *EXTRA File             310974        word16.opal
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\adm
+in\es-es\
+          *EXTRA File             141122        access16.opal
+          *EXTRA File             278340        excel16.opal
+          *EXTRA File              27870        lync16.opal
+          *EXTRA File             438024        octres.dll
+          *EXTRA File              1.0 m        office16.opal
+          *EXTRA File             107768        onent16.opal
+          *EXTRA File             713382        outlk16.opal
+          *EXTRA File             217624        ppt16.opal
+          *EXTRA File             239906        proj16.opal
+          *EXTRA File              62490        pub16.opal
+          *EXTRA File              19410        spd16.opal
+          *EXTRA File             151386        visio16.opal
+          *EXTRA File             339632        word16.opal
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\adm
+in\fr-fr\
+          *EXTRA File             140902        access16.opal
+          *EXTRA File             281710        excel16.opal
+          *EXTRA File              28280        lync16.opal
+          *EXTRA File             439544        octres.dll
+          *EXTRA File              1.0 m        office16.opal
+          *EXTRA File             107738        onent16.opal
+          *EXTRA File             719276        outlk16.opal
+          *EXTRA File             224720        ppt16.opal
+          *EXTRA File             241096        proj16.opal
+          *EXTRA File              62908        pub16.opal
+          *EXTRA File              19016        spd16.opal
+          *EXTRA File             154270        visio16.opal
+          *EXTRA File             354680        word16.opal
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\adm
+in\it-it\
+          *EXTRA File             139990        access16.opal
+          *EXTRA File             282812        excel16.opal
+          *EXTRA File              27442        lync16.opal
+          *EXTRA File             434952        octres.dll
+          *EXTRA File              1.0 m        office16.opal
+          *EXTRA File             110042        onent16.opal
+          *EXTRA File             723264        outlk16.opal
+          *EXTRA File             224438        ppt16.opal
+          *EXTRA File             245798        proj16.opal
+          *EXTRA File              64238        pub16.opal
+          *EXTRA File              18990        spd16.opal
+          *EXTRA File             154390        visio16.opal
+          *EXTRA File             354700        word16.opal
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\adm
+in\ja-jp\
+          *EXTRA File              94682        access16.opal
+          *EXTRA File             182448        excel16.opal
+          *EXTRA File              18926        lync16.opal
+          *EXTRA File             399528        octres.dll
+          *EXTRA File             747126        office16.opal
+          *EXTRA File              73980        onent16.opal
+          *EXTRA File             442298        outlk16.opal
+          *EXTRA File             146586        ppt16.opal
+          *EXTRA File             163690        proj16.opal
+          *EXTRA File              38518        pub16.opal
+          *EXTRA File              15766        spd16.opal
+          *EXTRA File             104190        visio16.opal
+          *EXTRA File             231922        word16.opal
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\adm
+in\ko-kr\
+          *EXTRA File              94366        access16.opal
+          *EXTRA File             179924        excel16.opal
+          *EXTRA File              18912        lync16.opal
+          *EXTRA File             397024        octres.dll
+          *EXTRA File             724692        office16.opal
+          *EXTRA File              73376        onent16.opal
+          *EXTRA File             433680        outlk16.opal
+          *EXTRA File             144202        ppt16.opal
+          *EXTRA File             165022        proj16.opal
+          *EXTRA File              39000        pub16.opal
+          *EXTRA File              15376        spd16.opal
+          *EXTRA File             103566        visio16.opal
+          *EXTRA File             228386        word16.opal
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\adm
+in\pt-br\
+          *EXTRA File             137136        access16.opal
+          *EXTRA File             273728        excel16.opal
+          *EXTRA File              27288        lync16.opal
+          *EXTRA File             431872        octres.dll
+          *EXTRA File            1044744        office16.opal
+          *EXTRA File             104078        onent16.opal
+          *EXTRA File             691888        outlk16.opal
+          *EXTRA File             217106        ppt16.opal
+          *EXTRA File             237480        proj16.opal
+          *EXTRA File              61520        pub16.opal
+          *EXTRA File              18748        spd16.opal
+          *EXTRA File             148532        visio16.opal
+          *EXTRA File             345270        word16.opal
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\adm
+in\ru-ru\
+          *EXTRA File             130816        access16.opal
+          *EXTRA File             260292        excel16.opal
+          *EXTRA File              26088        lync16.opal
+          *EXTRA File             429736        octres.dll
+          *EXTRA File            1029102        office16.opal
+          *EXTRA File             102778        onent16.opal
+          *EXTRA File             676050        outlk16.opal
+          *EXTRA File             207016        ppt16.opal
+          *EXTRA File             232076        proj16.opal
+          *EXTRA File              58060        pub16.opal
+          *EXTRA File              18858        spd16.opal
+          *EXTRA File             144198        visio16.opal
+          *EXTRA File             329626        word16.opal
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\adm
+in\zh-cn\
+          *EXTRA File              81294        access16.opal
+          *EXTRA File             154096        excel16.opal
+          *EXTRA File              16660        lync16.opal
+          *EXTRA File             387752        octres.dll
+          *EXTRA File             641302        office16.opal
+          *EXTRA File              65258        onent16.opal
+          *EXTRA File             364472        outlk16.opal
+          *EXTRA File             123696        ppt16.opal
+          *EXTRA File             142864        proj16.opal
+          *EXTRA File              31842        pub16.opal
+          *EXTRA File              14358        spd16.opal
+          *EXTRA File              90172        visio16.opal
+          *EXTRA File             197398        word16.opal
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\adm
+in\zh-tw\
+          *EXTRA File              82232        access16.opal
+          *EXTRA File             156726        excel16.opal
+          *EXTRA File              16912        lync16.opal
+          *EXTRA File             388264        octres.dll
+          *EXTRA File             649296        office16.opal
+          *EXTRA File              65778        onent16.opal
+          *EXTRA File             370130        outlk16.opal
+          *EXTRA File             125398        ppt16.opal
+          *EXTRA File             144720        proj16.opal
+          *EXTRA File              32730        pub16.opal
+          *EXTRA File              14626        spd16.opal
+          *EXTRA File              91374        visio16.opal
+          *EXTRA File             200580        word16.opal
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\cat
+alog\
+          *EXTRA File              93544        files.cat
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\dcf
+.en-us\
+          *EXTRA File             641592        dcfmui.cab
+          *EXTRA File              2.9 m        dcfmui.msi
+          *EXTRA File               1215        dcfmui.xml
+          *EXTRA File               1808        setup.xml
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\exc
+el.en-us\
+          *EXTRA File              5.5 m        excellr.cab
+          *EXTRA File              2.9 m        excelmui.msi
+          *EXTRA File               1780        excelmui.xml
+          *EXTRA File               2482        setup.xml
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\gro
+ove.en-us\
+          *EXTRA File             873322        groovelr.cab
+          *EXTRA File              2.8 m        groovemui.msi
+          *EXTRA File               1126        groovemui.xml
+          *EXTRA File               1640        setup.xml
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\hot
+fixes\
+          *EXTRA File            1026422        windows6.1-kb2999226-x64.msu
+          *EXTRA File              1.2 m        windows8-rt-kb2999226-x64.msu
+          *EXTRA File             994589        windows8.1-kb2999226-x64.msu
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\inf
+opath.en-us\
+          *EXTRA File              3.7 m        inflr.cab
+          *EXTRA File              2.9 m        infopathmui.msi
+          *EXTRA File               1230        infopathmui.xml
+          *EXTRA File               1795        setup.xml
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\lyn
+c.en-us\
+          *EXTRA File              2.4 m        lyncmui.cab
+          *EXTRA File              2.9 m        lyncmui.msi
+          *EXTRA File               1227        lyncmui.xml
+          *EXTRA File               1690        setup.xml
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\off
+ice.en-us\
+          *EXTRA File             336313        branding.xml
+          *EXTRA File             10.9 m        officelr.cab
+          *EXTRA File              4.6 m        officemui.msi
+          *EXTRA File               5170        officemui.xml
+          *EXTRA File              1.3 m        officemuiset.msi
+          *EXTRA File               1032        officemuiset.xml
+          *EXTRA File              15708        offsetlr.cab
+          *EXTRA File             207552        osetupui.dll
+          *EXTRA File              14598        pss10r.chm
+          *EXTRA File              82790        setup.chm
+          *EXTRA File               8237        setup.xml
+          *EXTRA File              10752        shellui.mst
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\off
+ice32.en-us\
+          *EXTRA File              1.3 m        office32mui.msi
+          *EXTRA File               1699        office32mui.xml
+          *EXTRA File              3.4 m        owow32lr.cab
+          *EXTRA File               2676        setup.xml
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\one
+note.en-us\
+          *EXTRA File              2.9 m        onenotemui.msi
+          *EXTRA File               1817        onenotemui.xml
+          *EXTRA File             12.7 m        onotelr.cab
+          *EXTRA File               2175        setup.xml
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\osm
+.en-us\
+          *EXTRA File              16813        osmmui.cab
+          *EXTRA File              1.4 m        osmmui.msi
+          *EXTRA File               1123        osmmui.xml
+          *EXTRA File               2038        setup.xml
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\osm
+ux.en-us\
+          *EXTRA File              4.0 m        osmuxmui.cab
+          *EXTRA File              1.3 m        osmuxmui.msi
+          *EXTRA File               1458        osmuxmui.xml
+          *EXTRA File               2454        setup.xml
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\out
+look.en-us\
+          *EXTRA File              3.8 m        outlklr.cab
+          *EXTRA File              3.4 m        outlookmui.msi
+          *EXTRA File               2837        outlookmui.xml
+          *EXTRA File               3870        setup.xml
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\pow
+erpoint.en-us\
+          *EXTRA File              2.9 m        powerpointmui.msi
+          *EXTRA File               1661        powerpointmui.xml
+          *EXTRA File              6.0 m        pptlr.cab
+          *EXTRA File               2072        setup.xml
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\pro
+ofing.en-us\
+          *EXTRA File              1.3 m        proofing.msi
+          *EXTRA File               1024        proofing.xml
+          *EXTRA File               6067        setup.xml
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\pro
+ofing.en-us\proof.en\
+          *EXTRA File             11.2 m        proof.cab
+          *EXTRA File              2.3 m        proof.msi
+          *EXTRA File               1555        proof.xml
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\pro
+ofing.en-us\proof.es\
+          *EXTRA File              2.3 m        proof.msi
+          *EXTRA File               1665        proof.xml
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\pro
+ofing.en-us\proof.fr\
+          *EXTRA File               1665        proof.xml
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\pro
+plus.ww\
+          *EXTRA File                913        config.xml
+          *EXTRA File               4471        office32ww.xml
+          *EXTRA File             242864        ose.exe
+          *EXTRA File             590523        pkeyconfig-office.xrm-ms
+          *EXTRA File              17012        proplusww.xml
+          *EXTRA File              26911        setup.xml
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\pub
+lisher.en-us\
+          *EXTRA File               1662        publishermui.xml
+          *EXTRA File               1795        setup.xml
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\upd
+ates\
+        *EXTRA Dir        -1    C:\Temp\MS Office  2016 Professional Plus 64Bit(Plus Includes MS Access Application)\wor
+d.en-us\
+          *EXTRA File               2772        setup.xml
+          *EXTRA File               2108        wordmui.xml
+        *EXTRA Dir        -1    C:\Temp\New Histology Package\
+          *EXTRA File              6.4 m        Histology100914.CAB
+          *EXTRA File              6.6 m        Histology101118.CAB
+          *EXTRA File             139776        setup.exe
+          *EXTRA File               6633        SETUP.LST
+        *EXTRA Dir        -1    C:\Temp\Package\
+          *EXTRA File              5.5 m        NetAcquire080206A.CAB
+          *EXTRA File               2247        setup - Shortcut.lnk
+          *EXTRA File             139776        setup.exe
+          *EXTRA File               5373        SETUP.LST
+        *EXTRA Dir        -1    C:\Temp\Package\Support\
+          *EXTRA File             147728        ASYCFILT.DLL
+          *EXTRA File              22288        COMCAT.DLL
+          *EXTRA File             164144        COMCT232.OCX
+          *EXTRA File             416528        COMCT332.OCX
+          *EXTRA File             609824        COMCTL32.OCX
+          *EXTRA File             152848        COMDLG32.OCX
+          *EXTRA File             924432        MFC40.DLL
+          *EXTRA File              81920        msado26.tlb
+          *EXTRA File            1010720        MSCHRT20.OCX
+          *EXTRA File             662288        MSCOMCT2.OCX
+          *EXTRA File              1.0 m        MSCOMCTL.OCX
+          *EXTRA File             103744        MSCOMM32.OCX
+          *EXTRA File             244416        msflxgrd.ocx
+          *EXTRA File             137000        MSMAPI32.OCX
+          *EXTRA File             167968        MSMASK32.OCX
+          *EXTRA File              1.3 m        msvbvm60.dll
+          *EXTRA File             326656        MSVCRT40.DLL
+          *EXTRA File                783        NetAcquire.DDF
+          *EXTRA File                193        NetAcquire080206A.BAT
+          *EXTRA File              4.9 m        NetAcquire080206A.exe
+          *EXTRA File             598288        OLEAUT32.DLL
+          *EXTRA File             164112        OLEPRO32.DLL
+          *EXTRA File             174352        RICHED32.DLL
+          *EXTRA File             203976        Richtx32.ocx
+          *EXTRA File             139776        SETUP.EXE
+          *EXTRA File               5373        Setup.Lst
+          *EXTRA File             249856        SETUP1.EXE
+          *EXTRA File              73216        ST6UNST.EXE
+          *EXTRA File              17920        STDOLE2.TLB
+          *EXTRA File             209608        tabctl32.ocx
+          *EXTRA File             200704        threed32.ocx
+          *EXTRA File             101888        VB6STKIT.DLL
+        *EXTRA Dir        -1    C:\Temp\The Plumtree Group\
+        *EXTRA Dir        -1    C:\Temp\The Plumtree Group\DartViewer\
+          *EXTRA File              69632        1070541.CHN
+          *EXTRA File              30208        1070541.CHW
+          *EXTRA File              57344        ADDSCAN.EXE
+          *EXTRA File               8704        AxInterop.AcroPDFLib.dll
+          *EXTRA File             129024        DartViewer.exe
+          *EXTRA File               2247        DartViewer.exe - Shortcut.lnk
+          *EXTRA File               2058        DartViewer.exe.config
+          *EXTRA File             122368        DartViewer.pdb
+          *EXTRA File              69632        DartViewer.XmlSerializers.dll
+          *EXTRA File              12800        Interop.AcroPDFLib.dll
+          *EXTRA File             102400        Interop.ADODB.dll
+          *EXTRA File              36864        Interop.PDFSHELLSERVERLib.dll
+          *EXTRA File             126976        Interop.SHDocVw.dll
+          *EXTRA File              45056        PIXLOADD.EXE
+          *EXTRA File              45056        PixTools.DLL
+          *EXTRA File             135168        PixTools.EZ.Dll
+          *EXTRA File             294912        PixTools.EZ.SampleDialogs.dll
+          *EXTRA File             409600        PixTools.IP.Dll
+          *EXTRA File             315392        PixTools.IP.SampleDialogs.dll
+          *EXTRA File              26694        Search.ico
+          *EXTRA File               6177        Applocker_log.txt
+          *EXTRA File             24.5 m        E85.20_CheckPointVPN.msi
+          *EXTRA File               3486        VPNCertSuhail
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :         1         0         1         0         0        45
+   Files :         7         0         7         0         0       327
+   Bytes :    69.0 k         0    69.0 k         0         0  226.11 m
+   Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+   Ended : 24 March 2026 14:39:55
+---------------------------------------------------------------------------
+
+
+Running E:\\Blocked apps checker\run_check.bat
+
+Running E:\\Profile checker\run_profile_check.bat
+
+Running E:\\Java Removal Tool & Checker\Run-JavaCheck.bat
+
+Running C:\Temp\W11 update fix commands.bat
+
+---------------------------------------------------------------------------
+Checking NetAcquire...
+NetAcquire installed.
+C:\Win11Scripts\NetAcquire already exists. NetAcquire fix not required.
+
+---------------------------------------------------------------------------
+
+
+Checking Lenovo System Update...
+System Update already installed: Lenovo System Update
+Launching Lenovo System Update...
+
+Checking DirectX and WDDM requirements...
+GPU: AMD Radeon (TM) Graphics
+DirectX Feature Levels: 12_1,12_0,11_1,11_0,10_1,10_0,9_3,9_2,9_1
+Driver Model (WDDM): WDDM 2.7
+Result: Meets Windows 11 graphics requirements.
+
+
+Preparing Windows Update environment...
+
+[CHECK] Update Orchestrator
+[OK] Update Orchestrator
+
+[CHECK] Windows Update
+[OK] Windows Update
+
+[CHECK] Windows Modules Installer
+[OK] Windows Modules Installer
+
+[CHECK] Windows Update Medic
+[OK] Windows Update Medic
+
+[CHECK] Windows Installer
+[OK] Windows Installer
+
+[CHECK] BITS
+[OK] BITS
+
+[CHECK] Cryptographic Services
+[OK] Cryptographic Services
+
+[CHECK] Windows Update Policies
+[OK] Windows Update Policies
+
+[CHECK] Disable Fast Startup
+[ISSUE] Disable Fast Startup
+ -> Attempting fix...
+
+
+HiberbootEnabled : 0
+PSPath           : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session
+                   Manager\Power
+PSParentPath     : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session
+                   Manager
+PSChildName      : Power
+PSDrive          : HKLM
+PSProvider       : Microsoft.PowerShell.Core\Registry
+
+ -> Fix applied
+
+[CHECK] Hosts file entries - windowsupdate
+[OK] Hosts file entries - windowsupdate
+
+[CHECK] Hosts file entries - update.microsoft
+[OK] Hosts file entries - update.microsoft
+
+Cleaning Windows Update cache...
+
+=== Windows Update environment prepared ===
+
+Cleaning old update and temporary files...
+This may take some time but helps prevent Windows 11 upgrade failures.
+
+SoftwareDistribution size : 0.09 GB
+SoftwareDistribution items: 4
+
+Catroot2 size             : 0.06 GB
+Catroot2 items            : 4
+
+Temp size                 : 0 GB
+Temp items                : 1
+
+Stopping Windows Update services...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to stop...
+Cleaning folders...
+Restarting services...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+
+Cleanup completed successfully.
+
+Refreshing C:\Temp
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows
+-------------------------------------------------------------------------------
+
+  Started : 24 March 2026 14:47:09
+   Source : E:\W11\Temp\
+     Dest : C:\Temp\
+
+    Files : *.*
+
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /PURGE /MIR /R:1 /W:1
+
+------------------------------------------------------------------------------
+
+                           7    E:\W11\Temp\
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :         1         0         1         0         0         0
+   Files :         7         0         7         0         0         0
+   Bytes :    69.0 k         0    69.0 k         0         0         0
+   Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+   Ended : 24 March 2026 14:47:09
+
+
+Select Upgrade Method:
+1 - Silent Upgrade (Win11Upgrade folder)
+2 - Windows11InstallationAssistant
+

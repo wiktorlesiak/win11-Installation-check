@@ -1,0 +1,302 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260330105828
+Username: HEALTHIRL\pfhwlesiak
+RunAs User: HEALTHIRL\pfhwlesiak
+Configuration Name: 
+Machine: LAPML18733 (Microsoft Windows NT 10.0.19045.0)
+Host Application: powershell -NoProfile -ExecutionPolicy Bypass -File Run-All.ps1
+Process ID: 15896
+PSVersion: 5.1.19041.5607
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.5607
+BuildVersion: 10.0.19041.5607
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is D:\Scripts\FullScriptLog\FullScriptLog_2026-03-30_10-58-27.txt
+Logging to D:\Scripts\FullScriptLog\FullScriptLog_2026-03-30_10-58-27.txt
+
+===== SYSTEM INFORMATION =====
+ComputerName      : LAPML18733
+SerialNumber      : PF2VPX1E
+Model             : 20U2S5EV00
+Domain            : healthirl.net
+InstalledRAM      : 7.76 GB
+OSName            : Microsoft Windows 10 Pro
+Version           : 10.0.19045
+BuildNumber       : 19045
+WindowsRelease    : 22H2
+SystemDrive       : C:
+OSArchitecture    : 64-bit
+SystemDirectory   : C:\windows\system32
+==============================
+
+Checking Windows version...
+Detected Version: 22H2
+Windows version meets minimum requirement for Windows 11 upgrade path.
+
+Checking system uptime...
+System Uptime: 0 Days 0 Hours
+
+Checking for pending reboot...
+No pending reboot.
+
+Checking Windows activation...
+Windows is ACTIVATED.
+
+---------------------------------------------------------------------------
+
+
+Checking RAM configuration...
+Total Installed RAM : 8 GB
+Number of DIMMs     :
+Stick Sizes         : 8 GB
+
+8GB RAM detected (unknown configuration).
+Recommendation: Upgrade to at least 16GB RAM.
+
+---------------------------------------------------------------------------
+
+
+Checking disk health and drives...
+# Drives detected: 1 #
+
+Name                 Size     Firmware Type BusType Status Health  SerialNumber         Model               
+----                 ----     -------- ---- ------- ------ ------  ------------         -----               
+Micron MTFDHBA256TDV 238.5 GB 3011P4LN SSD  NVMe    OK     Healthy 00A0_7501_2D16_1C2F. Micron MTFDHBA256TDV
+# Partitions: 6 #
+
+DriveLetter FileSystemLabel FileSystem SizeRemaining          Size HealthStatus
+----------- --------------- ---------- -------------          ---- ------------
+            BOOT            FAT32          485654528     522199040 Warning     
+            Recovery        NTFS         19401805824   20106727424 Healthy     
+            Recovery        NTFS          1938784256    2560618496 Healthy     
+            BOOT            FAT32          466726912     519045120 Healthy     
+C           Windows         NTFS        133016875008  252736155648 Healthy     
+D           Windows11       NTFS       1891457744896 1979600523264 Healthy
+
+Checking disk space...
+Sufficient Free Space: 123.88 GB, no cleanup required.
+
+---------------------------------------------------------------------------
+
+
+Checking TPM...
+TPM detected.
+
+Checking Secure Boot...
+Secure Boot enabled.
+
+Checking Windows upgrade residue...
+Taking ownership and removing hidden/system attributes...
+Cleanup succeeded on attempt 1.
+Windows upgrade folder removed successfully.
+
+Checking network connection...
+Connected, but unable to determine connection type.
+
+Refreshing C:\Temp
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows
+-------------------------------------------------------------------------------
+
+  Started : Monday 30 March 2026 11:00:00
+   Source : D:\W11\Temp\
+     Dest : C:\Temp\
+
+    Files : *.*
+
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /PURGE /MIR /R:1 /W:1
+
+------------------------------------------------------------------------------
+
+                           7    D:\W11\Temp\
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :         1         0         1         0         0         0
+   Files :         7         0         7         0         0         0
+   Bytes :    69.0 k         0    69.0 k         0         0         0
+   Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+   Ended : Monday 30 March 2026 11:00:00
+---------------------------------------------------------------------------
+
+
+Running D:\\Blocked apps checker\run_check.bat
+
+Running D:\\Profile checker\run_profile_check.bat
+
+Running D:\\Java Removal Tool & Checker\Run-JavaCheck.bat
+
+Running C:\Temp\W11 update fix commands.bat
+
+---------------------------------------------------------------------------
+Checking NetAcquire...
+NetAcquire not installed.
+
+---------------------------------------------------------------------------
+
+
+Checking Lenovo System Update...
+System Update already installed: Lenovo System Update
+Launching Lenovo System Update...
+
+Checking DirectX and WDDM requirements...
+GPU: Intel(R) UHD Graphics
+DirectX Feature Levels: 12_1,12_0,11_1,11_0,10_1,10_0,9_3,9_2,9_1
+Driver Model (WDDM): WDDM 2.7
+Result: Meets Windows 11 graphics requirements.
+
+
+Preparing Windows Update environment...
+
+[CHECK] Update Orchestrator
+[OK] Update Orchestrator
+
+[CHECK] Windows Update
+[OK] Windows Update
+
+[CHECK] Windows Modules Installer
+[OK] Windows Modules Installer
+
+[CHECK] Windows Update Medic
+[OK] Windows Update Medic
+
+[CHECK] Windows Installer
+[OK] Windows Installer
+
+[CHECK] BITS
+[OK] BITS
+
+[CHECK] Cryptographic Services
+[OK] Cryptographic Services
+
+[CHECK] Windows Update Policies
+[OK] Windows Update Policies
+
+[CHECK] Disable Fast Startup
+[ISSUE] Disable Fast Startup
+ -> Attempting fix...
+
+
+HiberbootEnabled : 0
+PSPath           : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session
+                   Manager\Power
+PSParentPath     : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session
+                   Manager
+PSChildName      : Power
+PSDrive          : HKLM
+PSProvider       : Microsoft.PowerShell.Core\Registry
+
+ -> Fix applied
+
+[CHECK] Hosts file entries - windowsupdate
+[OK] Hosts file entries - windowsupdate
+
+[CHECK] Hosts file entries - update.microsoft
+[OK] Hosts file entries - update.microsoft
+
+Cleaning Windows Update cache...
+
+=== Windows Update environment prepared ===
+
+Cleaning old update and temporary files...
+This may take some time but helps prevent Windows 11 upgrade failures.
+
+SoftwareDistribution size : 0.04 GB
+SoftwareDistribution items: 6
+
+Catroot2 size             : 0.05 GB
+Catroot2 items            : 4
+
+Temp size                 : 0 GB
+Temp items                : 1
+
+Stopping Windows Update services...
+Cleaning folders...
+Restarting services...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+WARNING: Waiting for service 'wuauserv (wuauserv)' to start...
+
+Cleanup completed successfully.
+
+Refreshing C:\Temp
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows
+-------------------------------------------------------------------------------
+
+  Started : Monday 30 March 2026 11:08:03
+   Source : D:\W11\Temp\
+     Dest : C:\Temp\
+
+    Files : *.*
+
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /PURGE /MIR /R:1 /W:1
+
+------------------------------------------------------------------------------
+
+                           7    D:\W11\Temp\
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :         1         0         1         0         0         0
+   Files :         7         0         7         0         0         0
+   Bytes :    69.0 k         0    69.0 k         0         0         0
+   Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+   Ended : Monday 30 March 2026 11:08:03
+
+
+Select Upgrade Method:
+1 - Silent Upgrade (Win11Upgrade folder)
+2 - Windows11InstallationAssistant
+

@@ -1,0 +1,617 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260330115531
+Username: LAPML16583\HSE.Installer
+RunAs User: LAPML16583\HSE.Installer
+Configuration Name: 
+Machine: LAPML16583 (Microsoft Windows NT 10.0.19045.0)
+Host Application: powershell -NoProfile -ExecutionPolicy Bypass -File Run-All.ps1
+Process ID: 9336
+PSVersion: 5.1.19041.6456
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.6456
+BuildVersion: 10.0.19041.6456
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is D:\Scripts\FullScriptLog\FullScriptLog_2026-03-30_11-55-30.txt
+Logging to D:\Scripts\FullScriptLog\FullScriptLog_2026-03-30_11-55-30.txt
+
+===== SYSTEM INFORMATION =====
+ComputerName      : LAPML16583
+SerialNumber      : PF34C0Y0
+Model             : 20U2S5EV00
+Domain            : healthirl.net
+InstalledRAM      : 7.76 GB
+OSName            : Microsoft Windows 10 Pro
+Version           : 10.0.19045
+BuildNumber       : 19045
+WindowsRelease    : 22H2
+SystemDrive       : C:
+OSArchitecture    : 64-bit
+SystemDirectory   : C:\windows\system32
+==============================
+
+Checking Windows version...
+Detected Version: 22H2
+Windows version meets minimum requirement for Windows 11 upgrade path.
+
+Checking system uptime...
+System Uptime: 0 Days 0 Hours
+
+Checking for pending reboot...
+No pending reboot.
+
+Checking Windows activation...
+Windows is ACTIVATED.
+
+---------------------------------------------------------------------------
+
+
+Checking RAM configuration...
+Total Installed RAM : 8 GB
+Number of DIMMs     :
+Stick Sizes         : 8 GB
+
+8GB RAM detected (unknown configuration).
+Recommendation: Upgrade to at least 16GB RAM.
+
+---------------------------------------------------------------------------
+
+
+Checking disk health and drives...
+# Drives detected: 1 #
+
+Name                 Size     Firmware Type BusType Status Health  SerialNumber         Model               
+----                 ----     -------- ---- ------- ------ ------  ------------         -----               
+Micron MTFDHBA256TDV 238.5 GB 3011P4LN SSD  NVMe    OK     Healthy 00A0_7501_2E15_8CB7. Micron MTFDHBA256TDV
+# Partitions: 6 #
+
+DriveLetter FileSystemLabel FileSystem SizeRemaining          Size HealthStatus
+----------- --------------- ---------- -------------          ---- ------------
+            Recovery        NTFS         19401805824   20106727424 Healthy     
+            Recovery        NTFS          1890078720    2560618496 Healthy     
+            BOOT            FAT32          468316160     519045120 Healthy     
+            BOOT            FAT32          485654528     522199040 Warning     
+C           Windows         NTFS         22152302592  252736155648 Healthy     
+D           Windows11       NTFS       1891457687552 1979600523264 Healthy
+
+Checking disk space...
+Sufficient Free Space: 20.63 GB, no cleanup required.
+Not enough space. Running Disk Cleanup...
+Free Space After Cleanup: 20.61 GB
+
+---------------------------------------------------------------------------
+
+
+Checking TPM...
+TPM detected.
+
+Checking Secure Boot...
+Secure Boot disabled.
+
+Checking Windows upgrade residue...
+Taking ownership and removing hidden/system attributes...
+Cleanup succeeded on attempt 1.
+Windows upgrade folder removed successfully.
+
+Checking network connection...
+Connected via Ethernet.
+
+Refreshing C:\Temp
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows
+-------------------------------------------------------------------------------
+
+  Started : 30 March 2026 11:58:36
+   Source : D:\W11\Temp\
+     Dest : C:\Temp\
+
+    Files : *.*
+
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /PURGE /MIR /R:1 /W:1
+
+------------------------------------------------------------------------------
+
+                           7    D:\W11\Temp\
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\
+          *EXTRA File                371        readme.htm
+          *EXTRA File             607936        setup.dll
+          *EXTRA File             236736        setup.exe
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\access.en-us\
+          *EXTRA File              1.0 m        accessmuiset.msi
+          *EXTRA File               1032        accessmuiset.xml
+          *EXTRA File               2584        setup.xml
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\access.en-us\access.en-us\
+          *EXTRA File              2.2 m        accessmui.msi
+          *EXTRA File               1449        accessmui.xml
+          *EXTRA File              5.1 m        acclr.cab
+          *EXTRA File             336313        branding.xml
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\admin\
+          *EXTRA File              64158        access16.opax
+          *EXTRA File             204078        excel16.opax
+          *EXTRA File              4.7 m        oct.dll
+          *EXTRA File             127656        octca.dll
+          *EXTRA File              1.2 m        office16.opax
+          *EXTRA File             116530        onent16.opax
+          *EXTRA File             561742        outlk16.opax
+          *EXTRA File             134886        ppt16.opax
+          *EXTRA File             277644        proj16.opax
+          *EXTRA File              38120        pub16.opax
+          *EXTRA File              20350        spd16.opax
+          *EXTRA File             100134        visio16.opax
+          *EXTRA File             368842        word16.opax
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\admin\de-de\
+          *EXTRA File             143930        access16.opal
+          *EXTRA File             285482        excel16.opal
+          *EXTRA File              28138        lync16.opal
+          *EXTRA File             436968        octres.dll
+          *EXTRA File              1.0 m        office16.opal
+          *EXTRA File             108598        onent16.opal
+          *EXTRA File             716550        outlk16.opal
+          *EXTRA File             227732        ppt16.opal
+          *EXTRA File             247444        proj16.opal
+          *EXTRA File              65550        pub16.opal
+          *EXTRA File              19104        spd16.opal
+          *EXTRA File             156962        visio16.opal
+          *EXTRA File             360292        word16.opal
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\admin\en-us\
+          *EXTRA File             124628        access16.opal
+          *EXTRA File             244138        excel16.opal
+          *EXTRA File             418016        octres.dll
+          *EXTRA File             959504        office16.opal
+          *EXTRA File              95882        onent16.opal
+          *EXTRA File             619324        outlk16.opal
+          *EXTRA File             195182        ppt16.opal
+          *EXTRA File             218778        proj16.opal
+          *EXTRA File              54498        pub16.opal
+          *EXTRA File              17426        spd16.opal
+          *EXTRA File             136500        visio16.opal
+          *EXTRA File             310974        word16.opal
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\admin\es-es\
+          *EXTRA File             141122        access16.opal
+          *EXTRA File             278340        excel16.opal
+          *EXTRA File              27870        lync16.opal
+          *EXTRA File             438024        octres.dll
+          *EXTRA File              1.0 m        office16.opal
+          *EXTRA File             107768        onent16.opal
+          *EXTRA File             713382        outlk16.opal
+          *EXTRA File             217624        ppt16.opal
+          *EXTRA File             239906        proj16.opal
+          *EXTRA File              62490        pub16.opal
+          *EXTRA File              19410        spd16.opal
+          *EXTRA File             151386        visio16.opal
+          *EXTRA File             339632        word16.opal
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\admin\fr-fr\
+          *EXTRA File             140902        access16.opal
+          *EXTRA File             281710        excel16.opal
+          *EXTRA File              28280        lync16.opal
+          *EXTRA File             439544        octres.dll
+          *EXTRA File              1.0 m        office16.opal
+          *EXTRA File             107738        onent16.opal
+          *EXTRA File             719276        outlk16.opal
+          *EXTRA File             224720        ppt16.opal
+          *EXTRA File             241096        proj16.opal
+          *EXTRA File              62908        pub16.opal
+          *EXTRA File              19016        spd16.opal
+          *EXTRA File             154270        visio16.opal
+          *EXTRA File             354680        word16.opal
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\admin\it-it\
+          *EXTRA File             139990        access16.opal
+          *EXTRA File             282812        excel16.opal
+          *EXTRA File              27442        lync16.opal
+          *EXTRA File             434952        octres.dll
+          *EXTRA File              1.0 m        office16.opal
+          *EXTRA File             110042        onent16.opal
+          *EXTRA File             723264        outlk16.opal
+          *EXTRA File             224438        ppt16.opal
+          *EXTRA File             245798        proj16.opal
+          *EXTRA File              64238        pub16.opal
+          *EXTRA File              18990        spd16.opal
+          *EXTRA File             154390        visio16.opal
+          *EXTRA File             354700        word16.opal
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\admin\ja-jp\
+          *EXTRA File              94682        access16.opal
+          *EXTRA File             182448        excel16.opal
+          *EXTRA File              18926        lync16.opal
+          *EXTRA File             399528        octres.dll
+          *EXTRA File             747126        office16.opal
+          *EXTRA File              73980        onent16.opal
+          *EXTRA File             442298        outlk16.opal
+          *EXTRA File             146586        ppt16.opal
+          *EXTRA File             163690        proj16.opal
+          *EXTRA File              38518        pub16.opal
+          *EXTRA File              15766        spd16.opal
+          *EXTRA File             104190        visio16.opal
+          *EXTRA File             231922        word16.opal
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\admin\ko-kr\
+          *EXTRA File              94366        access16.opal
+          *EXTRA File             179924        excel16.opal
+          *EXTRA File              18912        lync16.opal
+          *EXTRA File             397024        octres.dll
+          *EXTRA File             724692        office16.opal
+          *EXTRA File              73376        onent16.opal
+          *EXTRA File             433680        outlk16.opal
+          *EXTRA File             144202        ppt16.opal
+          *EXTRA File             165022        proj16.opal
+          *EXTRA File              39000        pub16.opal
+          *EXTRA File              15376        spd16.opal
+          *EXTRA File             103566        visio16.opal
+          *EXTRA File             228386        word16.opal
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\admin\pt-br\
+          *EXTRA File             137136        access16.opal
+          *EXTRA File             273728        excel16.opal
+          *EXTRA File              27288        lync16.opal
+          *EXTRA File             431872        octres.dll
+          *EXTRA File            1044744        office16.opal
+          *EXTRA File             104078        onent16.opal
+          *EXTRA File             691888        outlk16.opal
+          *EXTRA File             217106        ppt16.opal
+          *EXTRA File             237480        proj16.opal
+          *EXTRA File              61520        pub16.opal
+          *EXTRA File              18748        spd16.opal
+          *EXTRA File             148532        visio16.opal
+          *EXTRA File             345270        word16.opal
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\admin\ru-ru\
+          *EXTRA File             130816        access16.opal
+          *EXTRA File             260292        excel16.opal
+          *EXTRA File              26088        lync16.opal
+          *EXTRA File             429736        octres.dll
+          *EXTRA File            1029102        office16.opal
+          *EXTRA File             102778        onent16.opal
+          *EXTRA File             676050        outlk16.opal
+          *EXTRA File             207016        ppt16.opal
+          *EXTRA File             232076        proj16.opal
+          *EXTRA File              58060        pub16.opal
+          *EXTRA File              18858        spd16.opal
+          *EXTRA File             144198        visio16.opal
+          *EXTRA File             329626        word16.opal
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\admin\zh-cn\
+          *EXTRA File              81294        access16.opal
+          *EXTRA File             154096        excel16.opal
+          *EXTRA File              16660        lync16.opal
+          *EXTRA File             387752        octres.dll
+          *EXTRA File             641302        office16.opal
+          *EXTRA File              65258        onent16.opal
+          *EXTRA File             364472        outlk16.opal
+          *EXTRA File             123696        ppt16.opal
+          *EXTRA File             142864        proj16.opal
+          *EXTRA File              31842        pub16.opal
+          *EXTRA File              14358        spd16.opal
+          *EXTRA File              90172        visio16.opal
+          *EXTRA File             197398        word16.opal
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\admin\zh-tw\
+          *EXTRA File              82232        access16.opal
+          *EXTRA File             156726        excel16.opal
+          *EXTRA File              16912        lync16.opal
+          *EXTRA File             388264        octres.dll
+          *EXTRA File             649296        office16.opal
+          *EXTRA File              65778        onent16.opal
+          *EXTRA File             370130        outlk16.opal
+          *EXTRA File             125398        ppt16.opal
+          *EXTRA File             144720        proj16.opal
+          *EXTRA File              32730        pub16.opal
+          *EXTRA File              14626        spd16.opal
+          *EXTRA File              91374        visio16.opal
+          *EXTRA File             200580        word16.opal
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\catalog\
+          *EXTRA File              93544        files.cat
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\dcf.en-us\
+          *EXTRA File             641590        dcfmui.cab
+          *EXTRA File              2.2 m        dcfmui.msi
+          *EXTRA File               1215        dcfmui.xml
+          *EXTRA File               1808        setup.xml
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\excel.en-us\
+          *EXTRA File              5.5 m        excellr.cab
+          *EXTRA File              2.2 m        excelmui.msi
+          *EXTRA File               1780        excelmui.xml
+          *EXTRA File               2482        setup.xml
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\groove.en-us\
+          *EXTRA File             872962        groovelr.cab
+          *EXTRA File              2.2 m        groovemui.msi
+          *EXTRA File               1126        groovemui.xml
+          *EXTRA File               1640        setup.xml
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\hotfixes\
+          *EXTRA File            1026422        windows6.1-kb2999226-x64.msu
+          *EXTRA File             621986        windows6.1-kb2999226-x86.msu
+          *EXTRA File              1.2 m        windows8-rt-kb2999226-x64.msu
+          *EXTRA File             615304        windows8-rt-kb2999226-x86.msu
+          *EXTRA File             994589        windows8.1-kb2999226-x64.msu
+          *EXTRA File             595977        windows8.1-kb2999226-x86.msu
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\infopath.en-us\
+          *EXTRA File              3.7 m        inflr.cab
+          *EXTRA File              2.2 m        infopathmui.msi
+          *EXTRA File               1230        infopathmui.xml
+          *EXTRA File               1795        setup.xml
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\lync.en-us\
+          *EXTRA File              2.4 m        lyncmui.cab
+          *EXTRA File              2.2 m        lyncmui.msi
+          *EXTRA File               1227        lyncmui.xml
+          *EXTRA File               1690        setup.xml
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\office.en-us\
+          *EXTRA File             336313        branding.xml
+          *EXTRA File             11.1 m        officelr.cab
+          *EXTRA File              3.8 m        officemui.msi
+          *EXTRA File               5275        officemui.xml
+          *EXTRA File              1.0 m        officemuiset.msi
+          *EXTRA File               1032        officemuiset.xml
+          *EXTRA File              15708        offsetlr.cab
+          *EXTRA File             207552        osetupui.dll
+          *EXTRA File              14598        pss10r.chm
+          *EXTRA File              82790        setup.chm
+          *EXTRA File               8483        setup.xml
+          *EXTRA File              10752        shellui.mst
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\office64.en-us\
+          *EXTRA File              1.1 m        office64mui.msi
+          *EXTRA File               1910        office64mui.xml
+          *EXTRA File              1.0 m        office64muiset.msi
+          *EXTRA File               1036        office64muiset.xml
+          *EXTRA File              1.9 m        owow64lr.cab
+          *EXTRA File               3122        setup.xml
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\onenote.en-us\
+          *EXTRA File              2.2 m        onenotemui.msi
+          *EXTRA File               1817        onenotemui.xml
+          *EXTRA File             12.7 m        onotelr.cab
+          *EXTRA File               2175        setup.xml
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\osm.en-us\
+          *EXTRA File              16813        osmmui.cab
+          *EXTRA File              1.1 m        osmmui.msi
+          *EXTRA File               1123        osmmui.xml
+          *EXTRA File               2038        setup.xml
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\osmux.en-us\
+          *EXTRA File              4.0 m        osmuxmui.cab
+          *EXTRA File              1.0 m        osmuxmui.msi
+          *EXTRA File               1458        osmuxmui.xml
+          *EXTRA File               2454        setup.xml
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\outlook.en-us\
+          *EXTRA File              3.8 m        outlklr.cab
+          *EXTRA File              2.6 m        outlookmui.msi
+          *EXTRA File               2837        outlookmui.xml
+          *EXTRA File               3870        setup.xml
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\powerpoint.en-us\
+          *EXTRA File              2.2 m        powerpointmui.msi
+          *EXTRA File               1661        powerpointmui.xml
+          *EXTRA File              6.0 m        pptlr.cab
+          *EXTRA File               2072        setup.xml
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\proofing.en-us\
+          *EXTRA File              1.0 m        proofing.msi
+          *EXTRA File               1024        proofing.xml
+          *EXTRA File               6067        setup.xml
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\proofing.en-us\proof.en\
+          *EXTRA File             11.1 m        proof.cab
+          *EXTRA File              2.0 m        proof.msi
+          *EXTRA File               1555        proof.xml
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\proofing.en-us\proof.es\
+          *EXTRA File             13.2 m        proof.cab
+          *EXTRA File              2.0 m        proof.msi
+          *EXTRA File               1665        proof.xml
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\proofing.en-us\proof.fr\
+          *EXTRA File             13.2 m        proof.cab
+          *EXTRA File              2.0 m        proof.msi
+          *EXTRA File               1665        proof.xml
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\proplus.ww\
+          *EXTRA File                913        config.xml
+          *EXTRA File              3.7 m        office64ww.msi
+          *EXTRA File               4992        office64ww.xml
+          *EXTRA File             202928        ose.exe
+          *EXTRA File              9.3 m        osetup.dll
+          *EXTRA File             29.1 m        owow64ww.cab
+          *EXTRA File              1.2 m        pidgenx.dll
+          *EXTRA File             590523        pkeyconfig-office.xrm-ms
+          *EXTRA File             27.6 m        proplusww.msi
+          *EXTRA File              17108        proplusww.xml
+          *EXTRA File            308.5 m        propsww.cab
+          *EXTRA File            237.6 m        propsww2.cab
+          *EXTRA File              27782        setup.xml
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\publisher.en-us\
+          *EXTRA File              2.2 m        publishermui.msi
+          *EXTRA File               1662        publishermui.xml
+          *EXTRA File              3.3 m        publr.cab
+          *EXTRA File               1795        setup.xml
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\updates\
+          *EXTRA File              1.9 m        ProPlus2016.MSP
+          *EXTRA File               5032        ProPlus2016.MSP.xml
+          *EXTRA File                 75        readme.txt
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\visio.en-us\
+          *EXTRA File               6185        setup.xml
+          *EXTRA File             67.9 m        visiolr.cab
+          *EXTRA File              2.6 m        visiomui.msi
+          *EXTRA File               9359        visiomui.xml
+        *EXTRA Dir        -1    C:\Temp\Microsoft Office 2016 Pro Plus Suite\word.en-us\
+          *EXTRA File               2772        setup.xml
+          *EXTRA File              9.6 m        wordlr.cab
+          *EXTRA File              2.2 m        wordmui.msi
+          *EXTRA File               2108        wordmui.xml
+          *EXTRA File             418448        Applocker_log.txt
+          *EXTRA File             23.2 m        upd-ps-x64-7.1.0.25570.exe
+100%        New File                2580        ApplockerWin11scriptstask.ps1
+100%        Newer                   5871        backendscripts.ps1
+100%        Newer                   4049        excel_word_background_memory.vbs
+100%        New File                 293        how to run.txt
+100%        Newer                  56304        softwareprotection.reg
+100%        New File                 690        upgrade.bat
+100%        New File                 955        W11 update fix commands.bat
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :         1         0         1         0         0        38
+   Files :         7         7         0         0         0       272
+   Bytes :    69.0 k    69.0 k         0         0         0  915.13 m
+   Times :   0:00:02   0:00:00                       0:00:00   0:00:01
+
+
+   Speed :              111933 Bytes/sec.
+   Speed :               6.404 MegaBytes/min.
+   Ended : 30 March 2026 11:58:38
+---------------------------------------------------------------------------
+
+
+Running D:\\Blocked apps checker\run_check.bat
+
+Running D:\\Profile checker\run_profile_check.bat
+
+Running D:\\Java Removal Tool & Checker\Run-JavaCheck.bat
+
+Running C:\Temp\W11 update fix commands.bat
+
+---------------------------------------------------------------------------
+Checking NetAcquire...
+NetAcquire installed.
+C:\Win11Scripts\NetAcquire already exists. NetAcquire fix not required.
+
+---------------------------------------------------------------------------
+
+
+Checking Lenovo System Update...
+Lenovo System Update not found. Installing...
+Installation completed.
+Launching Lenovo System Update...
+
+Checking DirectX and WDDM requirements...
+GPU: Intel(R) UHD Graphics
+DirectX Feature Levels: 12_1,12_0,11_1,11_0,10_1,10_0,9_3,9_2,9_1
+Driver Model (WDDM): WDDM 2.7
+Result: Meets Windows 11 graphics requirements.
+
+
+Preparing Windows Update environment...
+
+[CHECK] Update Orchestrator
+[OK] Update Orchestrator
+
+[CHECK] Windows Update
+[OK] Windows Update
+
+[CHECK] Windows Modules Installer
+[OK] Windows Modules Installer
+
+[CHECK] Windows Update Medic
+[OK] Windows Update Medic
+
+[CHECK] Windows Installer
+[OK] Windows Installer
+
+[CHECK] BITS
+[OK] BITS
+
+[CHECK] Cryptographic Services
+[OK] Cryptographic Services
+
+[CHECK] Windows Update Policies
+[OK] Windows Update Policies
+
+[CHECK] Disable Fast Startup
+[ISSUE] Disable Fast Startup
+ -> Attempting fix...
+
+
+HiberbootEnabled : 0
+PSPath           : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session
+                   Manager\Power
+PSParentPath     : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session
+                   Manager
+PSChildName      : Power
+PSDrive          : HKLM
+PSProvider       : Microsoft.PowerShell.Core\Registry
+
+ -> Fix applied
+
+[CHECK] Hosts file entries - windowsupdate
+[OK] Hosts file entries - windowsupdate
+
+[CHECK] Hosts file entries - update.microsoft
+[OK] Hosts file entries - update.microsoft
+
+Cleaning Windows Update cache...
+
+=== Windows Update environment prepared ===
+
+Cleaning old update and temporary files...
+This may take some time but helps prevent Windows 11 upgrade failures.
+
+SoftwareDistribution size : 0.08 GB
+SoftwareDistribution items: 6
+
+Catroot2 size             : 0.06 GB
+Catroot2 items            : 4
+
+Temp size                 : 0 GB
+Temp items                : 1
+
+Stopping Windows Update services...
+Cleaning folders...
+Restarting services...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+WARNING: Waiting for service 'Windows Update (wuauserv)' to start...
+
+Cleanup completed successfully.
+
+Refreshing C:\Temp
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows
+-------------------------------------------------------------------------------
+
+  Started : 30 March 2026 12:03:54
+   Source : D:\W11\Temp\
+     Dest : C:\Temp\
+
+    Files : *.*
+
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /PURGE /MIR /R:1 /W:1
+
+------------------------------------------------------------------------------
+
+                           7    D:\W11\Temp\
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :         1         0         1         0         0         0
+   Files :         7         0         7         0         0         0
+   Bytes :    69.0 k         0    69.0 k         0         0         0
+   Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+   Ended : 30 March 2026 12:03:54
+
+
+Select Upgrade Method:
+1 - Silent Upgrade (Win11Upgrade folder)
+2 - Windows11InstallationAssistant
+

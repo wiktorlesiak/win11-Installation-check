@@ -1,0 +1,86 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260410112944
+Username: DSKML18834\HSE.Installer
+RunAs User: DSKML18834\HSE.Installer
+Configuration Name: 
+Machine: DSKML18834 (Microsoft Windows NT 10.0.19045.0)
+Host Application: powershell -NoProfile -ExecutionPolicy Bypass -File Run-All.ps1
+Process ID: 14180
+PSVersion: 5.1.19041.6807
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.6807
+BuildVersion: 10.0.19041.6807
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is D:\Scripts\FullScriptLog\FullScriptLog_2026-04-10_11-29-44.txt
+Logging to D:\Scripts\FullScriptLog\FullScriptLog_2026-04-10_11-29-44.txt
+
+===== SYSTEM INFORMATION =====
+ComputerName      : DSKML18834
+CanonicalName     : N/A
+SerialNumber      : GM020YBL
+Model             : 11JQS1H700
+Domain            : healthirl.net
+InstalledRAM      : 7.38 GB
+OSName            : Microsoft Windows 10 Pro
+Version           : 10.0.19045
+BuildNumber       : 19045
+WindowsRelease    : 22H2
+SystemDrive       : C:
+OSArchitecture    : 64-bit
+SystemDirectory   : C:\windows\system32
+==============================
+
+Checking Windows version...
+Detected Version: 22H2
+Windows version meets minimum requirement for Windows 11 upgrade path.
+
+Checking system uptime...
+System Uptime: 0 Days 0 Hours
+
+Checking for pending reboot...
+No pending reboot.
+
+Checking Windows activation...
+Windows is ACTIVATED.
+
+---------------------------------------------------------------------------
+
+
+Checking RAM configuration...
+Total Installed RAM : 8 GB
+Number of DIMMs     : 2
+Stick Sizes         : 4 GB, 4 GB
+
+2x4GB RAM detected.
+Recommendation: Replace with 2x8GB RAM (total 16GB).
+
+---------------------------------------------------------------------------
+
+
+Checking disk health and drives...
+# Drives detected: 1 #
+
+Name      Size     Firmware Type BusType Status Health  SerialNumber         Model    
+----      ----     -------- ---- ------- ------ ------  ------------         -----    
+SSD 480GB 447.1 GB W0222A0  SSD  SATA    OK     Healthy YH20230917480G000649 SSD 480GB
+# Partitions: 6 #
+
+DriveLetter FileSystemLabel FileSystem SizeRemaining          Size HealthStatus
+----------- --------------- ---------- -------------          ---- ------------
+            BOOT            FAT32          485654528     522199040 Warning     
+            Recovery        NTFS         19401805824   20106727424 Healthy     
+            Recovery        NTFS          4069601280    4782546944 Healthy     
+            BOOT            FAT32          446713856     477691904 Healthy     
+C           Windows         NTFS        309868531712  474707648512 Healthy     
+D           Windows11       NTFS       1891456733184 1979600523264 Healthy
+
+Checking disk space...
+Sufficient Free Space: 288.59 GB, no cleanup required.
+
+---------------------------------------------------------------------------
+
