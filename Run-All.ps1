@@ -14,7 +14,7 @@ Start-Process powershell.exe "-ExecutionPolicy Bypass -File `"$PSCommandPath`"" 
 exit
 }
 
-$ErrorActionPreference = "Stop"
+$ErrorActionPreference = "Inquire"
 
 # -------------------------------
 # Script Location
@@ -35,7 +35,7 @@ if (!(Test-Path $LogFolder)) {
 
 # Get device name + timestamp (dd-MM-yyyy format)
 $DeviceName = $env:COMPUTERNAME
-$TimeStamp = Get-Date -Format "dd-MM-yyyy_HH-mm-ss"
+$TimeStamp = Get-Date -Format "dd-MM-yyyy_HH-mm"
 
 # Build log file name
 $LogFile = Join-Path $LogFolder ("{0}_{1}.txt" -f $DeviceName, $TimeStamp)
@@ -69,11 +69,16 @@ $CDrive = Get-CimInstance Win32_LogicalDisk -Filter "DeviceID='C:'"
 $CSizeGB = [math]::Round($CDrive.Size / 1GB, 2)
 $CFreeGB = [math]::Round($CDrive.FreeSpace / 1GB, 2)
 
+#Get IP
+$IP = (Get-NetIPAddress -AddressFamily IPv4 |
+       Where-Object IPAddress -ne "127.0.0.1").IPAddress[0]
+
 
 Write-Host "ComputerName      : $env:COMPUTERNAME"
 Write-Host "SerialNumber      : $($BIOS.SerialNumber)"
 Write-Host "Model             : $SKU"
 Write-Host "Domain            : $DomainInfo"
+Write-Host "IP Address        : $IP"
 Write-Host "InstalledRAM      : $RAM GB"
 Write-Host "Disk Size         : $CSizeGB GB"
 Write-Host "Free disk space   : $CFreeGB GB"
@@ -81,9 +86,7 @@ Write-Host "OSName            : $($OS.Caption)"
 Write-Host "Version           : $($OS.Version)"
 Write-Host "BuildNumber       : $($OS.BuildNumber)"
 Write-Host "WindowsRelease    : $WinVersion"
-Write-Host "SystemDrive       : $($OS.SystemDrive)"
 Write-Host "OSArchitecture    : $($OS.OSArchitecture)"
-Write-Host "SystemDirectory   : $($OS.SystemDirectory)"
 Write-Host "=============================="
 Write-Host ""
 
@@ -139,10 +142,17 @@ if ($os) {
 
     Write-Host "System Uptime: $($Uptime.Days) Days $($Uptime.Hours) Hours"
 
-    if ($Uptime.Days -ge 1) {
+    if ($Uptime.Days -ge 3) {
+        Write-Host "Restart required: uptime > 3 days." -ForegroundColor Red
+    }
+    elseif ($Uptime.Days -ge 1) {
         Write-Host "Restart recommended: uptime > 1 day." -ForegroundColor Yellow
     }
-} else {
+    else {
+        Write-Host "No restart required: uptime < 1 day." -ForegroundColor Green
+    }
+}
+else {
     Write-Host "Unable to determine uptime." -ForegroundColor Red
 }
 
@@ -191,7 +201,7 @@ else {
 
 Write-Host "Windows NOT activated. Running fix..." -ForegroundColor Red
 
-$ActivationScript = Join-Path $ScriptRoot "Software\W11 activation OS & Office 2021\Fix-WindowsActivation.bat"
+$ActivationScript = Join-Path $ScriptRoot "Documents\W10 activation\activation w10 office.bat"
 
 if (Test-Path $ActivationScript) {
 
