@@ -90,6 +90,25 @@ Write-Host "OSArchitecture    : $($OS.OSArchitecture)"
 Write-Host "=============================="
 Write-Host ""
 
+Write-Host ""
+Write-Host "----------------------------------------" -ForegroundColor Cyan
+
+# ================================
+# LOCATION INPUT + LOGGING
+# ================================
+
+Write-Host ""
+Write-Host "----------------------------------------" -ForegroundColor Cyan
+
+$UserLocation = Read-Host "Enter location: "
+
+$Timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+
+# Display on screen
+Write-Host "----------------------------------------" -ForegroundColor Cyan
+Write-Host "Location: $UserLocation" -ForegroundColor Green
+Write-Host "----------------------------------------" -ForegroundColor Cyan
+
 # ================================
 # WINDOWS VERSION CHECK
 # ================================
@@ -103,7 +122,8 @@ $WinInfo = Get-ItemProperty -Path $RegPath -ErrorAction SilentlyContinue
 $DisplayVersion = $WinInfo.DisplayVersion
 
 if (-not $DisplayVersion) {
-    Write-Host "Unable to determine Windows release version." -ForegroundColor Red
+    Write-Host "[WARRNING] Unable to determine Windows release version manual check required." -ForegroundColor Red
+    Start-Process winver
 }
 else {
 
@@ -114,11 +134,11 @@ else {
         $VersionNumber = [int]$matches[1]
 
         if ($VersionNumber -le 21) {
-            Write-Host "WARNING: Windows version is $DisplayVersion." -ForegroundColor Yellow
+            Write-Host "[ISSUE] Windows version is $DisplayVersion." -ForegroundColor Yellow
             Write-Host "Feature update required: Upgrade to at least 22H2 before upgrading to Windows 11." -ForegroundColor Red
         }
         else {
-            Write-Host "Windows version meets minimum requirement for Windows 11 upgrade path." -ForegroundColor Green
+            Write-Host "[OK] Windows version meets minimum requirement for Windows 11 upgrade path." -ForegroundColor Green
         }
     }
     else {
@@ -143,13 +163,13 @@ if ($os) {
     Write-Host "System Uptime: $($Uptime.Days) Days $($Uptime.Hours) Hours"
 
     if ($Uptime.Days -ge 3) {
-        Write-Host "Restart required: uptime > 3 days." -ForegroundColor Red
+        Write-Host "[ISSUE] Restart required: uptime > 3 days." -ForegroundColor Red
     }
     elseif ($Uptime.Days -ge 1) {
-        Write-Host "Restart recommended: uptime > 1 day." -ForegroundColor Yellow
+        Write-Host "[WARRNING] Restart recommended: uptime > 1 day." -ForegroundColor Yellow
     }
     else {
-        Write-Host "No restart required: uptime < 1 day." -ForegroundColor Green
+        Write-Host "[OK] No restart required: uptime < 1 day." -ForegroundColor Green
     }
 }
 else {
@@ -175,10 +195,10 @@ if (Test-Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Aut
 }
 
 if ($RebootPending) {
-    Write-Host "Pending reboot detected. Restart required before upgrade." -ForegroundColor Red
+    Write-Host "[ISSUE] Pending reboot detected. Restart required before upgrade." -ForegroundColor Red
 }
 else {
-    Write-Host "No pending reboot." -ForegroundColor Green
+    Write-Host "[OK] No pending reboot." -ForegroundColor Green
 }
 
 Write-Host ""
@@ -194,12 +214,12 @@ Where-Object { $_.Name -like "Windows*" -and $_.PartialProductKey }
 
 if ($WindowsLicense.LicenseStatus -eq 1) {
 
-Write-Host "Windows is ACTIVATED." -ForegroundColor Green
+Write-Host "[OK] Windows is ACTIVATED." -ForegroundColor Green
 
 }
 else {
 
-Write-Host "Windows NOT activated. Running fix..." -ForegroundColor Red
+Write-Host "[ISSUE] Windows NOT activated. Running fix..." -ForegroundColor Red
 
 $ActivationScript = Join-Path $ScriptRoot "Documents\W10 activation\activation w10 office.bat"
 
@@ -243,12 +263,12 @@ Write-Host ""
 
 if ($TotalRAMGB -gt 16) {
 
-    Write-Host "RAM is sufficient. No upgrade required." -ForegroundColor Green
+    Write-Host "[OK] RAM is sufficient. No upgrade required." -ForegroundColor Green
 
 }
 elseif ($TotalRAMGB -eq 16) {
 
-    Write-Host "16GB RAM detected. No upgrade required." -ForegroundColor Green
+    Write-Host "[OK] 16GB RAM detected. No upgrade required." -ForegroundColor Green
 
 }
 elseif ($TotalRAMGB -eq 8) {
@@ -329,7 +349,7 @@ if ($driveget) {
     $hdd | Format-Table -AutoSize | Out-String | Write-Host -ForegroundColor Green
 
 } else {
-    Write-Host "Get-PhysicalDisk not supported on this system." -ForegroundColor Red
+    Write-Host "[ISSUE] Get-PhysicalDisk not supported on this system." -ForegroundColor Red
 }
 
 
@@ -426,11 +446,11 @@ Write-Host "Checking disk space..." -ForegroundColor Cyan
 $Drive = Get-PSDrive C
 $FreeGB = [math]::Round($Drive.Free / 1GB,2)
 
-Write-Host "Sufficient Free Space: $FreeGB GB, no cleanup required." -ForegroundColor Cyan
+Write-Host "[OK] Sufficient Free Space: $FreeGB GB, no cleanup required." -ForegroundColor Green
 
 if ($FreeGB -lt 25) {
 
-Write-Host "Not enough space. Running Disk Cleanup..." -ForegroundColor Yellow
+Write-Host "[ISSUE] Not enough space. Running Disk Cleanup..." -ForegroundColor Red
 
 Start-Process cleanmgr.exe "/sageset:1" -Wait
 Start-Process cleanmgr.exe "/sagerun:1" -Wait
@@ -462,19 +482,19 @@ $tpm = Get-Tpm
 
 if ($tpm.TpmPresent) {
 
-Write-Host "TPM detected." -ForegroundColor Green
+Write-Host "[OK] TPM detected." -ForegroundColor Green
 
 }
 else {
 
-Write-Host "TPM NOT detected." -ForegroundColor Red
+Write-Host "[ISSUE] TPM NOT detected." -ForegroundColor Red
 
 }
 
 }
 catch {
 
-Write-Host "TPM check unavailable." -ForegroundColor Yellow
+Write-Host "[WARRNING] TPM check unavailable. Manual check required" -ForegroundColor Yellow
 
 }
 
@@ -490,19 +510,19 @@ try {
 
 if (Confirm-SecureBootUEFI) {
 
-Write-Host "Secure Boot enabled." -ForegroundColor Green
+Write-Host "[OK] Secure Boot enabled." -ForegroundColor Green
 
 }
 else {
 
-Write-Host "Secure Boot disabled." -ForegroundColor Red
+Write-Host "[ISSUE} Secure Boot disabled." -ForegroundColor Red
 
 }
 
 }
 catch {
 
-Write-Host "Legacy BIOS detected." -ForegroundColor Yellow
+Write-Host "[WARRNING} Legacy BIOS detected." -ForegroundColor Yellow
 
 }
 
@@ -658,7 +678,7 @@ $TempSource = Join-Path $ScriptRoot "W11\Temp"
 
 Write-Host "Refreshing C:\Temp"
 
-robocopy $TempSource "C:\Temp" /MIR /R:1 /W:1
+robocopy $TempSource "C:\Temp" /MIR /R:1 /W:1 /NFL /NDL /NJH /NJS /NP /LOG:NUL
 
 Write-Host "---------------------------------------------------------------------------"
 
@@ -692,10 +712,10 @@ Write-Host "Script missing: $Script" -ForegroundColor Yellow
 
 }
 
+Start-Process "C:\Temp\W11 update fix commands.bat"
 Run-And-Wait "$ScriptRoot\Blocked apps checker\run_check.bat"
 Run-And-Wait "$ScriptRoot\Profile checker\run_profile_check.bat"
 Run-And-Wait "$ScriptRoot\Java Removal Tool & Checker\Run-JavaCheck.bat"
-Run-And-Wait "C:\Temp\W11 update fix commands.bat"
 
 Write-Host "---------------------------------------------------------------------------"
 
@@ -1201,20 +1221,6 @@ foreach ($svc in $services) {
 Write-Host ""
 Write-Host "Cleanup completed successfully." -ForegroundColor Green
 Write-Host ""
-
-# ================================
-# COPY TEMP FOLDER AGAIN
-# ================================
-
-$TempSource = Join-Path $ScriptRoot "W11\Temp"
-
-Write-Host "Refreshing C:\Temp"
-
-robocopy $TempSource "C:\Temp" /MIR /R:1 /W:1
-
-Write-Host ""
-
-Read-Host "System checks completed press ENTER to continue"
 
 
 # ================================
