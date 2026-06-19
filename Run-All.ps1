@@ -122,7 +122,7 @@ $WinInfo = Get-ItemProperty -Path $RegPath -ErrorAction SilentlyContinue
 $DisplayVersion = $WinInfo.DisplayVersion
 
 if (-not $DisplayVersion) {
-    Write-Host "[WARRNING] Unable to determine Windows release version manual check required." -ForegroundColor Red
+    Write-Host "[WARNING] Unable to determine Windows release version manual check required." -ForegroundColor Red
     Start-Process winver
 }
 else {
@@ -166,7 +166,7 @@ if ($os) {
         Write-Host "[ISSUE] Restart required: uptime > 3 days." -ForegroundColor Red
     }
     elseif ($Uptime.Days -ge 1) {
-        Write-Host "[WARRNING] Restart recommended: uptime > 1 day." -ForegroundColor Yellow
+        Write-Host "[WARNING] Restart recommended: uptime > 1 day." -ForegroundColor Yellow
     }
     else {
         Write-Host "[OK] No restart required: uptime < 1 day." -ForegroundColor Green
@@ -306,7 +306,7 @@ Write-Host "--------------------------------------------------------------------
 
 Write-Host ""
 
-Read-Host "RAM check completed press ENTER to continue"
+Read-Host "Enter number of 8GB RAM added: "
 
 # ================================
 # DISK HEALTH + DRIVE INFO
@@ -468,7 +468,8 @@ Write-Host "--------------------------------------------------------------------
 
 Write-Host ""
 
-Read-Host "Disk check completed press ENTER to continue"
+Read-Host "Disk check completed -  If disk was replaced enter details: "
+
 
 # ================================
 # TPM CHECK
@@ -494,7 +495,7 @@ Write-Host "[ISSUE] TPM NOT detected." -ForegroundColor Red
 }
 catch {
 
-Write-Host "[WARRNING] TPM check unavailable. Manual check required" -ForegroundColor Yellow
+Write-Host "[WARNING] TPM check unavailable. Manual check required" -ForegroundColor Yellow
 
 }
 
@@ -515,14 +516,14 @@ Write-Host "[OK] Secure Boot enabled." -ForegroundColor Green
 }
 else {
 
-Write-Host "[ISSUE} Secure Boot disabled." -ForegroundColor Red
+Write-Host "[ISSUE] Secure Boot disabled." -ForegroundColor Red
 
 }
 
 }
 catch {
 
-Write-Host "[WARRNING} Legacy BIOS detected." -ForegroundColor Yellow
+Write-Host "[WARNING] Legacy BIOS detected." -ForegroundColor Yellow
 
 }
 
@@ -541,7 +542,7 @@ function Remove-WindowsBT {
     param([string]$Path)
 
     if (!(Test-Path $Path)) {
-        Write-Host "No previous upgrade folder detected." -ForegroundColor Green
+        Write-Host "[OK] No previous upgrade folder detected." -ForegroundColor Green
         return
     }
 
@@ -557,7 +558,7 @@ function Remove-WindowsBT {
         }
     }
     catch {
-        Write-Host "Ownership/attribute removal failed: $_" -ForegroundColor Red
+        Write-Host "[ISSUE] Ownership/attribute removal failed: $_" -ForegroundColor Red
     }
 
     # Attempt deletion up to 3 times
@@ -565,11 +566,11 @@ function Remove-WindowsBT {
     for ($i=1; $i -le $maxAttempts; $i++) {
         try {
             Remove-Item $Path -Recurse -Force -ErrorAction Stop
-            Write-Host "Cleanup succeeded on attempt $i." -ForegroundColor Green
+            Write-Host "[OK] Cleanup succeeded on attempt $i." -ForegroundColor Green
             break
         }
         catch {
-            Write-Host "Attempt $i failed: $_" -ForegroundColor Yellow
+            Write-Host "[ISSUE] Attempt $i failed: $_" -ForegroundColor Yellow
             Start-Sleep 2
         }
     }
@@ -584,11 +585,11 @@ function Remove-WindowsBT {
             Write-Host "Folder renamed and deleted successfully." -ForegroundColor Green
         }
         catch {
-            Write-Host "Final removal failed. Manual cleanup may be required." -ForegroundColor Red
+            Write-Host "[ISSUE] Final removal failed. Manual cleanup may be required." -ForegroundColor Red
         }
     }
     else {
-        Write-Host "Windows upgrade folder removed successfully." -ForegroundColor Green
+        Write-Host "[OK] Windows upgrade folder removed successfully." -ForegroundColor Green
     }
 }
 
@@ -606,7 +607,7 @@ Write-Host "Checking network connection..." -ForegroundColor Cyan
 $adapters = Get-NetAdapter -Physical | Where-Object { $_.Status -eq "Up" }
 
 if (-not $adapters) {
-    Write-Host "No active network connection detected." -ForegroundColor Red
+    Write-Host "[ISSUE] No active network connection detected." -ForegroundColor Red
 }
 else {
 
@@ -623,14 +624,14 @@ else {
     }
 
     if ($isEthernet) {
-        Write-Host "Connected via Ethernet." -ForegroundColor Green
+        Write-Host "[OK] Connected via Ethernet." -ForegroundColor Green
     }
     elseif ($isWiFi) {
-        Write-Host "Connected via Wi-Fi." -ForegroundColor Yellow
-        Write-Host "This device must be connected via Ethernet." -ForegroundColor Red
+        Write-Host "[WARNING] Connected via Wi-Fi." -ForegroundColor Yellow
+        Write-Host "This device must be connected via Ethernet." -ForegroundColor Yellow
     }
     else {
-        Write-Host "Connected, but unable to determine connection type." -ForegroundColor Yellow
+        Write-Host "[WARNING] Connected, but unable to determine connection type." -ForegroundColor Yellow
     }
 }
 
@@ -648,7 +649,7 @@ if ($null -ne $ProxySettings) {
 
     if ($ProxySettings.ProxyEnable -eq 1) {
 
-        Write-Host "Manual Proxy is ENABLED." -ForegroundColor Red
+        Write-Host "[ISSUE] Manual Proxy is ENABLED." -ForegroundColor Red
 
         if ($ProxySettings.ProxyServer) {
             Write-Host "Proxy Server: $($ProxySettings.ProxyServer)" -ForegroundColor Red
@@ -657,14 +658,14 @@ if ($null -ne $ProxySettings) {
     }
     else {
 
-        Write-Host "Manual Proxy is DISABLED." -ForegroundColor Green
+        Write-Host "[OK] Manual Proxy is DISABLED." -ForegroundColor Green
 
     }
 
 }
 else {
 
-    Write-Host "Unable to read proxy settings." -ForegroundColor Red
+    Write-Host "[ISSUE] Unable to read proxy settings." -ForegroundColor Red
 
 }
 
@@ -697,7 +698,7 @@ param([string]$Script)
 
 if (Test-Path $Script) {
 
-Write-Host "Running $Script" -ForegroundColor Yellow
+Write-Host "Running $Script" -ForegroundColor Cyan
 
 Start-Process $Script -Wait
 
@@ -706,7 +707,7 @@ Read-Host "Press ENTER to continue"
 }
 else {
 
-Write-Host "Script missing: $Script" -ForegroundColor Yellow
+Write-Host "[Issue] Script missing: $Script" -ForegroundColor Red
 
 }
 
@@ -752,7 +753,7 @@ if ($NetAcquire) {
         }
         else {
 
-            Write-Host "NetAcquire fix source folder missing!" -ForegroundColor Red
+            Write-Host "[ISSUE] NetAcquire fix source folder missing!" -ForegroundColor Red
 
         }
 
@@ -773,7 +774,7 @@ if ($NetAcquire) {
         }
         else {
 
-            Write-Host "Run-CreateUKRegionTask.bat not found in NetAcquire Fix folder!" -ForegroundColor Red
+            Write-Host "[ISSUE] Run-CreateUKRegionTask.bat not found in NetAcquire Fix folder!" -ForegroundColor Red
 
         }
 
@@ -785,19 +786,19 @@ if ($NetAcquire) {
 
         if ($Task) {
 
-            Write-Host "Scheduled task 'Set-UKRegionalSettings' created successfully." -ForegroundColor Green
+            Write-Host "[OK] Scheduled task 'Set-UKRegionalSettings' created successfully." -ForegroundColor Green
 
         }
         else {
 
-            Write-Host "Scheduled task 'Set-UKRegionalSettings' NOT found." -ForegroundColor Red
+            Write-Host "[ISSUE] Scheduled task 'Set-UKRegionalSettings' NOT found." -ForegroundColor Red
 
         }
 
     }
     else {
 
-        Write-Host "C:\Win11Scripts\NetAcquire already exists. NetAcquire fix not required." -ForegroundColor Green
+        Write-Host "[OK] C:\Win11Scripts\NetAcquire already exists. NetAcquire fix not required." -ForegroundColor Green
 
     }
 
@@ -845,7 +846,7 @@ if (-not $InstalledApp) {
     }
     else {
 
-        Write-Host "Installer not found at $Installer"
+        Write-Host "[ISSUE] Installer not found at $Installer" -ForegroundColor Red
         exit 1
 
     }
@@ -867,11 +868,11 @@ if (Test-Path $Executable) {
 }
 else {
 
-    Write-Host "System Update executable not found at $Executable"
+    Write-Host "[ISSUE] System Update executable not found at $Executable" -ForegroundColor Red
 
 }
 
-Write-Host ""
+Write-Host "Lenovo System Update Check completed"
 
 # ================================
 # DIRECTX + WDDM CHECK
@@ -889,12 +890,12 @@ if ($OS.Caption -match "Windows 10") {
             Start-Process -FilePath "dxdiag.exe" -ArgumentList "/x $dxdiagFile" -Wait -WindowStyle Hidden -ErrorAction Stop
         }
         catch {
-            Write-Host "Failed to run dxdiag." -ForegroundColor Red
+            Write-Host "[ISSUE] Failed to run dxdiag." -ForegroundColor Red
             return
         }
 
         if (-not (Test-Path $dxdiagFile)) {
-            Write-Host "dxdiag output file not found." -ForegroundColor Red
+            Write-Host "[ISSUE] dxdiag output file not found." -ForegroundColor Red
             return
         }
 
@@ -902,14 +903,14 @@ if ($OS.Caption -match "Windows 10") {
             [xml]$dx = Get-Content $dxdiagFile -ErrorAction Stop
         }
         catch {
-            Write-Host "Failed to parse dxdiag output." -ForegroundColor Red
+            Write-Host "[ISSUE] Failed to parse dxdiag output." -ForegroundColor Red
             return
         }
 
         $devices = $dx.DxDiag.DisplayDevices.DisplayDevice
 
         if (-not $devices) {
-            Write-Host "No display devices found." -ForegroundColor Red
+            Write-Host "[ISSUE] No display devices found." -ForegroundColor Red
             return
         }
 
@@ -937,17 +938,17 @@ if ($OS.Caption -match "Windows 10") {
             }
 
             if ($dx12 -and $wddmOK) {
-                Write-Host "Result: Meets Windows 11 graphics requirements." -ForegroundColor Green
+                Write-Host "[OK] Result: Meets Windows 11 graphics requirements." -ForegroundColor Green
             }
             else {
-                Write-Host "Result: Does NOT meet Windows 11 graphics requirements." -ForegroundColor Red
+                Write-Host "[WARNING] Result: Does NOT meet Windows 11 graphics requirements." -ForegroundColor Yellow
 
                 if (-not $dx12) {
-                    Write-Host " - Missing DirectX 12 support." -ForegroundColor Red
+                    Write-Host "[ISSUE] - Missing DirectX 12 support." -ForegroundColor Red
                 }
 
                 if (-not $wddmOK) {
-                    Write-Host " - WDDM version below 2.0 (Detected: $driverModel)" -ForegroundColor Red
+                    Write-Host "[WARNING] - WDDM version below 2.0 (Detected: $driverModel)" -ForegroundColor Yellow
                 }
             }
 
@@ -1189,6 +1190,8 @@ Write-Host ""
 Write-Host "Temp size                 : $($tmp.Size)" -ForegroundColor Gray
 Write-Host "Temp items                : $($tmp.Count)" -ForegroundColor Gray
 Write-Host ""
+
+
 
 # Stop services safely
 Write-Host "Stopping Windows Update services..." -ForegroundColor Cyan
