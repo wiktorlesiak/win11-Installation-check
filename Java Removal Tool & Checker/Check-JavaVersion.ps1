@@ -1,3 +1,19 @@
+# Get script directory
+$scriptPath = Split-Path -Parent $MyInvocation.MyCommand.Path
+
+# Create Logs folder if it doesn't exist
+$logFolder = Join-Path $scriptPath "Logs"
+if (!(Test-Path $logFolder)) {
+    New-Item -ItemType Directory -Path $logFolder | Out-Null
+}
+
+# Build log file name: ComputerName_yyyyMMdd_HHmm.log
+$computerName = $env:COMPUTERNAME
+$dateTime = Get-Date -Format "yyyy-MM-dd_HH-mm"
+$logFile = Join-Path $logFolder "${computerName}_${dateTime}.log"
+
+Start-Transcript -Path $logFile -Append
+
 # Java Version Check Script
 
 try {
@@ -130,3 +146,5 @@ if ($nimisInstalled) {
 }
 
 Write-Host "Script completed." -ForegroundColor Gray
+
+Stop-Transcript
